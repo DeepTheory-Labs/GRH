@@ -1,0 +1,317 @@
+{
+  "everyDef": {
+    "name": "UpperTheory.EveryCharacter",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/EveryCharacter.lean",
+    "line": 13,
+    "title": "Dirichlet nonvanishing premise",
+    "summary": "Every Dirichlet L-function is nonzero to the right of one half, excluding the principal-character point at one.",
+    "kind": "compiled",
+    "sha256": "19b590d4f118e2b3a8dfc4cddce4d8be959b352780f70bcb530728021a247a3c"
+  },
+  "half": {
+    "name": "Claim.HalfPlane",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean",
+    "line": 3,
+    "title": "Right half-plane predicate",
+    "summary": "Nonvanishing in the open right half-plane for every positive level, subject to the exception at one.",
+    "kind": "compiled",
+    "sha256": "38733f9fe05ea33c24e390f3fc55f0c435df184c408bff179da153a0766610b9"
+  },
+  "stripDef": {
+    "name": "Claim.Strip",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean",
+    "line": 6,
+    "title": "Strip predicate",
+    "summary": "A Dirichlet L-function zero in the open critical strip has real part one half.",
+    "kind": "compiled",
+    "sha256": "f9ee1c9167d7e7a74ddea5f770ba06448ee863c737345975982afe9678a83104"
+  },
+  "zetaDef": {
+    "name": "Claim.Zeta",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean",
+    "line": 9,
+    "title": "Zeta-zero predicate",
+    "summary": "Every nontrivial zeta zero distinct from one lies on the critical line.",
+    "kind": "compiled",
+    "sha256": "ed6d400088839a702017365c73b9a01fe7f189d9b1ecbb55defad644aa59467e"
+  },
+  "factor": {
+    "name": "Claim.factor_ne_zero",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 7,
+    "title": "Euler factor is nonzero",
+    "summary": "At positive real part the prime-power term has norm less than one, so a deleted Euler factor cannot vanish.",
+    "kind": "compiled",
+    "sha256": "12e336b308de9f0e54eb1daa03732d517fdf3e94c406e4cf5182dcf0d2b7c2fc"
+  },
+  "primZero": {
+    "name": "Claim.prim_zero",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 23,
+    "title": "Pass a zero to the primitive character",
+    "summary": "Change level to the conductor and rule out zeros of the deleted Euler factors.",
+    "kind": "compiled",
+    "sha256": "f5e1a9671a8da1e654c1fd9626efe2bcc93fa4cc945f94de344be98a801a40b8"
+  },
+  "gamma": {
+    "name": "Claim.gamma_ne_zero",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 35,
+    "title": "Gamma factor is nonzero",
+    "summary": "Both possible archimedean factors are nonzero at positive real part.",
+    "kind": "compiled",
+    "sha256": "be1e65eb7fb3286cfacee40aeff0f864dd2189d03309e5b858d487c1361c50b1"
+  },
+  "reflect": {
+    "name": "Claim.prim_reflect",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 42,
+    "title": "Reflect a primitive zero",
+    "summary": "The completed functional equation transfers a primitive zero to the inverse character at one minus the original argument.",
+    "kind": "compiled",
+    "sha256": "f8f4cb9eae79c22dc9b1c7c910dd47c60ed0979487dc8f94d081473d4c2bb7d1"
+  },
+  "strip": {
+    "name": "Claim.strip",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 59,
+    "title": "All Dirichlet zeros in the strip",
+    "summary": "Use half-plane nonvanishing on the right. On the left, pass to the primitive character and reflect its zero to the right.",
+    "kind": "compiled",
+    "sha256": "96cf2c7e2043ba37d7bd7976a7106ee17826306b91be3b5123b4209645557c34"
+  },
+  "zeta": {
+    "name": "Claim.zeta",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 75,
+    "title": "Zeta consequence of nonvanishing",
+    "summary": "Use the level-one character in the strip and the zeta functional equation and nonvanishing outside it.",
+    "kind": "compiled",
+    "sha256": "ee2f0046467db886764cc122180455d6198ed4d9afc494ae38edd14a7bb4d957"
+  },
+  "right": {
+    "name": "Formalism.VW.rh_of_right",
+    "source": "Formalism/GammaFactorNonvanishing/RhOfRight.lean",
+    "line": 5,
+    "title": "Reflect a hypothetical zeta zero",
+    "summary": "Right-half-plane nonvanishing implies RH by the zeta functional equation, with the exceptional gamma and trigonometric factors handled explicitly.",
+    "kind": "compiled",
+    "sha256": "48fd885b7d506b9e0149834d4ba3fabd53cd0226a12c57527e8f6377c4c2105c"
+  },
+  "vGamma": {
+    "name": "Formalism.VW.gammaFactor_ne_zero",
+    "source": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 6,
+    "title": "Archimedean factor for the primitive proof",
+    "summary": "Compute the gamma factor according to character parity on the positive half-plane.",
+    "kind": "compiled",
+    "sha256": "2d3b6ed3e1ee7243cc5f21187156ba938c5569d6127ebc304ceb0f8b7beec7ec"
+  },
+  "crit": {
+    "name": "Formalism.VW.critLine",
+    "source": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 11,
+    "title": "Primitive zeros on the critical line",
+    "summary": "Half-plane nonvanishing and the primitive functional equation force a zero in the strip onto the critical line.",
+    "kind": "compiled",
+    "sha256": "865affffeaded44b5a21e65294e831a1d70a206630ad0500170661ae21a7011a"
+  },
+  "rhEvery": {
+    "name": "Formalism.VW.rh_of_every",
+    "source": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 29,
+    "title": "Specialize to the level-one character",
+    "summary": "Apply the zeta reduction to the trivial character modulo one, whose L-function is zeta.",
+    "kind": "compiled",
+    "sha256": "beecfff17a25432d57c68fb893b086240bbfcc8095a94583bc6213691cd2b451"
+  },
+  "topG": {
+    "name": "UpperTheory.Top.zeroFreeAll_of_topG",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean",
+    "line": 26,
+    "title": "Primitive zero-free criterion",
+    "summary": "Combine the top-level condition with the required host data for each primitive character.",
+    "kind": "source",
+    "sha256": "779f1617311a91f102fe98548f3774bcaf188e12c0506c5aa600f76d4af099a9"
+  },
+  "greenZero": {
+    "name": "UpperTheory.Top.zero_free_all_of_green_v_win",
+    "source": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean",
+    "line": 12,
+    "title": "Primitive character nonvanishing",
+    "summary": "The Green and window hypotheses and a definite-side witness provide the inputs of the primitive criterion.",
+    "kind": "source",
+    "sha256": "5e975b2462270fb38d695e966d3ce6bb6f409b715ddc3302ba807422a5925e41"
+  },
+  "imprimitive": {
+    "name": "UpperTheory.Top.imprimitive",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean",
+    "line": 5,
+    "title": "Extend to imprimitive characters",
+    "summary": "Use the character of minimal conductor and show that the remaining Euler factors cannot vanish.",
+    "kind": "source",
+    "sha256": "710456ef393cc097cfc5619d02fb92167a87d0f2bdd4c5340a56c9fe57c35661"
+  },
+  "greenEvery": {
+    "name": "UpperTheory.Top.every_character_of_green_v_win",
+    "source": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean",
+    "line": 16,
+    "title": "From windows to all characters",
+    "summary": "First derive the primitive zero-free result, then extend to arbitrary positive levels.",
+    "kind": "source",
+    "sha256": "2a16d81a39b3886cfb84a9c50bb541d385037c4cd8e02941f0d57943b9d96da1"
+  },
+  "definite": {
+    "name": "UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound",
+    "source": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+    "line": 44,
+    "title": "Construct a definite-side witness",
+    "summary": "Theta integrals, local matching, a covolume bound, and local parameters supply a nonempty family of definite-side hypotheses.",
+    "kind": "source",
+    "sha256": "7c64a85613593761729e25e8e59316e93e4566b0495623843333ac8a5102d27e"
+  },
+  "match": {
+    "name": "UpperTheory.Lit.every_character_of_theta_integrals_local_matching",
+    "source": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+    "line": 69,
+    "title": "Theta integrals and local matching",
+    "summary": "Combine the definite-side witness with the Green and window input to obtain the all-character conclusion.",
+    "kind": "source",
+    "sha256": "a24733b92afe929a3bce10446a1e6c1f7cda414ca65fce7d1e44ac00fd8518d7"
+  },
+  "literature": {
+    "name": "UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin",
+    "source": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 810,
+    "title": "Assemble the literature inputs",
+    "summary": "Package published results, local matching, theta integrals and a covolume estimate for the theta-to-nonvanishing theorem.",
+    "kind": "source",
+    "sha256": "830dcc21c3e6cbb1aa36c0fb5396d2ed4099f5f72b2c18644ad323b75924fac3"
+  },
+  "row": {
+    "name": "UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter",
+    "source": "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean",
+    "line": 6,
+    "title": "Galois row for the local parameter",
+    "summary": "The source obtains its local–global row by applying a Galois-representations result to a theta lift.",
+    "kind": "source",
+    "sha256": "9b1f19b756ad9cdefeec6fcbdb062e6e4c6042fe61c69ee48c430b18a4ce4055"
+  },
+  "local": {
+    "name": "UpperTheory.Zero.LLC.recTExists",
+    "source": "Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean",
+    "line": 20,
+    "title": "Local parameter construction",
+    "summary": "The project constructs the local parameter with the required compatibilities.",
+    "kind": "source",
+    "sha256": "f1d123825985c33caf5ee84b0b48bb1df17663e55b1004e0e0d380e704ac27a2"
+  },
+  "window": {
+    "name": "UpperTheory.One.vwin_of_row",
+    "source": "Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean",
+    "line": 4,
+    "title": "Window condition from a row",
+    "summary": "Use open-image and base-change inputs together with the given row to obtain the automorphic window.",
+    "kind": "source",
+    "sha256": "c6737c388a60710399cbefa7c22fa10c35609465302265d87f51a8f680299764"
+  },
+  "ofRow": {
+    "name": "UpperTheory.FinalTheorems.everyCharacter_of_row",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+    "line": 7,
+    "title": "Nonvanishing given the Galois row",
+    "summary": "Assemble the literature package using the supplied row and local parameter existence. Apply the window result to that same row.",
+    "kind": "source",
+    "sha256": "ed0432efd387d0f5b2c1887164113564dc5b1f56d51bb77fa00e420454d520f7"
+  },
+  "every": {
+    "name": "UpperTheory.FinalTheorems.everyCharacter",
+    "source": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+    "line": 10,
+    "title": "Nonvanishing for all characters",
+    "summary": "Discharge the row assumption with the local–global result. This is the unconditional input consumed by the public analytic deductions.",
+    "kind": "source",
+    "sha256": "cb6e29e571bc60a80fe7adced18bc00414f6ec80fb9521724b707e6e6e3244a4"
+  },
+  "allChi": {
+    "name": "allChi",
+    "source": "Supplements/Kernels/MainTheorems.lean",
+    "line": 7,
+    "title": "Public nonvanishing bridge",
+    "summary": "Expose the unconditional all-character result to the final deduction module.",
+    "kind": "source",
+    "sha256": "11a64a2901f9f1dfe7c998d12b57e1edacc087d6740857bb890f079d82026b5d"
+  },
+  "rhAll": {
+    "name": "rhOfAll",
+    "source": "Supplements/Kernels/MainTheorems.lean",
+    "line": 9,
+    "title": "Riemann hypothesis from all characters",
+    "summary": "Apply the checked level-one reduction to the nonvanishing bridge.",
+    "kind": "source",
+    "sha256": "0411e5a9dfb3386efa1d19f21b4f48f3061578663df27aa2e1537c899cf946d9"
+  },
+  "critAll": {
+    "name": "critAll",
+    "source": "Supplements/Kernels/MainTheorems.lean",
+    "line": 11,
+    "title": "Primitive critical-line bridge",
+    "summary": "Apply the primitive critical-line theorem with the unconditional nonvanishing input.",
+    "kind": "source",
+    "sha256": "0d978db013e5eba6fa1d430c3cbd57ba979648c7e28481d8ee74be0150b7b823"
+  },
+  "claimAll": {
+    "name": "claimAll",
+    "source": "Supplements/Kernels/MainTheorems.lean",
+    "line": 15,
+    "title": "Package the three analytic claims",
+    "summary": "Assemble the half-plane result, the general Dirichlet strip result and the zeta statement in a conjunction.",
+    "kind": "source",
+    "sha256": "ed1f716842f8ede8864c2da8b1ba7bef252f4af1ef68f6775a487aa17e90270c"
+  },
+  "mainRH": {
+    "name": "riemannHypothesis",
+    "source": "Main.lean",
+    "line": 4,
+    "title": "Riemann hypothesis",
+    "summary": "The first public theorem takes its proof from the zeta bridge.",
+    "kind": "source",
+    "sha256": "71b3d50605ddda7c0c74fbbf5cca47165a4cfa2ad72f50f36b907ecac7ff505a"
+  },
+  "mainZeta": {
+    "name": "riemannZeta_eq_zero_re",
+    "source": "Main.lean",
+    "line": 6,
+    "title": "Nontrivial zeta zeros on the line",
+    "summary": "The second public statement uses the same bridge under a definitionally equal type.",
+    "kind": "source",
+    "sha256": "b76ddf651dfdaa35aa759391bf660be25e1a3d4299cf9b6fd89926313aac2ae7"
+  },
+  "mainNV": {
+    "name": "LFunction_ne_zero_of_half_lt_re",
+    "source": "Main.lean",
+    "line": 8,
+    "title": "Dirichlet half-plane nonvanishing",
+    "summary": "The public theorem is the all-character nonvanishing bridge.",
+    "kind": "source",
+    "sha256": "5b0ee88593377690a537bd3111264f9a9652eaad5475b129ce9e15b263830d64"
+  },
+  "mainStrip": {
+    "name": "LFunction_eq_zero_re",
+    "source": "Main.lean",
+    "line": 10,
+    "title": "All Dirichlet zeros on the line",
+    "summary": "Project the strip proof from the three-part conjunction. Only the strip component is selected at this use.",
+    "kind": "source",
+    "sha256": "16e8622c29d633b78f0009d3ed16ed8cd13ece9122362aed0a4fb12646635409"
+  },
+  "mainPrim": {
+    "name": "LFunction_eq_zero_re_of_isPrimitive",
+    "source": "Main.lean",
+    "line": 12,
+    "title": "Primitive Dirichlet zeros on the line",
+    "summary": "The original public theorem uses the dedicated primitive bridge.",
+    "kind": "source",
+    "sha256": "0401b524ca2966a15b42b17c6d82be74188720e1452c23c1c994ee9ed8fc53e6"
+  }
+}

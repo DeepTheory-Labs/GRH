@@ -1,0 +1,449 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Lean source evidence</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{max-width:96ch;margin:2rem auto;padding:0 1rem;font:1rem/1.5 system-ui}h2{overflow-wrap:anywhere}code{white-space:pre-wrap;overflow-wrap:anywhere}pre{padding:.8rem;background:#f2f4f7}pre a{display:inline-block;min-width:3em}span:target{background:#fff4b8}nav{position:sticky;top:0;background:white;padding:6px 0}</style><nav><a href="index.html">Return to the proof graph</a></nav><h1>Lean source evidence</h1><section id="reciprocity_from_literature"><h2><code>UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a><pre><code><span id="reciprocity_from_literature-L313"><a href="#reciprocity_from_literature-L313">313</a>theorem UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) : _root_.UpperTheory.Zero.LLC.RecTExists :=</span>
+<span id="reciprocity_from_literature-L314"><a href="#reciprocity_from_literature-L314">314</a>  _root_.UpperTheory.One.M.New.llOf_alt (_root_.UpperTheory.LiteratureTheorems.local_langlands_recT_exists_of_literature O) (_root_.UpperTheory.LiteratureTheorems.local_converse_gl_of_literature O) (_root_.UpperTheory.LiteratureTheorems.depth_zero_induction_of_literature O) (_root_.UpperTheory.LiteratureTheorems.brauer_degree_zero_of_literature O) (_root_.UpperTheory.LiteratureTheorems.chevalley_units_of_literature O) (_root_.UpperTheory.LiteratureTheorems.global_artin_reciprocity_of_literature O) (_root_.UpperTheory.LiteratureTheorems.langlands_exhaustion_gl_of_literature O) (_root_.UpperTheory.LiteratureTheorems.langlands_multisegments_of_literature O) (_root_.UpperTheory.LiteratureTheorems.standard_cosocle_gl_of_literature O) (_root_.UpperTheory.LiteratureTheorems.zelevinsky_polynomial_ring_of_literature O) (_root_.UpperTheory.LiteratureTheorems.geometric_restriction_of_literature O) (_root_.UpperTheory.LiteratureTheorems.bernstein_zelevinsky_finiteness_of_literature O)</span>
+</code></pre></section><section id="covolume_bound"><h2><code>SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopCovolSlim2Use.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopCovolSlim2Use.lean</a><pre><code><span id="covolume_bound-L16"><a href="#covolume_bound-L16">16</a>theorem topCovolSlim2_use_alt_alt : GlobalTheory.CompanionTheory.Hypotheses₂.ResolutionCharZero → GlobalTheory.CompanionTheory.Hypotheses₂.PrincipalisationCharZero → GlobalTheory.CompanionTheory.Hypotheses₂.PoincareLelongInv → PositivityTheory.MbHsUse.HSUse → ReciprocityTheory.ChartRestriction.G.ArakelovGeometry.MoriwakiBigStatement → HT.FarguesExact → GR.ZarhinStatement → Pub.NefRR → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → GlobalTheory.Published.PointSeparationPair → GlobalTheory.Published.ArDegree → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → _root_.GlobalTheory.CovTop.CovolumeBoundOfX :=</span>
+<span id="covolume_bound-L17"><a href="#covolume_bound-L17">17</a>  fun h₁ h₂ hPL hU hBig hFar hZar hRR hS hK hN hSep hDeg hP hGD =&gt;</span>
+<span id="covolume_bound-L18"><a href="#covolume_bound-L18">18</a>    have hX : GlobalTheory.CovTop.HypothesesX := ⟨hK, hN, GlobalTheory.GreenBridge.green_of_regular GlobalTheory.greenRegularCharacters_holds, hSep, _root_.FubiniStudyChowHeightFormula₂.fubiniStudy_chowHeight_formula hP⟩</span>
+<span id="covolume_bound-L19"><a href="#covolume_bound-L19">19</a>    have hF := PositivityTheory.Prw.toroidalChartsForFan_of hK</span>
+<span id="covolume_bound-L20"><a href="#covolume_bound-L20">20</a>    have hH : GlobalTheory.CovHt.HypothesesH := ⟨hS, hF, GlobalTheory.Published.toroidalCharts_of_siegel_of_forFan hS hF, hDeg⟩</span>
+<span id="covolume_bound-L21"><a href="#covolume_bound-L21">21</a>    _root_.SelfIntersectionVolumeEstimates.topCovolG_alt_alt ⟨_root_.ChowFormHeightComparison₂.chow_form_height_comparison, _root_.PositivityTheory.Xj7N.small_sections_injective (GlobalTheory.CompanionTheory.Ar.Rec.exists_nonvanishing_of_toroidal hH.sieg hX.ks)⟩ hX hP hH hGD ⟨hP.q6, hP.q8, hP.q13, hP.q7, hP.q10, GlobalTheory.Published.chowFormIntExists_holds, ChowFormCompatibility.chow_form_hyperplane_section, hP.q12⟩</span>
+<span id="covolume_bound-L22"><a href="#covolume_bound-L22">22</a>      (PositivityTheory.HtPt.Ah.deep_slim_use h₁ h₂ hPL hU hBig hFar hZar hRR)</span>
+</code></pre></section><section id="theta_to_Galois"><h2><code>UpperTheory.Gal.Int.galoisRepresentations_of_thetaLift</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GaloisRepresentationsOfThetaLift.lean">Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GaloisRepresentationsOfThetaLift.lean</a><pre><code><span id="theta_to_Galois-L6"><a href="#theta_to_Galois-L6">6</a>theorem galoisRepresentations_of_thetaLift (up : UpperTheory.TP.TLiftK) : UpperTheory.GalStar.Row0b recT := galoisLocalGlobalStrong_of_geometry_lift UpperTheory.Gal.Int.Geo.geoOne_holds up</span>
+</code></pre></section><section id="theta_lift"><h2><code>UpperTheory.TP.K.tLiftK</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/ThetaKernels/TLiftK.lean">Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/ThetaKernels/TLiftK.lean</a><pre><code><span id="theta_lift-L4"><a href="#theta_lift-L4">4</a>theorem UpperTheory.TP.K.tLiftK : UpperTheory.TP.TLiftK :=</span>
+<span id="theta_lift-L5"><a href="#theta_lift-L5">5</a>  UpperTheory.TP.tLift_holds_k</span>
+</code></pre></section><section id="Galois_row"><h2><code>UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean">Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean</a><pre><code><span id="Galois_row-L6"><a href="#Galois_row-L6">6</a>theorem galoisLocalGlobalStrong_recParameter : UpperTheory.GalStar.Row0b recT := galoisRepresentations_of_thetaLift UpperTheory.TP.K.tLiftK</span>
+</code></pre></section><section id="local_Langlands"><h2><code>UpperTheory.Zero.LLC.recTExists</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean">Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean</a><pre><code><span id="local_Langlands-L20"><a href="#local_Langlands-L20">20</a>theorem UpperTheory.Zero.LLC.recTExists :</span>
+<span id="local_Langlands-L21"><a href="#local_Langlands-L21">21</a>    UpperTheory.Zero.LLC.RecTExists := by</span>
+<span id="local_Langlands-L22"><a href="#local_Langlands-L22">22</a>  intro E Ω _ _ _ _ _ A w h</span>
+<span id="local_Langlands-L23"><a href="#local_Langlands-L23">23</a>  obtain ⟨a, ha, -⟩ := UpperTheory.Zero.LLC.artEx E Ω A w h</span>
+<span id="local_Langlands-L24"><a href="#local_Langlands-L24">24</a>  obtain ⟨r, hr⟩ := UpperTheory.Zero.LLC.cuspEx E Ω A w h a ha</span>
+<span id="local_Langlands-L25"><a href="#local_Langlands-L25">25</a>  obtain ⟨⟨rc, hrc⟩, hcu⟩ :=</span>
+<span id="local_Langlands-L26"><a href="#local_Langlands-L26">26</a>    GlobalTheory.LocLanglands.exists_isLExt UpperTheory.Zero.LLC.Pr.exh UpperTheory.Zero.LLC.Pr.multi E Ω A w h r</span>
+<span id="local_Langlands-L27"><a href="#local_Langlands-L27">27</a>  have hcusp : ∀ x : IrrGL (HeightOneSpectrum.adicCompletion E w), x.IsCusp → rc x = r x :=</span>
+<span id="local_Langlands-L28"><a href="#local_Langlands-L28">28</a>    hcu rc hrc</span>
+<span id="local_Langlands-L29"><a href="#local_Langlands-L29">29</a>  have hD := UpperTheory.Zero.LLC.extDim E Ω A w h a ha r rc hr hrc</span>
+<span id="local_Langlands-L30"><a href="#local_Langlands-L30">30</a>  have hT := UpperTheory.Zero.LLC.extTw E Ω A w h a ha r rc hr hrc</span>
+<span id="local_Langlands-L31"><a href="#local_Langlands-L31">31</a>  refine ⟨rc, a, ha, ?_⟩</span>
+<span id="local_Langlands-L32"><a href="#local_Langlands-L32">32</a>  refine</span>
+<span id="local_Langlands-L33"><a href="#local_Langlands-L33">33</a>    { dim := fun x =&gt; (hD x).1.1</span>
+<span id="local_Langlands-L34"><a href="#local_Langlands-L34">34</a>      one := fun χ hχ =&gt; (hcusp _ (IrrGL.isCusp_ofChar χ hχ)).trans (hr.one χ hχ)</span>
+<span id="local_Langlands-L35"><a href="#local_Langlands-L35">35</a>      langlands := ?_</span>
+<span id="local_Langlands-L36"><a href="#local_Langlands-L36">36</a>      cusp := ?_</span>
+<span id="local_Langlands-L37"><a href="#local_Langlands-L37">37</a>      nu := hT.1</span>
+<span id="local_Langlands-L38"><a href="#local_Langlands-L38">38</a>      absCentral := fun x ω hω σ =&gt; ((hD x).2 ω hω σ).1</span>
+<span id="local_Langlands-L39"><a href="#local_Langlands-L39">39</a>      twist := ?_</span>
+<span id="local_Langlands-L40"><a href="#local_Langlands-L40">40</a>      central := fun x ω hg hω σ =&gt; ((hD x).2 ω hω σ).2 hg</span>
+<span id="local_Langlands-L41"><a href="#local_Langlands-L41">41</a>      dual := UpperTheory.Zero.LLC.extDual E Ω A w h a ha r rc hr hrc</span>
+<span id="local_Langlands-L42"><a href="#local_Langlands-L42">42</a>      inj := UpperTheory.Zero.LLC.extInj E Ω A w h a ha r rc hr hrc</span>
+<span id="local_Langlands-L43"><a href="#local_Langlands-L43">43</a>      depth := fun x hg hx =&gt; UpperTheory.Zero.LLC.extDepth E Ω A w h a ha r rc hr hrc x hg hx</span>
+<span id="local_Langlands-L44"><a href="#local_Langlands-L44">44</a>      type := ?_ }</span>
+<span id="local_Langlands-L45"><a href="#local_Langlands-L45">45</a>  · intro l x hl</span>
+<span id="local_Langlands-L46"><a href="#local_Langlands-L46">46</a>    rw [hrc l x hl]</span>
+<span id="local_Langlands-L47"><a href="#local_Langlands-L47">47</a>    unfold GlobalTheory.LocLanglands.segSum</span>
+<span id="local_Langlands-L48"><a href="#local_Langlands-L48">48</a>    congr 1</span>
+<span id="local_Langlands-L49"><a href="#local_Langlands-L49">49</a>    refine List.map_congr_left ?_</span>
+<span id="local_Langlands-L50"><a href="#local_Langlands-L50">50</a>    intro Δ _</span>
+<span id="local_Langlands-L51"><a href="#local_Langlands-L51">51</a>    rw [hcusp _ Δ.isCusp_first]</span>
+<span id="local_Langlands-L52"><a href="#local_Langlands-L52">52</a>  · intro x hx</span>
+<span id="local_Langlands-L53"><a href="#local_Langlands-L53">53</a>    rw [hcusp x hx]</span>
+<span id="local_Langlands-L54"><a href="#local_Langlands-L54">54</a>    exact hr.irr x hx</span>
+<span id="local_Langlands-L55"><a href="#local_Langlands-L55">55</a>  · intro x χ hχ hg</span>
+<span id="local_Langlands-L56"><a href="#local_Langlands-L56">56</a>    rw [hcusp _ (IrrGL.isCusp_ofChar χ hχ), hr.one χ hχ]</span>
+<span id="local_Langlands-L57"><a href="#local_Langlands-L57">57</a>    exact hT.2 x χ hχ hg</span>
+<span id="local_Langlands-L58"><a href="#local_Langlands-L58">58</a>  · refine (UpperTheory.Zero.LLC.typeIff E Ω A w h rc).2 ?_</span>
+<span id="local_Langlands-L59"><a href="#local_Langlands-L59">59</a>    intro x</span>
+<span id="local_Langlands-L60"><a href="#local_Langlands-L60">60</a>    unfold UpperTheory.Zero.LLC.TypeAt</span>
+<span id="local_Langlands-L61"><a href="#local_Langlands-L61">61</a>    intro g _ i hi n hn D R hR θ hθ τ hτ hN σ hσ hinf</span>
+<span id="local_Langlands-L62"><a href="#local_Langlands-L62">62</a>    have hx : x.IsCusp := by</span>
+<span id="local_Langlands-L63"><a href="#local_Langlands-L63">63</a>      subst hσ</span>
+<span id="local_Langlands-L64"><a href="#local_Langlands-L64">64</a>      exact IrrGL.isCusp_of.2 ⟨hn, DiscreteGroups.sglob.DzLc.isCuspidal_of_inflates i hi τ hτ σ hinf⟩</span>
+<span id="local_Langlands-L65"><a href="#local_Langlands-L65">65</a>    rw [hcusp x hx]</span>
+<span id="local_Langlands-L66"><a href="#local_Langlands-L66">66</a>    exact hr.type x hx g i hi n hn D R hR θ hθ τ hτ hN σ hσ hinf</span>
+</code></pre></section><section id="automorphic_window"><h2><code>UpperTheory.One.vwin_of_row</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean">Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean</a><pre><code><span id="automorphic_window-L4"><a href="#automorphic_window-L4">4</a>theorem UpperTheory.One.vwin_of_row (h : UpperTheory.GalStar.Row0b fun h rc =&gt; UpperTheory.Zero.LLC.IsRecT h rc) : UpperTheory.Top.VWin :=</span>
+<span id="automorphic_window-L5"><a href="#automorphic_window-L5">5</a>  UpperTheory.One.Join.automorphic_window_of_inputs (UpperTheory.LiteratureTheorems.OpenImageCondition.mk h) UpperTheory.BaseChangeIdentities.baseChangeN h</span>
+</code></pre></section><section id="third_place_inputs"><h2><code>UpperTheory.LiteratureTheorems.published_results_eigen</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a><pre><code><span id="third_place_inputs-L666"><a href="#third_place_inputs-L666">666</a>theorem UpperTheory.LiteratureTheorems.published_results_eigen (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) : _root_.GlobalTheory.Fc.S0.UnitaryGroupThirdPlaceHypotheses where</span>
+<span id="third_place_inputs-L667"><a href="#third_place_inputs-L667">667</a>  clozelCohomological := (_root_.UpperTheory.LiteratureTheorems.clozel_cohomological_of_literature O)</span>
+<span id="third_place_inputs-L668"><a href="#third_place_inputs-L668">668</a>  greenCuspidal := (_root_.UpperTheory.LiteratureTheorems.green_cuspidal_of_literature O)</span>
+<span id="third_place_inputs-L669"><a href="#third_place_inputs-L669">669</a>  heckeLAdicCharacter := (_root_.UpperTheory.LiteratureTheorems.hecke_l_adic_character_of_literature O)</span>
+<span id="third_place_inputs-L670"><a href="#third_place_inputs-L670">670</a>  chebotarevDegreeOne := (_root_.UpperTheory.LiteratureTheorems.chebotarev_degree_one_of_literature O)</span>
+<span id="third_place_inputs-L671"><a href="#third_place_inputs-L671">671</a>  galoisRepOfPolarizedCuspidal := (_root_.UpperTheory.LiteratureTheorems.cusp_u_of_literature O)</span>
+<span id="third_place_inputs-L672"><a href="#third_place_inputs-L672">672</a>  baseChangeDefiniteUnitary := (_root_.UpperTheory.LiteratureTheorems.base_change_definite_unitary_group_of_literature O)</span>
+<span id="third_place_inputs-L673"><a href="#third_place_inputs-L673">673</a>  bhattScholzeCrystallineLattices := (_root_.UpperTheory.LiteratureTheorems.bhatt_scholze_crystalline_lattices_of_literature O)</span>
+<span id="third_place_inputs-L674"><a href="#third_place_inputs-L674">674</a>  heckeLAdicCharacterAbove := (_root_.UpperTheory.LiteratureTheorems.hecke_l_adic_character_above_of_literature O)</span>
+<span id="third_place_inputs-L675"><a href="#third_place_inputs-L675">675</a>  cuspRapidDecay := (_root_.UpperTheory.LiteratureTheorems.cusp_rapid_decay_of_literature O)</span>
+<span id="third_place_inputs-L676"><a href="#third_place_inputs-L676">676</a>  weilSiegelFormulaUnitary := (_root_.UpperTheory.LiteratureTheorems.weil_siegel_formula_unitary_of_literature O)</span>
+<span id="third_place_inputs-L677"><a href="#third_place_inputs-L677">677</a>  siegelWeilUnitaryConvergent := (_root_.UpperTheory.LiteratureTheorems.siegel_weil_unitary_convergent_of_literature O)</span>
+<span id="third_place_inputs-L678"><a href="#third_place_inputs-L678">678</a>  doublingMethod := (_root_.UpperTheory.LiteratureTheorems.doubling_method O)</span>
+<span id="third_place_inputs-L679"><a href="#third_place_inputs-L679">679</a>  unramifiedDoublingGL := (_root_.UpperTheory.LiteratureTheorems.unramified_doubling_gl_of_literature O)</span>
+<span id="third_place_inputs-L680"><a href="#third_place_inputs-L680">680</a>  bernsteinZelevinskyFiniteness := (_root_.UpperTheory.LiteratureTheorems.bernstein_zelevinsky_finiteness_of_literature O)</span>
+<span id="third_place_inputs-L681"><a href="#third_place_inputs-L681">681</a>  formalDegreeCompactDual := (_root_.UpperTheory.LiteratureTheorems.formal_degree_compact_dual_of_literature O)</span>
+<span id="third_place_inputs-L682"><a href="#third_place_inputs-L682">682</a>  bernsteinUnitaryProductIrreducible := (_root_.UpperTheory.LiteratureTheorems.bernstein_unitary_product_irreducible_of_literature O)</span>
+<span id="third_place_inputs-L683"><a href="#third_place_inputs-L683">683</a>  geometricLemmaFiltration := (_root_.UpperTheory.LiteratureTheorems.geometric_restriction_filtration_of_literature O)</span>
+<span id="third_place_inputs-L684"><a href="#third_place_inputs-L684">684</a>  unlinkedProductIrreducible := (_root_.UpperTheory.LiteratureTheorems.unlinked_product_irreducible_of_literature O)</span>
+<span id="third_place_inputs-L685"><a href="#third_place_inputs-L685">685</a>  depthZeroJacquetInjective := (_root_.UpperTheory.LiteratureTheorems.depth_zero_jacquet_injective_of_literature O)</span>
+<span id="third_place_inputs-L686"><a href="#third_place_inputs-L686">686</a>  jacquetShalika := (_root_.UpperTheory.LiteratureTheorems.jacquet_shalika_of_literature O)</span>
+<span id="third_place_inputs-L687"><a href="#third_place_inputs-L687">687</a>  automorphicFormsFiniteGL := (_root_.UpperTheory.LiteratureTheorems.automorphic_forms_finite_gl_of_literature O)</span>
+<span id="third_place_inputs-L688"><a href="#third_place_inputs-L688">688</a>  localGlobalAboveL := (_root_.UpperTheory.LiteratureTheorems.carU_above_l_of_literature O)</span>
+<span id="third_place_inputs-L689"><a href="#third_place_inputs-L689">689</a>  regularAlgebraicPurity := (_root_.UpperTheory.LiteratureTheorems.regular_algebraic_purity_of_literature O)</span>
+<span id="third_place_inputs-L690"><a href="#third_place_inputs-L690">690</a>  globalArtinReciprocity := (_root_.UpperTheory.LiteratureTheorems.global_artin_reciprocity_of_literature O)</span>
+<span id="third_place_inputs-L691"><a href="#third_place_inputs-L691">691</a>  heckeLAdicParameterAbove := (_root_.UpperTheory.LiteratureTheorems.hecke_l_adic_parameter_above_of_literature O)</span>
+<span id="third_place_inputs-L692"><a href="#third_place_inputs-L692">692</a>  deRhamPotSemistable := (_root_.UpperTheory.LiteratureTheorems.de_rham_pot_semistable_of_literature O)</span>
+<span id="third_place_inputs-L693"><a href="#third_place_inputs-L693">693</a>  harishChandraFinite := (_root_.UpperTheory.LiteratureTheorems.harish_chandra_finite_of_literature O)</span>
+<span id="third_place_inputs-L694"><a href="#third_place_inputs-L694">694</a>  greenRegularCharacters := (_root_.UpperTheory.LiteratureTheorems.green_regular_characters_of_literature O)</span>
+<span id="third_place_inputs-L695"><a href="#third_place_inputs-L695">695</a>  zelevinskyPolynomialRing := (_root_.UpperTheory.LiteratureTheorems.zelevinsky_polynomial_ring_of_literature O)</span>
+<span id="third_place_inputs-L696"><a href="#third_place_inputs-L696">696</a>  rayClassFieldSt := (_root_.UpperTheory.LiteratureTheorems.ray_class_field_st_of_literature O)</span>
+<span id="third_place_inputs-L697"><a href="#third_place_inputs-L697">697</a>  rayCharacterArtin := (_root_.UpperTheory.LiteratureTheorems.ray_character_artin_of_literature O)</span>
+<span id="third_place_inputs-L698"><a href="#third_place_inputs-L698">698</a>  genericUnitaryDualGL := (_root_.UpperTheory.LiteratureTheorems.generic_unitary_dual_gl_of_literature O)</span>
+<span id="third_place_inputs-L699"><a href="#third_place_inputs-L699">699</a>  standardCosocleGL := (_root_.UpperTheory.LiteratureTheorems.standard_cosocle_gl_of_literature O)</span>
+<span id="third_place_inputs-L700"><a href="#third_place_inputs-L700">700</a>  cheb := (_root_.UpperTheory.LiteratureTheorems.cheb_of_literature O)</span>
+<span id="third_place_inputs-L701"><a href="#third_place_inputs-L701">701</a>  discreteSeriesCover := (_root_.UpperTheory.LiteratureTheorems.discrete_series_cover_of_literature O)</span>
+<span id="third_place_inputs-L702"><a href="#third_place_inputs-L702">702</a>  harishChandraModules := (_root_.UpperTheory.LiteratureTheorems.harish_chandra_modules_of_literature O)</span>
+<span id="third_place_inputs-L703"><a href="#third_place_inputs-L703">703</a>  casselmanWallach := (_root_.UpperTheory.LiteratureTheorems.casselman_wallach_of_literature O)</span>
+<span id="third_place_inputs-L704"><a href="#third_place_inputs-L704">704</a>  weilRepresentationUnitaryPair := (_root_.UpperTheory.LiteratureTheorems.weil_representation_unitary_pair_of_literature O)</span>
+<span id="third_place_inputs-L705"><a href="#third_place_inputs-L705">705</a>  discreteSeriesExists := (_root_.UpperTheory.LiteratureTheorems.discrete_series_exists_of_literature O)</span>
+<span id="third_place_inputs-L706"><a href="#third_place_inputs-L706">706</a>  discreteSeriesClassification := (_root_.UpperTheory.LiteratureTheorems.discrete_series_classification_of_literature O)</span>
+<span id="third_place_inputs-L707"><a href="#third_place_inputs-L707">707</a>  strongApproxSU := (_root_.UpperTheory.LiteratureTheorems.strong_approx_su_of_literature O)</span>
+<span id="third_place_inputs-L708"><a href="#third_place_inputs-L708">708</a>  siegelWeilUnitaryConvergent2 := (_root_.UpperTheory.LiteratureTheorems.siegelWeilU_unitary_convergent_of_literature O)</span>
+<span id="third_place_inputs-L709"><a href="#third_place_inputs-L709">709</a>  harishChandraAnalyticity := (_root_.UpperTheory.LiteratureTheorems.harish_chandra_analyticity_of_literature O)</span>
+<span id="third_place_inputs-L710"><a href="#third_place_inputs-L710">710</a>  cuspTraceClass := (_root_.UpperTheory.LiteratureTheorems.cusp_trace_class_of_literature O)</span>
+<span id="third_place_inputs-L711"><a href="#third_place_inputs-L711">711</a>  dixmierMalliavinFactorisation := (_root_.UpperTheory.LiteratureTheorems.dixmier_malliavin_factorisation_of_literature O)</span>
+<span id="third_place_inputs-L712"><a href="#third_place_inputs-L712">712</a>  flathFactorisation := (_root_.UpperTheory.LiteratureTheorems.flath_factorisation_of_literature O)</span>
+<span id="third_place_inputs-L713"><a href="#third_place_inputs-L713">713</a>  cMCurveGoodOutsidePrimeSt := (_root_.UpperTheory.LiteratureTheorems.cm_curve_good_outside_prime_st_of_literature O)</span>
+<span id="third_place_inputs-L714"><a href="#third_place_inputs-L714">714</a>  weberRayFieldSt := (_root_.UpperTheory.LiteratureTheorems.weber_ray_field_st_of_literature O)</span>
+<span id="third_place_inputs-L715"><a href="#third_place_inputs-L715">715</a>  discreteSeriesCoverExists := (_root_.UpperTheory.LiteratureTheorems.discrete_series_cover_exists_of_literature O)</span>
+<span id="third_place_inputs-L716"><a href="#third_place_inputs-L716">716</a>  siegelWeilUnitarySchrodinger := (_root_.UpperTheory.LiteratureTheorems.siegel_weil_unitary_schrodinger_of_literature O)</span>
+<span id="third_place_inputs-L717"><a href="#third_place_inputs-L717">717</a>  siegelEisensteinContinuation := (_root_.UpperTheory.LiteratureTheorems.siegel_eisenstein_continuation_of_literature O)</span>
+<span id="third_place_inputs-L718"><a href="#third_place_inputs-L718">718</a>  siegelEisensteinSimplePole := (_root_.UpperTheory.LiteratureTheorems.siegel_eisenstein_simple_pole O)</span>
+<span id="third_place_inputs-L719"><a href="#third_place_inputs-L719">719</a>  schurOrthogonalitySquareIntegrable := (_root_.UpperTheory.LiteratureTheorems.schur_orthogonality_square_integrable_of_literature O)</span>
+<span id="third_place_inputs-L720"><a href="#third_place_inputs-L720">720</a>  litN := (_root_.UpperTheory.LiteratureTheorems.literature_nonexistence O)</span>
+<span id="third_place_inputs-L721"><a href="#third_place_inputs-L721">721</a>  toHypothesesX := (_root_.UpperTheory.LiteratureTheorems.published_results_analytic O)</span>
+<span id="third_place_inputs-L722"><a href="#third_place_inputs-L722">722</a>  nLink := (_root_.UpperTheory.LiteratureTheorems.published_results_local O)</span>
+<span id="third_place_inputs-L723"><a href="#third_place_inputs-L723">723</a>  depthZeroSupport&#x27; := (_root_.UpperTheory.LiteratureTheorems.depth_zero_support_of_literature O)</span>
+<span id="third_place_inputs-L724"><a href="#third_place_inputs-L724">724</a>  localFiniteness := (_root_.UpperTheory.LiteratureTheorems.local_finiteness_of_literature O)</span>
+<span id="third_place_inputs-L725"><a href="#third_place_inputs-L725">725</a>  localTateDuality := (_root_.UpperTheory.LiteratureTheorems.local_tate_duality_of_literature O)</span>
+<span id="third_place_inputs-L726"><a href="#third_place_inputs-L726">726</a>  localEulerChar := (_root_.UpperTheory.LiteratureTheorems.localEulerChar_alt_alt O)</span>
+</code></pre></section><section id="theta_local_inputs"><h2><code>UpperTheory.LiteratureTheorems.published_results_first</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a><pre><code><span id="theta_local_inputs-L727"><a href="#theta_local_inputs-L727">727</a>theorem UpperTheory.LiteratureTheorems.published_results_first (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) : GlobalTheory.FunPr.ThetaLocalInputs where</span>
+<span id="theta_local_inputs-L728"><a href="#theta_local_inputs-L728">728</a>  greenSeriesSt := (_root_.UpperTheory.LiteratureTheorems.green_series_st_of_literature O)</span>
+<span id="theta_local_inputs-L729"><a href="#theta_local_inputs-L729">729</a>  linnik := (_root_.UpperTheory.LiteratureTheorems.linnik_of_literature O)</span>
+<span id="theta_local_inputs-L730"><a href="#theta_local_inputs-L730">730</a>  complexMultiplicationJSt := (_root_.UpperTheory.LiteratureTheorems.complex_multiplication_j_st_of_literature O)</span>
+<span id="theta_local_inputs-L731"><a href="#theta_local_inputs-L731">731</a>  cuspidalMirabolic := (_root_.UpperTheory.LiteratureTheorems.cuspidal_mirabolic_of_literature O)</span>
+<span id="theta_local_inputs-L732"><a href="#theta_local_inputs-L732">732</a>  weylBranching := (_root_.UpperTheory.LiteratureTheorems.weyl_branching_of_literature O)</span>
+<span id="theta_local_inputs-L733"><a href="#theta_local_inputs-L733">733</a>  bernsteinUnitaryProductIrreducible := (_root_.UpperTheory.LiteratureTheorems.bernstein_unitary_product_irreducible_of_literature O)</span>
+<span id="theta_local_inputs-L734"><a href="#theta_local_inputs-L734">734</a>  zelevinskyPolynomialRing := (_root_.UpperTheory.LiteratureTheorems.zelevinsky_polynomial_ring_of_literature O)</span>
+<span id="theta_local_inputs-L735"><a href="#theta_local_inputs-L735">735</a>  bernsteinZelevinskyFiniteness := (_root_.UpperTheory.LiteratureTheorems.bernstein_zelevinsky_finiteness_of_literature O)</span>
+<span id="theta_local_inputs-L736"><a href="#theta_local_inputs-L736">736</a>  cuspTraceClass := (_root_.UpperTheory.LiteratureTheorems.cusp_trace_class_of_literature O)</span>
+<span id="theta_local_inputs-L737"><a href="#theta_local_inputs-L737">737</a>  flathFactorisation := (_root_.UpperTheory.LiteratureTheorems.flath_factorisation_of_literature O)</span>
+<span id="theta_local_inputs-L738"><a href="#theta_local_inputs-L738">738</a>  weilSiegelFormulaUnitary := (_root_.UpperTheory.LiteratureTheorems.weil_siegel_formula_unitary_of_literature O)</span>
+<span id="theta_local_inputs-L739"><a href="#theta_local_inputs-L739">739</a>  rallisInnerProductConvergent := (_root_.UpperTheory.LiteratureTheorems.rallis_inner_product_convergent_of_literature O)</span>
+<span id="theta_local_inputs-L740"><a href="#theta_local_inputs-L740">740</a>  doublingMethod := (_root_.UpperTheory.LiteratureTheorems.doubling_method O)</span>
+<span id="theta_local_inputs-L741"><a href="#theta_local_inputs-L741">741</a>  unramifiedDoublingGL := (_root_.UpperTheory.LiteratureTheorems.unramified_doubling_gl_of_literature O)</span>
+<span id="theta_local_inputs-L742"><a href="#theta_local_inputs-L742">742</a>  hermitianLocalGlobal := (_root_.UpperTheory.LiteratureTheorems.hermitian_local_global_of_literature O)</span>
+<span id="theta_local_inputs-L743"><a href="#theta_local_inputs-L743">743</a>  quadraticClassFieldTheory := (_root_.UpperTheory.LiteratureTheorems.quadratic_class_field_theory_of_literature O)</span>
+<span id="theta_local_inputs-L744"><a href="#theta_local_inputs-L744">744</a>  borelCasselman := (_root_.UpperTheory.LiteratureTheorems.borel_casselman_of_literature O)</span>
+<span id="theta_local_inputs-L745"><a href="#theta_local_inputs-L745">745</a>  radfordShufflePolynomial := (_root_.UpperTheory.LiteratureTheorems.radford_shuffle_polynomial_of_literature O)</span>
+<span id="theta_local_inputs-L746"><a href="#theta_local_inputs-L746">746</a>  dixmierMalliavinFactorisation := (_root_.UpperTheory.LiteratureTheorems.dixmier_malliavin_factorisation_of_literature O)</span>
+<span id="theta_local_inputs-L747"><a href="#theta_local_inputs-L747">747</a>  schurOrthogonalitySquareIntegrable := (_root_.UpperTheory.LiteratureTheorems.schur_orthogonality_square_integrable_of_literature O)</span>
+<span id="theta_local_inputs-L748"><a href="#theta_local_inputs-L748">748</a>  heckeLPartialContinuation := (_root_.UpperTheory.LiteratureTheorems.hecke_l_partial_continuation_of_literature O)</span>
+<span id="theta_local_inputs-L749"><a href="#theta_local_inputs-L749">749</a>  logDerOne := (_root_.UpperTheory.LiteratureTheorems.logDerivOne O)</span>
+<span id="theta_local_inputs-L750"><a href="#theta_local_inputs-L750">750</a>  kFiniteVectorsUnitary := (_root_.UpperTheory.LiteratureTheorems.k_finite_vectors_unitary_of_literature O)</span>
+<span id="theta_local_inputs-L751"><a href="#theta_local_inputs-L751">751</a>  discreteSeriesLowestKType := (_root_.UpperTheory.LiteratureTheorems.discrete_series_lowest_k_type_of_literature O)</span>
+<span id="theta_local_inputs-L752"><a href="#theta_local_inputs-L752">752</a>  holomorphicDiscreteSeries := (_root_.UpperTheory.LiteratureTheorems.holomorphic_discrete_series_of_literature O)</span>
+<span id="theta_local_inputs-L753"><a href="#theta_local_inputs-L753">753</a>  gKGlobalisation := (_root_.UpperTheory.LiteratureTheorems.gk_globalisation_of_literature O)</span>
+<span id="theta_local_inputs-L754"><a href="#theta_local_inputs-L754">754</a>  cuspBounded := (_root_.UpperTheory.LiteratureTheorems.cusp_bounded_of_literature O)</span>
+<span id="theta_local_inputs-L755"><a href="#theta_local_inputs-L755">755</a>  strongApproxSU := (_root_.UpperTheory.LiteratureTheorems.strong_approx_su_of_literature O)</span>
+<span id="theta_local_inputs-L756"><a href="#theta_local_inputs-L756">756</a>  heckeLEntireAndNonzeroAtOne := (_root_.UpperTheory.LiteratureTheorems.hecke_l_entire_and_nonzero_at_one_of_literature O)</span>
+<span id="theta_local_inputs-L757"><a href="#theta_local_inputs-L757">757</a>  realMetaplecticRepresentation := (_root_.UpperTheory.LiteratureTheorems.real_metaplectic_representation_of_literature O)</span>
+<span id="theta_local_inputs-L758"><a href="#theta_local_inputs-L758">758</a>  cuspDecayBound := (_root_.UpperTheory.LiteratureTheorems.cusp_decay_bound_of_literature O)</span>
+<span id="theta_local_inputs-L759"><a href="#theta_local_inputs-L759">759</a>  gLHoweDuality := (_root_.UpperTheory.LiteratureTheorems.gl_howe_duality_of_literature O)</span>
+<span id="theta_local_inputs-L760"><a href="#theta_local_inputs-L760">760</a>  kudlaSplittingSplitUnitary := (_root_.UpperTheory.LiteratureTheorems.kudla_splitting_split_unitary_of_literature O)</span>
+<span id="theta_local_inputs-L761"><a href="#theta_local_inputs-L761">761</a>  metaplecticRepresentation := (_root_.UpperTheory.LiteratureTheorems.metaplectic_representation_of_literature O)</span>
+<span id="theta_local_inputs-L762"><a href="#theta_local_inputs-L762">762</a>  harishChandraModules := (_root_.UpperTheory.LiteratureTheorems.harish_chandra_modules_of_literature O)</span>
+<span id="theta_local_inputs-L763"><a href="#theta_local_inputs-L763">763</a>  discreteSeriesCover := (_root_.UpperTheory.LiteratureTheorems.discrete_series_cover_of_literature O)</span>
+<span id="theta_local_inputs-L764"><a href="#theta_local_inputs-L764">764</a>  idealInvariantsOneOrbitSt := (_root_.UpperTheory.LiteratureTheorems.ideal_invariants_one_orbit_st_of_literature O)</span>
+<span id="theta_local_inputs-L765"><a href="#theta_local_inputs-L765">765</a>  hermitianHassePrinciple := (_root_.UpperTheory.LiteratureTheorems.hermitian_hasse_principle_of_literature O)</span>
+<span id="theta_local_inputs-L766"><a href="#theta_local_inputs-L766">766</a>  stoneVonNeumann := (_root_.UpperTheory.LiteratureTheorems.stone_von_neumann_of_literature O)</span>
+<span id="theta_local_inputs-L767"><a href="#theta_local_inputs-L767">767</a>  discreteSeriesUpqExists := (_root_.UpperTheory.LiteratureTheorems.discrete_series_upq_exists_of_literature O)</span>
+<span id="theta_local_inputs-L768"><a href="#theta_local_inputs-L768">768</a>  formalDegreeCompactDual := (_root_.UpperTheory.LiteratureTheorems.formal_degree_compact_dual_of_literature O)</span>
+<span id="theta_local_inputs-L769"><a href="#theta_local_inputs-L769">769</a>  thetaRationalInvariance := (_root_.UpperTheory.LiteratureTheorems.theta_rational_invariance_of_literature O)</span>
+<span id="theta_local_inputs-L770"><a href="#theta_local_inputs-L770">770</a>  discreteSeriesHermitianUnique := (_root_.UpperTheory.LiteratureTheorems.discrete_series_hermitian_unique_of_literature O)</span>
+<span id="theta_local_inputs-L771"><a href="#theta_local_inputs-L771">771</a>  discreteSeriesExists := (_root_.UpperTheory.LiteratureTheorems.discrete_series_exists_of_literature O)</span>
+<span id="theta_local_inputs-L772"><a href="#theta_local_inputs-L772">772</a>  harishChandraFinite := (_root_.UpperTheory.LiteratureTheorems.harish_chandra_finite_of_literature O)</span>
+<span id="theta_local_inputs-L773"><a href="#theta_local_inputs-L773">773</a>  cuspRapidDecay := (_root_.UpperTheory.LiteratureTheorems.cusp_rapid_decay_of_literature O)</span>
+<span id="theta_local_inputs-L774"><a href="#theta_local_inputs-L774">774</a>  weilRepresentationUnitaryPair := (_root_.UpperTheory.LiteratureTheorems.weil_representation_unitary_pair_of_literature O)</span>
+<span id="theta_local_inputs-L775"><a href="#theta_local_inputs-L775">775</a>  discreteSeriesCoverExists := (_root_.UpperTheory.LiteratureTheorems.discrete_series_cover_exists_of_literature O)</span>
+<span id="theta_local_inputs-L776"><a href="#theta_local_inputs-L776">776</a>  cuspDecaySobolev := (_root_.UpperTheory.LiteratureTheorems.cusp_decay_sobolev_of_literature O)</span>
+<span id="theta_local_inputs-L777"><a href="#theta_local_inputs-L777">777</a>  casselmanWallach := (_root_.UpperTheory.LiteratureTheorems.casselman_wallach_of_literature O)</span>
+<span id="theta_local_inputs-L778"><a href="#theta_local_inputs-L778">778</a>  howeDualityReal := (_root_.UpperTheory.LiteratureTheorems.howe_duality_real_of_literature O)</span>
+<span id="theta_local_inputs-L779"><a href="#theta_local_inputs-L779">779</a>  siegelSetUnitary := (_root_.UpperTheory.LiteratureTheorems.siegel_set_unitary_of_literature O)</span>
+<span id="theta_local_inputs-L780"><a href="#theta_local_inputs-L780">780</a>  weilRepresentationExists := (_root_.UpperTheory.LiteratureTheorems.weil_representation_exists_of_literature O)</span>
+</code></pre></section><section id="theta_matching"><h2><code>UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a><pre><code><span id="theta_matching-L565"><a href="#theta_matching-L565">565</a>theorem UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ThetaIntegralsAgree ∧ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.LocalMatching :=</span>
+<span id="theta_matching-L566"><a href="#theta_matching-L566">566</a>  PositivityTheory.ThKR.theoremK_head2 (_root_.UpperTheory.LiteratureTheorems.eis_bl_of_literature O) (_root_.UpperTheory.LiteratureTheorems.siegel_weil_std_of_literature O)</span>
+</code></pre></section><section id="definite_side"><h2><code>UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean</a><pre><code><span id="definite_side-L44"><a href="#definite_side-L44">44</a>theorem nonempty_hyps_definite_side_of_closed_bound : _root_.GlobalTheory.Fc.S0.UnitaryGroupThirdPlaceHypotheses → _root_.GlobalTheory.FunPr.ThetaLocalInputs → GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ThetaIntegralsAgree → GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.LocalMatching → _root_.GlobalTheory.CovTop.CovolumeBoundOfX → ∀ (hL : _root_.UpperTheory.Zero.LLC.RecTExists), (∀ cDep : ℝ, _root_.GlobalTheory.Fc.RL.LinkedAt (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL cDep) (fun Q L =&gt; _root_.GlobalTheory.Fc.R1.SlotNormCondition Q L fun 𝒞 =&gt; Formalism.MainNotions.Closed 𝒞 fun Fm _ =&gt; _root_.GlobalTheory.NLink.BoundAtTwoThreeFamilyFonAlt Fm)) → Nonempty (_root_.GlobalTheory.Fc.HypsAlt S0.NL _root_.GlobalTheory.Fc.DefiniteSideCondition) := by</span>
+<span id="definite_side-L45"><a href="#definite_side-L45">45</a>  intro P F hA hM hX hL hN</span>
+<span id="definite_side-L46"><a href="#definite_side-L46">46</a>  have C := P.litN</span>
+<span id="definite_side-L47"><a href="#definite_side-L47">47</a>  have hS : GlobalTheory.IndefiniteRowSideFullHecke.LevelPlusSubgroup.FunctionalsSeparate :=</span>
+<span id="definite_side-L48"><a href="#definite_side-L48">48</a>    _root_.UpperTheory.Lit.functionalsSeparate_of_howeUnram_of_siegelWeil F GlobalTheory.Hk3.howeUnram_holds P.siegelWeilUnitaryConvergent</span>
+<span id="definite_side-L49"><a href="#definite_side-L49">49</a>  have hRat : S0.RowRat := GlobalTheory.Mem.LiteralAutomorphy.rowRatW_of_rowTest (_root_.GlobalTheory.T.test_vector_assembly_holds F.siegelSetUnitary F.howeDualityReal</span>
+<span id="definite_side-L50"><a href="#definite_side-L50">50</a>    P.greenCuspidal F C.join C.fe hA hM hS)</span>
+<span id="definite_side-L51"><a href="#definite_side-L51">51</a>  have hFit : _root_.GlobalTheory.BigTop.Fun.ConstantFunctionFits @GlobalTheory.BigTop.Fun.Fld := _root_.GlobalTheory.BigTop.Fun.Close.fourier_coefficient_fit_of_join_alt F C.join C.fe hA hM hS (_root_.GlobalTheory.Fc.S0.ontoX_and_lamLow_of_unitaryGroupHypotheses&#x27; P).2</span>
+<span id="definite_side-L52"><a href="#definite_side-L52">52</a>  obtain ⟨CF1, hCF1⟩ := _root_.GlobalTheory.Mem.LiteralAutomorphy.evaluation_grid_of_join F.howeDualityReal hM F C.join C.fe hA</span>
+<span id="definite_side-L53"><a href="#definite_side-L53">53</a>    (_root_.GlobalTheory.WeilConv.twisted_weil_representation_convergence F.siegelSetUnitary F) (_root_.GlobalTheory.T.twisted_local_factors_match F.howeDualityReal F hA hM)</span>
+<span id="definite_side-L54"><a href="#definite_side-L54">54</a>    (_root_.GlobalTheory.T.twisted_square_theta_integrals_eq F hA hM) hS</span>
+<span id="definite_side-L55"><a href="#definite_side-L55">55</a>  obtain ⟨CF0, hCF0⟩ := _root_.GlobalTheory.Fc.StageOne.rowFun_at_gridA_alt P.discreteSeriesCover P.harishChandraModules P.cuspRapidDecay P.casselmanWallach</span>
+<span id="definite_side-L56"><a href="#definite_side-L56">56</a>    P.rayClassFieldSt hFit</span>
+<span id="definite_side-L57"><a href="#definite_side-L57">57</a>  have hEv : EvLgG (GridA (max CF0 CF1)) := hCF1 _ (le_max_right _ _)</span>
+<span id="definite_side-L58"><a href="#definite_side-L58">58</a>  have hOpen1 : _root_.GlobalTheory.Fc.S0.OpenParameterStatements (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL (max CF0 CF1)) := _root_.GlobalTheory.T.open0_of_unitary_group_hypotheses P hL (max CF0 CF1)</span>
+<span id="definite_side-L59"><a href="#definite_side-L59">59</a>  have hMono := _root_.GlobalTheory.Glob.open_and_linked_of_stronger_extension_alt hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithList hL (max CF0 CF1))</span>
+<span id="definite_side-L60"><a href="#definite_side-L60">60</a>    (_root_.GlobalTheory.Mem.LiteralAutomorphy.extensionWithAtProperty hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) (GridA (max CF0 CF1))) SExt.none (geoCl anyGeometry)</span>
+<span id="definite_side-L61"><a href="#definite_side-L61">61</a>    (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1.1⟩)</span>
+<span id="definite_side-L62"><a href="#definite_side-L62">62</a>  have hOpenA := hMono.2 hOpen1</span>
+<span id="definite_side-L63"><a href="#definite_side-L63">63</a>  have hFun := hCF0 (max CF0 CF1) (le_max_left _ _) hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) SExt.none (geoCl anyGeometry)</span>
+<span id="definite_side-L64"><a href="#definite_side-L64">64</a>    (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1⟩) hOpenA</span>
+<span id="definite_side-L65"><a href="#definite_side-L65">65</a>  have hL3 := _root_.GlobalTheory.Glob.CovolRow.linked_bundles_l3_of_open_alt P.discreteSeriesCover P.harishChandraModules P.cuspRapidDecay</span>
+<span id="definite_side-L66"><a href="#definite_side-L66">66</a>    P.casselmanWallach P.rayClassFieldSt hX hL (_root_.GlobalTheory.Mem.LiteralAutomorphy.extensionWithAtProperty hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) (GridA (max CF0 CF1)))</span>
+<span id="definite_side-L67"><a href="#definite_side-L67">67</a>    SExt.none (geoCl anyGeometry) (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1.1.1⟩) hOpenA</span>
+<span id="definite_side-L68"><a href="#definite_side-L68">68</a>  exact _root_.GlobalTheory.Fc.S0.StageU.hypotheses_nonempty_of_unramified_exponents_alt P hRat hL (max CF0 CF1) (GridA (max CF0 CF1)) hEv (hN (max CF0 CF1)) hFun hL3</span>
+</code></pre></section><section id="family_zero_free"><h2><code>UpperTheory.Top.zeroFreeAll_of_topG</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean">Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean</a><pre><code><span id="family_zero_free-L26"><a href="#family_zero_free-L26">26</a>theorem zeroFreeAll_of_topG {la : ℝ} (hla : 1 &lt; la) (h : TopG) (hS : ∀ ψ : PChar, HostExW la (GChi ψ).req) : ZeroFreeAll := by</span>
+<span id="family_zero_free-L27"><a href="#family_zero_free-L27">27</a>  have key : ZeroFreeOn fun _ =&gt; True :=</span>
+<span id="family_zero_free-L28"><a href="#family_zero_free-L28">28</a>    zeroFreeOn_of_tiedWin_cyc (Fam := FamP) (core := fun Fm =&gt; Fm.toFamCore) (Tied := fun Fm =&gt; ChainTied Fm) hla</span>
+<span id="family_zero_free-L29"><a href="#family_zero_free-L29">29</a>      (fun ψ _ =&gt; UpperTheory.Comparison₂.level_gm_le_on_family_scales _) (fun ψ _ =&gt; UpperTheory.Comparison₂.formB _) fun ψ _ =&gt; by</span>
+<span id="family_zero_free-L30"><a href="#family_zero_free-L30">30</a>        obtain ⟨eD, eL, ε₁, h1, h2⟩ := h la (GChi ψ) hla (hS ψ) (hypV_of_cls ψ la)</span>
+<span id="family_zero_free-L31"><a href="#family_zero_free-L31">31</a>        refine ⟨eD, eL, ε₁, h1, fun eps a b =&gt; ?_⟩</span>
+<span id="family_zero_free-L32"><a href="#family_zero_free-L32">32</a>        obtain ⟨Fm, c, d⟩ := h2 eps a b</span>
+<span id="family_zero_free-L33"><a href="#family_zero_free-L33">33</a>        exact ⟨Fm, eFamC_of_cls ψ la Fm c, c.1, d⟩</span>
+<span id="family_zero_free-L34"><a href="#family_zero_free-L34">34</a>  exact key</span>
+</code></pre></section><section id="primitive_zero_free"><h2><code>UpperTheory.Top.zero_free_all_of_green_v_win</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean</a><pre><code><span id="primitive_zero_free-L12"><a href="#primitive_zero_free-L12">12</a>theorem UpperTheory.Top.zero_free_all_of_green_v_win (hG : GlobalTheory.GLq.Green) (hV : UpperTheory.Top.VWin)</span>
+<span id="primitive_zero_free-L13"><a href="#primitive_zero_free-L13">13</a>    (h : Nonempty (_root_.GlobalTheory.Fc.HypsAlt (fun 𝒞 =&gt; Closed 𝒞 fun Fm _ =&gt; LinkN Fm) _root_.GlobalTheory.Fc.DefiniteSideCondition)) : Formalism.HC.ZeroFreeAll :=</span>
+<span id="primitive_zero_free-L14"><a href="#primitive_zero_free-L14">14</a>  h.elim fun h =&gt; UpperTheory.Top.zeroFreeAll_of_topG (la := 3 / 2) (by norm_num)</span>
+<span id="primitive_zero_free-L15"><a href="#primitive_zero_free-L15">15</a>    (_root_.GlobalTheory.Fc.forall_goal_of_shape_of_hyps _ _ _ _ (_root_.UpperTheory.Top.shape_closed_link_n_of_green hG) trivial trivial h) fun ψ =&gt; UpperTheory.Top.supplyChi ψ (hV ψ)</span>
+</code></pre></section><section id="change_of_level"><h2><code>UpperTheory.Top.imprimitive</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean">Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean</a><pre><code><span id="change_of_level-L5"><a href="#change_of_level-L5">5</a>theorem UpperTheory.Top.imprimitive :</span>
+<span id="change_of_level-L6"><a href="#change_of_level-L6">6</a>    ZeroFreeAll → ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 1 / 2 &lt; s.re → (χ ≠ 1 ∨ s ≠ 1) →</span>
+<span id="change_of_level-L7"><a href="#change_of_level-L7">7</a>      DirichletCharacter.LFunction χ s ≠ 0 := by</span>
+<span id="change_of_level-L8"><a href="#change_of_level-L8">8</a>  intro h N _ χ s hs hχs</span>
+<span id="change_of_level-L9"><a href="#change_of_level-L9">9</a>  haveI : NeZero χ.conductor := (PChar.of χ).ne</span>
+<span id="change_of_level-L10"><a href="#change_of_level-L10">10</a>  have hL : DirichletCharacter.LFunction χ.primitiveCharacter s ≠ 0 := h (PChar.of χ) trivial s hs</span>
+<span id="change_of_level-L11"><a href="#change_of_level-L11">11</a>  have hχ&#x27; : χ.primitiveCharacter ≠ 1 ∨ s ≠ 1 := by</span>
+<span id="change_of_level-L12"><a href="#change_of_level-L12">12</a>    rcases hχs with hχ | hs1</span>
+<span id="change_of_level-L13"><a href="#change_of_level-L13">13</a>    · left</span>
+<span id="change_of_level-L14"><a href="#change_of_level-L14">14</a>      intro h1</span>
+<span id="change_of_level-L15"><a href="#change_of_level-L15">15</a>      apply hχ</span>
+<span id="change_of_level-L16"><a href="#change_of_level-L16">16</a>      rw [← χ.changeLevel_primitiveCharacter, h1, DirichletCharacter.changeLevel_one]</span>
+<span id="change_of_level-L17"><a href="#change_of_level-L17">17</a>    · exact Or.inr hs1</span>
+<span id="change_of_level-L18"><a href="#change_of_level-L18">18</a>  have hrw := DirichletCharacter.LFunction_changeLevel χ.conductor_dvd_level χ.primitiveCharacter hχ&#x27;</span>
+<span id="change_of_level-L19"><a href="#change_of_level-L19">19</a>  rw [χ.changeLevel_primitiveCharacter] at hrw</span>
+<span id="change_of_level-L20"><a href="#change_of_level-L20">20</a>  rw [hrw]</span>
+<span id="change_of_level-L21"><a href="#change_of_level-L21">21</a>  refine mul_ne_zero hL (Finset.prod_ne_zero_iff.mpr fun p hp =&gt; ?_)</span>
+<span id="change_of_level-L22"><a href="#change_of_level-L22">22</a>  have hp&#x27; := Nat.prime_of_mem_primeFactors hp</span>
+<span id="change_of_level-L23"><a href="#change_of_level-L23">23</a>  intro h0</span>
+<span id="change_of_level-L24"><a href="#change_of_level-L24">24</a>  have key : χ.primitiveCharacter p * (p : ℂ) ^ (-s) = 1 := by linear_combination -h0</span>
+<span id="change_of_level-L25"><a href="#change_of_level-L25">25</a>  have h1 : ‖χ.primitiveCharacter (p : ZMod χ.conductor)‖ ≤ 1 := DirichletCharacter.norm_le_one _ _</span>
+<span id="change_of_level-L26"><a href="#change_of_level-L26">26</a>  have h2 : ‖(p : ℂ) ^ (-s)‖ &lt; 1 := by</span>
+<span id="change_of_level-L27"><a href="#change_of_level-L27">27</a>    rw [Complex.norm_natCast_cpow_of_pos hp&#x27;.pos, Complex.neg_re]</span>
+<span id="change_of_level-L28"><a href="#change_of_level-L28">28</a>    exact Real.rpow_lt_one_of_one_lt_of_neg (by exact_mod_cast hp&#x27;.one_lt) (by linarith)</span>
+<span id="change_of_level-L29"><a href="#change_of_level-L29">29</a>  have hn : ‖χ.primitiveCharacter p * (p : ℂ) ^ (-s)‖ &lt; 1 := by</span>
+<span id="change_of_level-L30"><a href="#change_of_level-L30">30</a>    rw [norm_mul]</span>
+<span id="change_of_level-L31"><a href="#change_of_level-L31">31</a>    calc ‖χ.primitiveCharacter (p : ZMod χ.conductor)‖ * ‖(p : ℂ) ^ (-s)‖</span>
+<span id="change_of_level-L32"><a href="#change_of_level-L32">32</a>        ≤ 1 * ‖(p : ℂ) ^ (-s)‖ := by gcongr</span>
+<span id="change_of_level-L33"><a href="#change_of_level-L33">33</a>      _ &lt; 1 := by simpa using h2</span>
+<span id="change_of_level-L34"><a href="#change_of_level-L34">34</a>  rw [key, norm_one] at hn</span>
+<span id="change_of_level-L35"><a href="#change_of_level-L35">35</a>  exact lt_irrefl _ hn</span>
+</code></pre></section><section id="all_levels"><h2><code>UpperTheory.Top.every_character_of_green_v_win</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean</a><pre><code><span id="all_levels-L16"><a href="#all_levels-L16">16</a>theorem UpperTheory.Top.every_character_of_green_v_win (hG : GlobalTheory.GLq.Green) (hV : UpperTheory.Top.VWin)</span>
+<span id="all_levels-L17"><a href="#all_levels-L17">17</a>    (h : Nonempty (_root_.GlobalTheory.Fc.HypsAlt (fun 𝒞 =&gt; Closed 𝒞 fun Fm _ =&gt; LinkN Fm) _root_.GlobalTheory.Fc.DefiniteSideCondition)) : UpperTheory.EveryCharacter :=</span>
+<span id="all_levels-L18"><a href="#all_levels-L18">18</a>  UpperTheory.Top.imprimitive (_root_.UpperTheory.Top.zero_free_all_of_green_v_win hG hV h)</span>
+</code></pre></section><section id="theta_to_nonvanishing"><h2><code>UpperTheory.Lit.every_character_of_theta_integrals_local_matching</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean</a><pre><code><span id="theta_to_nonvanishing-L69"><a href="#theta_to_nonvanishing-L69">69</a>theorem every_character_of_theta_integrals_local_matching (P : _root_.GlobalTheory.Fc.S0.UnitaryGroupThirdPlaceHypotheses) (F : _root_.GlobalTheory.FunPr.ThetaLocalInputs) (hA : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ThetaIntegralsAgree)</span>
+<span id="theta_to_nonvanishing-L70"><a href="#theta_to_nonvanishing-L70">70</a>    (hM : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.LocalMatching) (hX : _root_.GlobalTheory.CovTop.CovolumeBoundOfX) (hL : _root_.UpperTheory.Zero.LLC.RecTExists) (hV : VWin) :</span>
+<span id="theta_to_nonvanishing-L71"><a href="#theta_to_nonvanishing-L71">71</a>    UpperTheory.EveryCharacter :=</span>
+<span id="theta_to_nonvanishing-L72"><a href="#theta_to_nonvanishing-L72">72</a>  _root_.UpperTheory.Top.every_character_of_green_v_win (GlobalTheory.GreenBridge.green_of_regular P.greenRegularCharacters) hV</span>
+<span id="theta_to_nonvanishing-L73"><a href="#theta_to_nonvanishing-L73">73</a>    (_root_.UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound P F hA hM hX hL fun cDep =&gt; _root_.UpperTheory.N.boundAtTwoThree_linked_of_recT P.nLink (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL cDep))</span>
+</code></pre></section><section id="literature_to_nonvanishing"><h2><code>UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a><pre><code><span id="literature_to_nonvanishing-L810"><a href="#literature_to_nonvanishing-L810">810</a>theorem UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) (hV : UpperTheory.Top.VWin) : UpperTheory.EveryCharacter :=</span>
+<span id="literature_to_nonvanishing-L811"><a href="#literature_to_nonvanishing-L811">811</a>  _root_.UpperTheory.Lit.every_character_of_theta_integrals_local_matching (_root_.UpperTheory.LiteratureTheorems.published_results_eigen O) (_root_.UpperTheory.LiteratureTheorems.published_results_first O) (_root_.UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature O).1 (_root_.UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature O).2</span>
+<span id="literature_to_nonvanishing-L812"><a href="#literature_to_nonvanishing-L812">812</a>    (_root_.SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt (_root_.UpperTheory.LiteratureTheorems.resolution_char_zero_of_literature O) (_root_.UpperTheory.LiteratureTheorems.principalisation_char_zero_of_literature O) (_root_.UpperTheory.LiteratureTheorems.poincare_lelong_inv_of_literature O) PositivityTheory.Pf1.HilbertSamuelMoriwaki.hsUse_outright PositivityTheory.Pf1.HilbertSamuelMoriwaki.moriwakiBig_outright (_root_.UpperTheory.LiteratureTheorems.fargues_exact_of_literature O) (_root_.UpperTheory.LiteratureTheorems.zarhin_statement O) (_root_.UpperTheory.LiteratureTheorems.nef_rr_of_literature O) (_root_.UpperTheory.LiteratureTheorems.siegel_toroidal_integral_of_literature O) (_root_.UpperTheory.LiteratureTheorems.toroidal_for_fan_ks_of_literature O) (_root_.UpperTheory.LiteratureTheorems.semi_abelian_lie_seminegative_of_literature O) (_root_.UpperTheory.LiteratureTheorems.point_separation_pair_of_literature O) (_root_.UpperTheory.LiteratureTheorems.ar_degree_of_literature O) (_root_.UpperTheory.LiteratureTheorems.published_results_arithmetic O) (_root_.UpperTheory.LiteratureTheorems.grothendieck_deformation_of_literature O))</span>
+<span id="literature_to_nonvanishing-L813"><a href="#literature_to_nonvanishing-L813">813</a>    (_root_.UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature O) hV</span>
+</code></pre></section><section id="row_to_nonvanishing"><h2><code>UpperTheory.FinalTheorems.everyCharacter_of_row</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean">Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean</a><pre><code><span id="row_to_nonvanishing-L7"><a href="#row_to_nonvanishing-L7">7</a>theorem UpperTheory.FinalTheorems.everyCharacter_of_row (h : UpperTheory.GalStar.Row0b fun h rc =&gt; UpperTheory.Zero.LLC.IsRecT h rc) : UpperTheory.EveryCharacter :=</span>
+<span id="row_to_nonvanishing-L8"><a href="#row_to_nonvanishing-L8">8</a>  UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin ⟨h, UpperTheory.Zero.LLC.recTExists, h⟩ (UpperTheory.One.vwin_of_row h)</span>
+</code></pre></section><section id="every_character"><h2><code>UpperTheory.FinalTheorems.everyCharacter</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean">Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean</a><pre><code><span id="every_character-L10"><a href="#every_character-L10">10</a>theorem UpperTheory.FinalTheorems.everyCharacter : UpperTheory.EveryCharacter :=</span>
+<span id="every_character-L11"><a href="#every_character-L11">11</a>  UpperTheory.FinalTheorems.everyCharacter_of_row UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter</span>
+</code></pre></section><section id="Euler_factor"><h2><code>Claim.factor_ne_zero</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="Euler_factor-L7"><a href="#Euler_factor-L7">7</a>theorem factor_ne_zero {M : ℕ} (ψ : DirichletCharacter ℂ M) {s : ℂ} (hs : 0 &lt; s.re) (p : ℕ)</span>
+<span id="Euler_factor-L8"><a href="#Euler_factor-L8">8</a>    (hp : p.Prime) : (1 : ℂ) - ψ p * (p : ℂ) ^ (-s) ≠ 0 := by</span>
+<span id="Euler_factor-L9"><a href="#Euler_factor-L9">9</a>  intro h</span>
+<span id="Euler_factor-L10"><a href="#Euler_factor-L10">10</a>  have h1 : ψ p * (p : ℂ) ^ (-s) = 1 := by linear_combination -h</span>
+<span id="Euler_factor-L11"><a href="#Euler_factor-L11">11</a>  have hp1 : (1 : ℝ) &lt; p := by exact_mod_cast hp.one_lt</span>
+<span id="Euler_factor-L12"><a href="#Euler_factor-L12">12</a>  have hpow : ‖(p : ℂ) ^ (-s)‖ &lt; 1 := by</span>
+<span id="Euler_factor-L13"><a href="#Euler_factor-L13">13</a>    rw [Complex.norm_natCast_cpow_of_pos hp.pos, Complex.neg_re]</span>
+<span id="Euler_factor-L14"><a href="#Euler_factor-L14">14</a>    exact Real.rpow_lt_one_of_one_lt_of_neg hp1 (by linarith)</span>
+<span id="Euler_factor-L15"><a href="#Euler_factor-L15">15</a>  have hn : ‖ψ p * (p : ℂ) ^ (-s)‖ &lt; 1 := by</span>
+<span id="Euler_factor-L16"><a href="#Euler_factor-L16">16</a>    rw [norm_mul]</span>
+<span id="Euler_factor-L17"><a href="#Euler_factor-L17">17</a>    calc ‖ψ p‖ * ‖(p : ℂ) ^ (-s)‖ ≤ 1 * ‖(p : ℂ) ^ (-s)‖ := by</span>
+<span id="Euler_factor-L18"><a href="#Euler_factor-L18">18</a>          gcongr; exact ψ.norm_le_one _</span>
+<span id="Euler_factor-L19"><a href="#Euler_factor-L19">19</a>      _ &lt; 1 := by rw [one_mul]; exact hpow</span>
+<span id="Euler_factor-L20"><a href="#Euler_factor-L20">20</a>  rw [h1, norm_one] at hn</span>
+<span id="Euler_factor-L21"><a href="#Euler_factor-L21">21</a>  exact lt_irrefl _ hn</span>
+</code></pre></section><section id="primitive_zero"><h2><code>Claim.prim_zero</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="primitive_zero-L23"><a href="#primitive_zero-L23">23</a>theorem prim_zero {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N) [NeZero χ.conductor] {s : ℂ}</span>
+<span id="primitive_zero-L24"><a href="#primitive_zero-L24">24</a>    (hs0 : 0 &lt; s.re) (hs1 : s.re &lt; 1) (h : DirichletCharacter.LFunction χ s = 0) :</span>
+<span id="primitive_zero-L25"><a href="#primitive_zero-L25">25</a>    DirichletCharacter.LFunction χ.primitiveCharacter s = 0 := by</span>
+<span id="primitive_zero-L26"><a href="#primitive_zero-L26">26</a>  have hs : s ≠ 1 := fun e =&gt; by rw [e, Complex.one_re] at hs1; exact lt_irrefl _ hs1</span>
+<span id="primitive_zero-L27"><a href="#primitive_zero-L27">27</a>  have key := DirichletCharacter.LFunction_changeLevel χ.conductor_dvd_level</span>
+<span id="primitive_zero-L28"><a href="#primitive_zero-L28">28</a>    χ.primitiveCharacter (Or.inr hs)</span>
+<span id="primitive_zero-L29"><a href="#primitive_zero-L29">29</a>  rw [χ.changeLevel_primitiveCharacter, h] at key</span>
+<span id="primitive_zero-L30"><a href="#primitive_zero-L30">30</a>  rcases mul_eq_zero.mp key.symm with h&#x27; | h&#x27;</span>
+<span id="primitive_zero-L31"><a href="#primitive_zero-L31">31</a>  · exact h&#x27;</span>
+<span id="primitive_zero-L32"><a href="#primitive_zero-L32">32</a>  · obtain ⟨p, hp, hp0⟩ := Finset.prod_eq_zero_iff.mp h&#x27;</span>
+<span id="primitive_zero-L33"><a href="#primitive_zero-L33">33</a>    exact absurd hp0 (factor_ne_zero _ hs0 p (Nat.prime_of_mem_primeFactors hp))</span>
+</code></pre></section><section id="strip_gamma"><h2><code>Claim.gamma_ne_zero</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="strip_gamma-L35"><a href="#strip_gamma-L35">35</a>theorem gamma_ne_zero {M : ℕ} [NeZero M] (φ : DirichletCharacter ℂ M) {t : ℂ} (ht : 0 &lt; t.re) :</span>
+<span id="strip_gamma-L36"><a href="#strip_gamma-L36">36</a>    DirichletCharacter.gammaFactor φ t ≠ 0 := by</span>
+<span id="strip_gamma-L37"><a href="#strip_gamma-L37">37</a>  rcases φ.even_or_odd with hφ | hφ</span>
+<span id="strip_gamma-L38"><a href="#strip_gamma-L38">38</a>  · rw [hφ.gammaFactor_def]; exact Complex.Gammaℝ_ne_zero_of_re_pos ht</span>
+<span id="strip_gamma-L39"><a href="#strip_gamma-L39">39</a>  · rw [hφ.gammaFactor_def]</span>
+<span id="strip_gamma-L40"><a href="#strip_gamma-L40">40</a>    exact Complex.Gammaℝ_ne_zero_of_re_pos (by rw [Complex.add_re, Complex.one_re]; linarith)</span>
+</code></pre></section><section id="reflect_zero"><h2><code>Claim.prim_reflect</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="reflect_zero-L42"><a href="#reflect_zero-L42">42</a>theorem prim_reflect {M : ℕ} [NeZero M] (ψ : DirichletCharacter ℂ M) (hψ : ψ.IsPrimitive) {s : ℂ}</span>
+<span id="reflect_zero-L43"><a href="#reflect_zero-L43">43</a>    (hs0 : 0 &lt; s.re) (hs1 : s.re &lt; 1) (h : DirichletCharacter.LFunction ψ s = 0) :</span>
+<span id="reflect_zero-L44"><a href="#reflect_zero-L44">44</a>    DirichletCharacter.LFunction ψ⁻¹ (1 - s) = 0 := by</span>
+<span id="reflect_zero-L45"><a href="#reflect_zero-L45">45</a>  have hs0&#x27; : s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at hs0; exact lt_irrefl _ hs0</span>
+<span id="reflect_zero-L46"><a href="#reflect_zero-L46">46</a>  have ht0 : 0 &lt; (1 - s).re := by rw [Complex.sub_re, Complex.one_re]; linarith</span>
+<span id="reflect_zero-L47"><a href="#reflect_zero-L47">47</a>  have ht0&#x27; : 1 - s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at ht0; exact lt_irrefl _ ht0</span>
+<span id="reflect_zero-L48"><a href="#reflect_zero-L48">48</a>  have hc : DirichletCharacter.completedLFunction ψ s = 0 := by</span>
+<span id="reflect_zero-L49"><a href="#reflect_zero-L49">49</a>    rw [DirichletCharacter.LFunction_eq_completed_div_gammaFactor ψ s (Or.inl hs0&#x27;),</span>
+<span id="reflect_zero-L50"><a href="#reflect_zero-L50">50</a>      div_eq_zero_iff] at h</span>
+<span id="reflect_zero-L51"><a href="#reflect_zero-L51">51</a>    exact h.resolve_right (gamma_ne_zero ψ hs0)</span>
+<span id="reflect_zero-L52"><a href="#reflect_zero-L52">52</a>  have hψ&#x27; : (ψ⁻¹).IsPrimitive := by</span>
+<span id="reflect_zero-L53"><a href="#reflect_zero-L53">53</a>    rw [DirichletCharacter.isPrimitive_def, DirichletCharacter.conductor_inv]; exact hψ</span>
+<span id="reflect_zero-L54"><a href="#reflect_zero-L54">54</a>  have fe := hψ&#x27;.completedLFunction_one_sub s</span>
+<span id="reflect_zero-L55"><a href="#reflect_zero-L55">55</a>  rw [inv_inv, hc, mul_zero] at fe</span>
+<span id="reflect_zero-L56"><a href="#reflect_zero-L56">56</a>  rw [DirichletCharacter.LFunction_eq_completed_div_gammaFactor ψ⁻¹ (1 - s) (Or.inl ht0&#x27;), fe,</span>
+<span id="reflect_zero-L57"><a href="#reflect_zero-L57">57</a>    zero_div]</span>
+</code></pre></section><section id="Dirichlet_strip"><h2><code>Claim.strip</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="Dirichlet_strip-L59"><a href="#Dirichlet_strip-L59">59</a>theorem strip (h : HalfPlane) : Strip := by</span>
+<span id="Dirichlet_strip-L60"><a href="#Dirichlet_strip-L60">60</a>  unfold HalfPlane at h</span>
+<span id="Dirichlet_strip-L61"><a href="#Dirichlet_strip-L61">61</a>  intro N _ χ s hs0 hs1 hz</span>
+<span id="Dirichlet_strip-L62"><a href="#Dirichlet_strip-L62">62</a>  have hs : s ≠ 1 := fun e =&gt; by rw [e, Complex.one_re] at hs1; exact lt_irrefl _ hs1</span>
+<span id="Dirichlet_strip-L63"><a href="#Dirichlet_strip-L63">63</a>  have hs0&#x27; : s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at hs0; exact lt_irrefl _ hs0</span>
+<span id="Dirichlet_strip-L64"><a href="#Dirichlet_strip-L64">64</a>  rcases lt_trichotomy s.re (1 / 2) with hlt | heq | hgt</span>
+<span id="Dirichlet_strip-L65"><a href="#Dirichlet_strip-L65">65</a>  · exfalso</span>
+<span id="Dirichlet_strip-L66"><a href="#Dirichlet_strip-L66">66</a>    haveI : NeZero χ.conductor := ⟨χ.conductor_ne_zero⟩</span>
+<span id="Dirichlet_strip-L67"><a href="#Dirichlet_strip-L67">67</a>    have hp := prim_zero χ hs0 hs1 hz</span>
+<span id="Dirichlet_strip-L68"><a href="#Dirichlet_strip-L68">68</a>    have hr := prim_reflect χ.primitiveCharacter χ.primitiveCharacter_isPrimitive hs0 hs1 hp</span>
+<span id="Dirichlet_strip-L69"><a href="#Dirichlet_strip-L69">69</a>    have ht : (1 : ℂ) - s ≠ 1 := fun e =&gt; hs0&#x27; (sub_eq_self.mp e)</span>
+<span id="Dirichlet_strip-L70"><a href="#Dirichlet_strip-L70">70</a>    exact h χ.conductor χ.primitiveCharacter⁻¹ (1 - s)</span>
+<span id="Dirichlet_strip-L71"><a href="#Dirichlet_strip-L71">71</a>      (by rw [Complex.sub_re, Complex.one_re]; linarith) (Or.inr ht) hr</span>
+<span id="Dirichlet_strip-L72"><a href="#Dirichlet_strip-L72">72</a>  · exact heq</span>
+<span id="Dirichlet_strip-L73"><a href="#Dirichlet_strip-L73">73</a>  · exact absurd hz (h N χ s hgt (Or.inr hs))</span>
+</code></pre></section><section id="zeta_claim"><h2><code>Claim.zeta</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a><pre><code><span id="zeta_claim-L75"><a href="#zeta_claim-L75">75</a>theorem zeta (h : HalfPlane) : Zeta := by</span>
+<span id="zeta_claim-L76"><a href="#zeta_claim-L76">76</a>  intro s hz htriv hs1</span>
+<span id="zeta_claim-L77"><a href="#zeta_claim-L77">77</a>  have hs0 : s ≠ 0 := fun e =&gt; by rw [e, riemannZeta_zero] at hz; norm_num at hz</span>
+<span id="zeta_claim-L78"><a href="#zeta_claim-L78">78</a>  rcases lt_or_ge 0 s.re with hpos | hnpos</span>
+<span id="zeta_claim-L79"><a href="#zeta_claim-L79">79</a>  · rcases lt_or_ge s.re 1 with hlt1 | hge1</span>
+<span id="zeta_claim-L80"><a href="#zeta_claim-L80">80</a>    · have hL : DirichletCharacter.LFunction (1 : DirichletCharacter ℂ 1) s = 0 := by</span>
+<span id="zeta_claim-L81"><a href="#zeta_claim-L81">81</a>        rw [DirichletCharacter.LFunction_modOne_eq]; exact hz</span>
+<span id="zeta_claim-L82"><a href="#zeta_claim-L82">82</a>      exact strip h 1 1 s hpos hlt1 hL</span>
+<span id="zeta_claim-L83"><a href="#zeta_claim-L83">83</a>    · exact absurd hz (riemannZeta_ne_zero_of_one_le_re hge1)</span>
+<span id="zeta_claim-L84"><a href="#zeta_claim-L84">84</a>  · exfalso</span>
+<span id="zeta_claim-L85"><a href="#zeta_claim-L85">85</a>    have hG : Gammaℝ s ≠ 0 := by</span>
+<span id="zeta_claim-L86"><a href="#zeta_claim-L86">86</a>      intro hg</span>
+<span id="zeta_claim-L87"><a href="#zeta_claim-L87">87</a>      obtain ⟨n, hn⟩ := Complex.Gammaℝ_eq_zero_iff.mp hg</span>
+<span id="zeta_claim-L88"><a href="#zeta_claim-L88">88</a>      rcases n with _ | n</span>
+<span id="zeta_claim-L89"><a href="#zeta_claim-L89">89</a>      · exact hs0 (by simpa using hn)</span>
+<span id="zeta_claim-L90"><a href="#zeta_claim-L90">90</a>      · exact htriv ⟨n, by rw [hn]; push_cast; ring⟩</span>
+<span id="zeta_claim-L91"><a href="#zeta_claim-L91">91</a>    have hc : completedRiemannZeta s = 0 := by</span>
+<span id="zeta_claim-L92"><a href="#zeta_claim-L92">92</a>      rw [riemannZeta_def_of_ne_zero hs0, div_eq_zero_iff] at hz</span>
+<span id="zeta_claim-L93"><a href="#zeta_claim-L93">93</a>      exact hz.resolve_right hG</span>
+<span id="zeta_claim-L94"><a href="#zeta_claim-L94">94</a>    have h1s : 1 - s ≠ 0 := fun e =&gt; by</span>
+<span id="zeta_claim-L95"><a href="#zeta_claim-L95">95</a>      have := congrArg Complex.re e</span>
+<span id="zeta_claim-L96"><a href="#zeta_claim-L96">96</a>      rw [Complex.sub_re, Complex.one_re, Complex.zero_re] at this</span>
+<span id="zeta_claim-L97"><a href="#zeta_claim-L97">97</a>      linarith</span>
+<span id="zeta_claim-L98"><a href="#zeta_claim-L98">98</a>    have hz&#x27; : riemannZeta (1 - s) = 0 := by</span>
+<span id="zeta_claim-L99"><a href="#zeta_claim-L99">99</a>      rw [riemannZeta_def_of_ne_zero h1s, completedRiemannZeta_one_sub, hc, zero_div]</span>
+<span id="zeta_claim-L100"><a href="#zeta_claim-L100">100</a>    exact riemannZeta_ne_zero_of_one_le_re (by rw [Complex.sub_re, Complex.one_re]; linarith) hz&#x27;</span>
+</code></pre></section><section id="primitive_gamma"><h2><code>Formalism.VW.gammaFactor_ne_zero</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a><pre><code><span id="primitive_gamma-L6"><a href="#primitive_gamma-L6">6</a>theorem Formalism.VW.gammaFactor_ne_zero {N : ℕ} (χ : DirichletCharacter ℂ N) {s : ℂ} (hs : 0 &lt; s.re) : gammaFactor χ s ≠ 0 := by</span>
+<span id="primitive_gamma-L7"><a href="#primitive_gamma-L7">7</a>  rcases χ.even_or_odd with h | h</span>
+<span id="primitive_gamma-L8"><a href="#primitive_gamma-L8">8</a>  · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos hs</span>
+<span id="primitive_gamma-L9"><a href="#primitive_gamma-L9">9</a>  · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos (by rw [add_re, one_re]; linarith)</span>
+</code></pre></section><section id="primitive_line"><h2><code>Formalism.VW.critLine</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a><pre><code><span id="primitive_line-L11"><a href="#primitive_line-L11">11</a>theorem Formalism.VW.critLine (h : UpperTheory.EveryCharacter) (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)</span>
+<span id="primitive_line-L12"><a href="#primitive_line-L12">12</a>    (h0 : 0 &lt; s.re) (h1 : s.re &lt; 1) (hz : LFunction χ s = 0) : s.re = 1 / 2 := by</span>
+<span id="primitive_line-L13"><a href="#primitive_line-L13">13</a>  have hs0 : s ≠ 0 := fun e =&gt; by simp [e] at h0</span>
+<span id="primitive_line-L14"><a href="#primitive_line-L14">14</a>  have hs1 : s ≠ 1 := fun e =&gt; by simp [e] at h1</span>
+<span id="primitive_line-L15"><a href="#primitive_line-L15">15</a>  by_contra hne</span>
+<span id="primitive_line-L16"><a href="#primitive_line-L16">16</a>  rcases lt_or_gt_of_ne hne with hlt | hgt</span>
+<span id="primitive_line-L17"><a href="#primitive_line-L17">17</a>  · have hinv : χ⁻¹.IsPrimitive := by</span>
+<span id="primitive_line-L18"><a href="#primitive_line-L18">18</a>      rw [isPrimitive_def, conductor_inv]; exact hχ</span>
+<span id="primitive_line-L19"><a href="#primitive_line-L19">19</a>    have hc : completedLFunction χ s = 0 := by</span>
+<span id="primitive_line-L20"><a href="#primitive_line-L20">20</a>      rw [LFunction_eq_completed_div_gammaFactor χ s (Or.inl hs0)] at hz</span>
+<span id="primitive_line-L21"><a href="#primitive_line-L21">21</a>      exact (div_eq_zero_iff.1 hz).resolve_right (Formalism.VW.gammaFactor_ne_zero χ h0)</span>
+<span id="primitive_line-L22"><a href="#primitive_line-L22">22</a>    have hfe := hinv.completedLFunction_one_sub s</span>
+<span id="primitive_line-L23"><a href="#primitive_line-L23">23</a>    rw [inv_inv, hc, mul_zero] at hfe</span>
+<span id="primitive_line-L24"><a href="#primitive_line-L24">24</a>    have h2 : (1 - s) ≠ 0 := sub_ne_zero.2 hs1.symm</span>
+<span id="primitive_line-L25"><a href="#primitive_line-L25">25</a>    refine h N χ⁻¹ (1 - s) (by rw [sub_re, one_re]; linarith) (Or.inr fun e =&gt; hs0 (by linear_combination -e)) ?_</span>
+<span id="primitive_line-L26"><a href="#primitive_line-L26">26</a>    rw [LFunction_eq_completed_div_gammaFactor χ⁻¹ (1 - s) (Or.inl h2), hfe, zero_div]</span>
+<span id="primitive_line-L27"><a href="#primitive_line-L27">27</a>  · exact h N χ s hgt (Or.inr hs1) hz</span>
+</code></pre></section><section id="zeta_reflection"><h2><code>Formalism.VW.rh_of_right</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/RhOfRight.lean">Formalism/GammaFactorNonvanishing/RhOfRight.lean</a><pre><code><span id="zeta_reflection-L5"><a href="#zeta_reflection-L5">5</a>theorem Formalism.VW.rh_of_right (hz : ∀ s : ℂ, 1 / 2 &lt; s.re → s ≠ 1 → riemannZeta s ≠ 0) : RiemannHypothesis := by</span>
+<span id="zeta_reflection-L6"><a href="#zeta_reflection-L6">6</a>  unfold RiemannHypothesis</span>
+<span id="zeta_reflection-L7"><a href="#zeta_reflection-L7">7</a>  intro s hs htriv hs1</span>
+<span id="zeta_reflection-L8"><a href="#zeta_reflection-L8">8</a>  rcases lt_trichotomy s.re (1 / 2) with hlt | heq | hgt</span>
+<span id="zeta_reflection-L9"><a href="#zeta_reflection-L9">9</a>  · exfalso</span>
+<span id="zeta_reflection-L10"><a href="#zeta_reflection-L10">10</a>    have hpi : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero</span>
+<span id="zeta_reflection-L11"><a href="#zeta_reflection-L11">11</a>    have hs0 : s ≠ 0 := by</span>
+<span id="zeta_reflection-L12"><a href="#zeta_reflection-L12">12</a>      rintro rfl</span>
+<span id="zeta_reflection-L13"><a href="#zeta_reflection-L13">13</a>      rw [riemannZeta_zero] at hs</span>
+<span id="zeta_reflection-L14"><a href="#zeta_reflection-L14">14</a>      norm_num at hs</span>
+<span id="zeta_reflection-L15"><a href="#zeta_reflection-L15">15</a>    have ht : 1 / 2 &lt; (1 - s).re := by</span>
+<span id="zeta_reflection-L16"><a href="#zeta_reflection-L16">16</a>      rw [Complex.sub_re, Complex.one_re]</span>
+<span id="zeta_reflection-L17"><a href="#zeta_reflection-L17">17</a>      linarith</span>
+<span id="zeta_reflection-L18"><a href="#zeta_reflection-L18">18</a>    have h1 : (1 - s) ≠ 1 := by</span>
+<span id="zeta_reflection-L19"><a href="#zeta_reflection-L19">19</a>      intro h</span>
+<span id="zeta_reflection-L20"><a href="#zeta_reflection-L20">20</a>      apply hs0</span>
+<span id="zeta_reflection-L21"><a href="#zeta_reflection-L21">21</a>      linear_combination -h</span>
+<span id="zeta_reflection-L22"><a href="#zeta_reflection-L22">22</a>    have hnat : ∀ n : ℕ, (1 - s) ≠ -(n : ℂ) := by</span>
+<span id="zeta_reflection-L23"><a href="#zeta_reflection-L23">23</a>      intro n h</span>
+<span id="zeta_reflection-L24"><a href="#zeta_reflection-L24">24</a>      have hr := congrArg Complex.re h</span>
+<span id="zeta_reflection-L25"><a href="#zeta_reflection-L25">25</a>      rw [Complex.sub_re, Complex.one_re, Complex.neg_re, Complex.natCast_re] at hr</span>
+<span id="zeta_reflection-L26"><a href="#zeta_reflection-L26">26</a>      have : (0 : ℝ) ≤ n := n.cast_nonneg</span>
+<span id="zeta_reflection-L27"><a href="#zeta_reflection-L27">27</a>      linarith</span>
+<span id="zeta_reflection-L28"><a href="#zeta_reflection-L28">28</a>    have key := riemannZeta_one_sub hnat h1</span>
+<span id="zeta_reflection-L29"><a href="#zeta_reflection-L29">29</a>    rw [sub_sub_cancel, hs] at key</span>
+<span id="zeta_reflection-L30"><a href="#zeta_reflection-L30">30</a>    have hz&#x27; := hz (1 - s) ht h1</span>
+<span id="zeta_reflection-L31"><a href="#zeta_reflection-L31">31</a>    have h2pi : (2 : ℂ) * (2 * (Real.pi : ℂ)) ^ (-(1 - s)) ≠ 0 :=</span>
+<span id="zeta_reflection-L32"><a href="#zeta_reflection-L32">32</a>      mul_ne_zero two_ne_zero (Complex.cpow_ne_zero_iff.2 (Or.inl (mul_ne_zero two_ne_zero hpi)))</span>
+<span id="zeta_reflection-L33"><a href="#zeta_reflection-L33">33</a>    have hG : Complex.Gamma (1 - s) ≠ 0 := Complex.Gamma_ne_zero_of_re_pos (by linarith)</span>
+<span id="zeta_reflection-L34"><a href="#zeta_reflection-L34">34</a>    have hcos : Complex.cos ((Real.pi : ℂ) * (1 - s) / 2) ≠ 0 := by</span>
+<span id="zeta_reflection-L35"><a href="#zeta_reflection-L35">35</a>      rw [Ne, Complex.cos_eq_zero_iff]</span>
+<span id="zeta_reflection-L36"><a href="#zeta_reflection-L36">36</a>      rintro ⟨k, hk⟩</span>
+<span id="zeta_reflection-L37"><a href="#zeta_reflection-L37">37</a>      have h3 : ((1 - s) - (2 * (k : ℂ) + 1)) * (Real.pi : ℂ) = 0 := by</span>
+<span id="zeta_reflection-L38"><a href="#zeta_reflection-L38">38</a>        linear_combination 2 * hk</span>
+<span id="zeta_reflection-L39"><a href="#zeta_reflection-L39">39</a>      rcases mul_eq_zero.1 h3 with h | h</span>
+<span id="zeta_reflection-L40"><a href="#zeta_reflection-L40">40</a>      · have hsk : s = -2 * (k : ℂ) := by linear_combination -h</span>
+<span id="zeta_reflection-L41"><a href="#zeta_reflection-L41">41</a>        have hre : s.re = -2 * (k : ℝ) := by</span>
+<span id="zeta_reflection-L42"><a href="#zeta_reflection-L42">42</a>          rw [hsk, Complex.mul_re]</span>
+<span id="zeta_reflection-L43"><a href="#zeta_reflection-L43">43</a>          simp</span>
+<span id="zeta_reflection-L44"><a href="#zeta_reflection-L44">44</a>        rcases lt_trichotomy k 0 with hk0 | hk0 | hk0</span>
+<span id="zeta_reflection-L45"><a href="#zeta_reflection-L45">45</a>        · have : (k : ℝ) ≤ -1 := by exact_mod_cast (show k ≤ -1 by omega)</span>
+<span id="zeta_reflection-L46"><a href="#zeta_reflection-L46">46</a>          linarith</span>
+<span id="zeta_reflection-L47"><a href="#zeta_reflection-L47">47</a>        · apply hs0</span>
+<span id="zeta_reflection-L48"><a href="#zeta_reflection-L48">48</a>          rw [hsk, hk0]</span>
+<span id="zeta_reflection-L49"><a href="#zeta_reflection-L49">49</a>          simp</span>
+<span id="zeta_reflection-L50"><a href="#zeta_reflection-L50">50</a>        · apply htriv</span>
+<span id="zeta_reflection-L51"><a href="#zeta_reflection-L51">51</a>          refine ⟨(k - 1).toNat, ?_⟩</span>
+<span id="zeta_reflection-L52"><a href="#zeta_reflection-L52">52</a>          have hnk : ((k - 1).toNat : ℤ) = k - 1 := Int.toNat_of_nonneg (by omega)</span>
+<span id="zeta_reflection-L53"><a href="#zeta_reflection-L53">53</a>          have h&#x27; : (((k - 1).toNat : ℕ) : ℂ) = (k : ℂ) - 1 := by</span>
+<span id="zeta_reflection-L54"><a href="#zeta_reflection-L54">54</a>            have := congrArg (fun m : ℤ =&gt; (m : ℂ)) hnk</span>
+<span id="zeta_reflection-L55"><a href="#zeta_reflection-L55">55</a>            push_cast at this</span>
+<span id="zeta_reflection-L56"><a href="#zeta_reflection-L56">56</a>            exact this</span>
+<span id="zeta_reflection-L57"><a href="#zeta_reflection-L57">57</a>          rw [hsk, h&#x27;]</span>
+<span id="zeta_reflection-L58"><a href="#zeta_reflection-L58">58</a>          ring</span>
+<span id="zeta_reflection-L59"><a href="#zeta_reflection-L59">59</a>      · exact hpi h</span>
+<span id="zeta_reflection-L60"><a href="#zeta_reflection-L60">60</a>    exact (mul_ne_zero (mul_ne_zero (mul_ne_zero h2pi hG) hcos) hz&#x27;) key.symm</span>
+<span id="zeta_reflection-L61"><a href="#zeta_reflection-L61">61</a>  · exact heq</span>
+<span id="zeta_reflection-L62"><a href="#zeta_reflection-L62">62</a>  · exact absurd hs (hz s hgt hs1)</span>
+</code></pre></section><section id="level_one_zeta"><h2><code>Formalism.VW.rh_of_every</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a><pre><code><span id="level_one_zeta-L29"><a href="#level_one_zeta-L29">29</a>theorem Formalism.VW.rh_of_every (h : UpperTheory.EveryCharacter) : RiemannHypothesis :=</span>
+<span id="level_one_zeta-L30"><a href="#level_one_zeta-L30">30</a>  Formalism.VW.rh_of_right fun s hs hs1 =&gt; by</span>
+<span id="level_one_zeta-L31"><a href="#level_one_zeta-L31">31</a>    have := h 1 (1 : DirichletCharacter ℂ 1) s hs (Or.inr hs1)</span>
+<span id="level_one_zeta-L32"><a href="#level_one_zeta-L32">32</a>    rwa [LFunction_modOne_eq] at this</span>
+</code></pre></section><section id="half_plane_input"><h2><code>allChi</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a><pre><code><span id="half_plane_input-L7"><a href="#half_plane_input-L7">7</a>theorem allChi : UpperTheory.EveryCharacter := UpperTheory.FinalTheorems.everyCharacter</span>
+</code></pre></section><section id="RH_wrapper"><h2><code>rhOfAll</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a><pre><code><span id="RH_wrapper-L9"><a href="#RH_wrapper-L9">9</a>theorem rhOfAll : RiemannHypothesis := Formalism.VW.rh_of_every allChi</span>
+</code></pre></section><section id="strip_bundle"><h2><code>claimAll</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a><pre><code><span id="strip_bundle-L15"><a href="#strip_bundle-L15">15</a>theorem claimAll : Claim.HalfPlane ∧ Claim.Strip ∧ Claim.Zeta :=</span>
+<span id="strip_bundle-L16"><a href="#strip_bundle-L16">16</a>  ⟨allChi, Claim.strip allChi, Claim.zeta allChi⟩</span>
+</code></pre></section><section id="primitive_wrapper"><h2><code>critAll</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a><pre><code><span id="primitive_wrapper-L11"><a href="#primitive_wrapper-L11">11</a>theorem critAll (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)</span>
+<span id="primitive_wrapper-L12"><a href="#primitive_wrapper-L12">12</a>    (h0 : 0 &lt; s.re) (h1 : s.re &lt; 1) (hz : LFunction χ s = 0) : s.re = 1 / 2 :=</span>
+<span id="primitive_wrapper-L13"><a href="#primitive_wrapper-L13">13</a>  Formalism.VW.critLine allChi N χ hχ s h0 h1 hz</span>
+</code></pre></section><section id="Riemann_hypothesis"><h2><code>riemannHypothesis</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a><pre><code><span id="Riemann_hypothesis-L4"><a href="#Riemann_hypothesis-L4">4</a>theorem riemannHypothesis : RiemannHypothesis := rhOfAll</span>
+</code></pre></section><section id="zeta_zeros"><h2><code>riemannZeta_eq_zero_re</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a><pre><code><span id="zeta_zeros-L6"><a href="#zeta_zeros-L6">6</a>theorem riemannZeta_eq_zero_re : RiemannZetaZerosOnLine := rhOfAll</span>
+</code></pre></section><section id="Dirichlet_nonvanishing"><h2><code>LFunction_ne_zero_of_half_lt_re</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a><pre><code><span id="Dirichlet_nonvanishing-L8"><a href="#Dirichlet_nonvanishing-L8">8</a>theorem LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf := allChi</span>
+</code></pre></section><section id="Dirichlet_zeros"><h2><code>LFunction_eq_zero_re</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a><pre><code><span id="Dirichlet_zeros-L10"><a href="#Dirichlet_zeros-L10">10</a>theorem LFunction_eq_zero_re : DirichletLZerosOnLine := claimAll.2.1</span>
+</code></pre></section><section id="primitive_zeros"><h2><code>LFunction_eq_zero_re_of_isPrimitive</code></h2><a href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a><pre><code><span id="primitive_zeros-L12"><a href="#primitive_zeros-L12">12</a>theorem LFunction_eq_zero_re_of_isPrimitive : PrimitiveDirichletLZerosOnLine := critAll</span>
+</code></pre></section></html>

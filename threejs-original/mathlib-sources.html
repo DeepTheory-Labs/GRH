@@ -1,0 +1,282 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mathlib source excerpts · Proof atlas</title><style>body{max-width:85ch;margin:auto;padding:2rem 1.2rem;background:#11151d;color:#eef0f1;font:16px/1.55 system-ui,sans-serif}section{margin:2.2rem 0;scroll-margin:1.2rem}h2,code{overflow-wrap:anywhere}h2{font-size:1.1rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#1c222e;padding:1rem;font-size:.88rem}a{color:#9bdcde}small{color:#b8c5cf}mark{background:#544520;color:#fff}nav{display:flex;gap:1rem}</style></head><body><nav><a href="index.html">Back to the proof atlas</a></nav><h1>Mathlib source excerpts</h1><p>Exact source lines from Mathlib revision <code>0df444a360eaa60ab8c11dca51a86af692955474</code>.</p><section id="math-Complex.Gamma"><h2>Complex.Gamma</h2><small>Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean · line 287</small><pre> 285  interesting. -/
+ 286  /-- The `Γ` function (of a complex variable `s`). -/
+<mark> 287  @[irreducible, pp_nodot] def Gamma (s : ℂ) : ℂ :=</mark>
+ 288    GammaAux ⌊1 - s.re⌋₊ s
+ 289  
+ 290  private theorem Gamma_eq_GammaAux (s : ℂ) (n : ℕ) (h1 : -s.re &lt; ↑n) : Gamma s = GammaAux n s := by
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean#L287">View pinned Mathlib source</a></section><section id="math-Complex.Gamma_ne_zero_of_re_pos"><h2>Complex.Gamma_ne_zero_of_re_pos</h2><small>Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean · line 454</small><pre> 452  
+ 453  /-- A weaker, but easier-to-apply, version of `Complex.Gamma_ne_zero`. -/
+<mark> 454  theorem Gamma_ne_zero_of_re_pos {s : ℂ} (hs : 0 &lt; re s) : Gamma s ≠ 0 := by</mark>
+ 455    refine Gamma_ne_zero fun m =&gt; ?_
+ 456    contrapose! hs
+ 457    simpa only [hs, neg_re, ← ofReal_natCast, ofReal_re, neg_nonpos] using Nat.cast_nonneg _
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean#L454">View pinned Mathlib source</a></section><section id="math-Complex.Gammaℝ"><h2>Complex.Gammaℝ</h2><small>Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean · line 43</small><pre>  41  See &quot;Valeurs de fonctions L et périodes d&#x27;intégrales&quot; § 5.3. Note that this is not the same as
+  42  `Real.Gamma`; in particular it is a function `ℂ → ℂ`. -/
+<mark>  43  noncomputable def Gammaℝ (s : ℂ) := π ^ (-s / 2) * Gamma (s / 2)</mark>
+  44  
+  45  lemma Gammaℝ_def (s : ℂ) : Gammaℝ s = π ^ (-s / 2) * Gamma (s / 2) := rfl
+  46  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean#L43">View pinned Mathlib source</a></section><section id="math-Complex.Gammaℝ_eq_zero_iff"><h2>Complex.Gammaℝ_eq_zero_iff</h2><small>Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean · line 73</small><pre>  71      exact div_pos hs two_pos
+  72  
+<mark>  73  lemma Gammaℝ_eq_zero_iff {s : ℂ} : Gammaℝ s = 0 ↔ ∃ n : ℕ, s = -(2 * n) := by</mark>
+  74    simp [Gammaℝ_def, Complex.Gamma_eq_zero_iff, pi_ne_zero, div_eq_iff (two_ne_zero&#x27; ℂ), mul_comm]
+  75  
+  76  @[simp]
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean#L73">View pinned Mathlib source</a></section><section id="math-Complex.Gammaℝ_ne_zero_of_re_pos"><h2>Complex.Gammaℝ_ne_zero_of_re_pos</h2><small>Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean · line 66</small><pre>  64    ring
+  65  
+<mark>  66  lemma Gammaℝ_ne_zero_of_re_pos {s : ℂ} (hs : 0 &lt; re s) : Gammaℝ s ≠ 0 := by</mark>
+  67    apply mul_ne_zero
+  68    · simp [pi_ne_zero]
+  69    · apply Gamma_ne_zero_of_re_pos
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Gamma/Deligne.lean#L66">View pinned Mathlib source</a></section><section id="math-Complex.cos"><h2>Complex.cos</h2><small>Mathlib/Analysis/Complex/Trigonometric.lean · line 35</small><pre>  33  /-- The complex cosine function, defined via `exp` -/
+  34  @[pp_nodot]
+<mark>  35  def cos (z : ℂ) : ℂ :=</mark>
+  36    (exp (z * I) + exp (-z * I)) / 2
+  37  
+  38  /-- The complex tangent function, defined as `sin z / cos z` -/
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/Complex/Trigonometric.lean#L35">View pinned Mathlib source</a></section><section id="math-Complex.cos_eq_zero_iff"><h2>Complex.cos_eq_zero_iff</h2><small>Mathlib/Analysis/SpecialFunctions/Trigonometric/Complex.lean · line 33</small><pre>  31  open scoped Real
+  32  
+<mark>  33  theorem cos_eq_zero_iff {θ : ℂ} : cos θ = 0 ↔ ∃ k : ℤ, θ = (2 * k + 1) * π / 2 := by</mark>
+  34    have h : (exp (θ * I) + exp (-θ * I)) / 2 = 0 ↔ exp (2 * θ * I) = -1 := by
+  35      rw [@div_eq_iff _ _ (exp (θ * I) + exp (-θ * I)) 2 0 two_ne_zero, zero_mul,
+  36        add_eq_zero_iff_eq_neg, neg_eq_neg_one_mul, ← div_eq_iff (exp_ne_zero _), ← exp_sub]
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Trigonometric/Complex.lean#L33">View pinned Mathlib source</a></section><section id="math-Complex.cpow_ne_zero_iff"><h2>Complex.cpow_ne_zero_iff</h2><small>Mathlib/Analysis/SpecialFunctions/Pow/Complex.lean · line 49</small><pre>  47    split_ifs &lt;;&gt; simp [*, exp_ne_zero]
+  48  
+<mark>  49  theorem cpow_ne_zero_iff {x y : ℂ} :</mark>
+  50      x ^ y ≠ 0 ↔ x ≠ 0 ∨ y = 0 := by
+  51    rw [ne_eq, cpow_eq_zero_iff, not_and_or, ne_eq, not_not]
+  52  
+  53  theorem cpow_ne_zero_iff_of_exponent_ne_zero {x y : ℂ} (hy : y ≠ 0) :
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Pow/Complex.lean#L49">View pinned Mathlib source</a></section><section id="math-Complex.norm_natCast_cpow_of_pos"><h2>Complex.norm_natCast_cpow_of_pos</h2><small>Mathlib/Analysis/SpecialFunctions/Pow/Real.lean · line 355</small><pre> 353    rw [← ofReal_natCast, norm_cpow_eq_rpow_re_of_nonneg n.cast_nonneg hs]
+ 354  
+<mark> 355  lemma norm_natCast_cpow_of_pos {n : ℕ} (hn : 0 &lt; n) (s : ℂ) :</mark>
+ 356      ‖(n : ℂ) ^ s‖ = (n : ℝ) ^ (s.re) := by
+ 357    rw [← ofReal_natCast, norm_cpow_eq_rpow_re_of_pos (Nat.cast_pos.mpr hn) _]
+ 358  
+ 359  lemma norm_natCast_cpow_pos_of_pos {n : ℕ} (hn : 0 &lt; n) (s : ℂ) : 0 &lt; ‖(n : ℂ) ^ s‖ :=
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean#L355">View pinned Mathlib source</a></section><section id="math-DirichletCharacter"><h2>DirichletCharacter</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 40</small><pre>  38  /-- The type of Dirichlet characters of level `n`. -/
+  39  @[wikidata Q1063579]
+<mark>  40  abbrev DirichletCharacter (R : Type*) [CommMonoidWithZero R] (n : ℕ) := MulChar (ZMod n) R</mark>
+  41  
+  42  open MulChar
+  43  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L40">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.Even"><h2>DirichletCharacter.Even</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 536</small><pre> 534  
+ 535  /-- A Dirichlet character is even if its value at -1 is 1. -/
+<mark> 536  def Even : Prop := ψ (-1) = 1</mark>
+ 537  
+ 538  lemma even_or_odd [NoZeroDivisors S] : ψ.Even ∨ ψ.Odd := by
+ 539    suffices ψ (-1) ^ 2 = 1 by convert! sq_eq_one_iff.mp this
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L536">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.Even.gammaFactor_def"><h2>DirichletCharacter.Even.gammaFactor_def</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 210</small><pre> 208    if χ.Even then Gammaℝ s else Gammaℝ (s + 1)
+ 209  
+<mark> 210  lemma Even.gammaFactor_def {χ : DirichletCharacter ℂ N} (hχ : χ.Even) (s : ℂ) :</mark>
+ 211      gammaFactor χ s = Gammaℝ s := by
+ 212    simp [gammaFactor, hχ]
+ 213  
+ 214  lemma Odd.gammaFactor_def {χ : DirichletCharacter ℂ N} (hχ : χ.Odd) (s : ℂ) :
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L210">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.IsPrimitive"><h2>DirichletCharacter.IsPrimitive</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 292</small><pre> 290  
+ 291  /-- A character is primitive if its level is equal to its conductor. -/
+<mark> 292  def IsPrimitive : Prop := conductor χ = n</mark>
+ 293  
+ 294  lemma isPrimitive_def : IsPrimitive χ ↔ conductor χ = n := Iff.rfl
+ 295  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L292">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.IsPrimitive.completedLFunction_one_sub"><h2>DirichletCharacter.IsPrimitive.completedLFunction_one_sub</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 284</small><pre> 282  
+ 283  /-- **Functional equation** for primitive Dirichlet L-functions. -/
+<mark> 284  theorem completedLFunction_one_sub {χ : DirichletCharacter ℂ N} (hχ : IsPrimitive χ) (s : ℂ) :</mark>
+ 285      completedLFunction χ (1 - s) = N ^ (s - 1 / 2) * rootNumber χ * completedLFunction χ⁻¹ s := by
+ 286    classical
+ 287    -- First handle special case of Riemann zeta
+ 288    rcases eq_or_ne N 1 with rfl | hN
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L284">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.LFunction"><h2>DirichletCharacter.LFunction</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 61</small><pre>  59  -/
+  60  @[pp_nodot]
+<mark>  61  noncomputable def LFunction (χ : DirichletCharacter ℂ N) (s : ℂ) : ℂ := ZMod.LFunction χ s</mark>
+  62  
+  63  /--
+  64  The L-function of the (unique) Dirichlet character mod 1 is the Riemann zeta function.
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L61">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.LFunction_changeLevel"><h2>DirichletCharacter.LFunction_changeLevel</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 150</small><pre> 148  with `∏ p ∈ N.primeFactors, (1 - χ p * p ^ (-s))`.
+ 149  (Note that `1 - χ p * p ^ (-s) = 1` when `p` divides `M`). -/
+<mark> 150  lemma LFunction_changeLevel {M N : ℕ} [NeZero M] [NeZero N] (hMN : M ∣ N)</mark>
+ 151      (χ : DirichletCharacter ℂ M) {s : ℂ} (h : χ ≠ 1 ∨ s ≠ 1) :
+ 152      LFunction (changeLevel hMN χ) s =
+ 153        LFunction χ s * ∏ p ∈ N.primeFactors, (1 - χ p * p ^ (-s)) := by
+ 154    rcases h with h | h
+ 155    · have hχ : changeLevel hMN χ ≠ 1 := h ∘ (changeLevel_eq_one_iff hMN).mp
+ 156      have h&#x27; : Continuous fun s ↦ LFunction χ s * ∏ p ∈ N.primeFactors, (1 - χ p * ↑p ^ (-s)) :=
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L150">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.LFunction_eq_completed_div_gammaFactor"><h2>DirichletCharacter.LFunction_eq_completed_div_gammaFactor</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 259</small><pre> 257  it holds at the poles of the gamma factor as well.
+ 258  -/
+<mark> 259  lemma LFunction_eq_completed_div_gammaFactor (χ : DirichletCharacter ℂ N) (s : ℂ)</mark>
+ 260      (h : s ≠ 0 ∨ N ≠ 1) : LFunction χ s = completedLFunction χ s / gammaFactor χ s := by
+ 261    rcases χ.even_or_odd with hχ | hχ &lt;;&gt;
+ 262    rw [hχ.gammaFactor_def]
+ 263    · exact LFunction_eq_completed_div_gammaFactor_even hχ.to_fun _ (h.imp_right χ.map_zero&#x27;)
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L259">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.LFunction_modOne_eq"><h2>DirichletCharacter.LFunction_modOne_eq</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 67</small><pre>  65  (Compare `DirichletCharacter.LSeries_modOne_eq`.)
+  66  -/
+<mark>  67  @[simp] lemma LFunction_modOne_eq {χ : DirichletCharacter ℂ 1} :</mark>
+  68      LFunction χ = riemannZeta := by
+  69    ext; rw [LFunction, ZMod.LFunction_modOne_eq, (by rfl : (0 : ZMod 1) = 1), map_one, one_mul]
+  70  
+  71  /--
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L67">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.Odd"><h2>DirichletCharacter.Odd</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 533</small><pre> 531  
+ 532  /-- A Dirichlet character is odd if its value at -1 is -1. -/
+<mark> 533  def Odd : Prop := ψ (-1) = -1</mark>
+ 534  
+ 535  /-- A Dirichlet character is even if its value at -1 is 1. -/
+ 536  def Even : Prop := ψ (-1) = 1
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L533">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.Odd.gammaFactor_def"><h2>DirichletCharacter.Odd.gammaFactor_def</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 214</small><pre> 212    simp [gammaFactor, hχ]
+ 213  
+<mark> 214  lemma Odd.gammaFactor_def {χ : DirichletCharacter ℂ N} (hχ : χ.Odd) (s : ℂ) :</mark>
+ 215      gammaFactor χ s = Gammaℝ (s + 1) := by
+ 216    simp [gammaFactor, hχ.not_even]
+ 217  
+ 218  end gammaFactor
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L214">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.changeLevel"><h2>DirichletCharacter.changeLevel</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 66</small><pre>  64  /-- A function that modifies the level of a Dirichlet character to some multiple
+  65    of its original level. -/
+<mark>  66  noncomputable def changeLevel {n m : ℕ} (hm : n ∣ m) :</mark>
+  67      DirichletCharacter R n →* DirichletCharacter R m where
+  68    toFun ψ := MulChar.ofUnitHom (ψ.toUnitHom.comp (ZMod.unitsMap hm))
+  69    map_one&#x27; := by ext; simp
+  70    map_mul&#x27; ψ₁ ψ₂ := by ext; simp
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L66">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.changeLevel_primitiveCharacter"><h2>DirichletCharacter.changeLevel_primitiveCharacter</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 310</small><pre> 308    Classical.choose (factorsThrough_conductor χ).choose_spec
+ 309  
+<mark> 310  theorem changeLevel_primitiveCharacter :</mark>
+ 311      (changeLevel χ.conductor_dvd_level) χ.primitiveCharacter = χ :=
+ 312    (factorsThrough_conductor χ).choose_spec.choose_spec.symm
+ 313  
+ 314  lemma primitiveCharacter_isPrimitive : IsPrimitive (χ.primitiveCharacter) := by
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L310">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.completedLFunction"><h2>DirichletCharacter.completedLFunction</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 224</small><pre> 222  `LFunction χ s * gammaFactor χ s`.
+ 223  -/
+<mark> 224  @[pp_nodot] noncomputable def completedLFunction (χ : DirichletCharacter ℂ N) (s : ℂ) : ℂ :=</mark>
+ 225    ZMod.completedLFunction χ s
+ 226  
+ 227  /--
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L224">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.conductor"><h2>DirichletCharacter.conductor</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 246</small><pre> 244  
+ 245  /-- The minimum natural number level `n` through which `χ` factors. -/
+<mark> 246  noncomputable def conductor : ℕ := sInf (conductorSet χ)</mark>
+ 247  
+ 248  lemma conductor_mem_conductorSet : conductor χ ∈ conductorSet χ :=
+ 249    Nat.sInf_mem (Set.nonempty_of_mem (level_mem_conductorSet χ))
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L246">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.conductor_dvd_level"><h2>DirichletCharacter.conductor_dvd_level</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 251</small><pre> 249    Nat.sInf_mem (Set.nonempty_of_mem (level_mem_conductorSet χ))
+ 250  
+<mark> 251  lemma conductor_dvd_level : conductor χ ∣ n := (conductor_mem_conductorSet χ).dvd</mark>
+ 252  
+ 253  lemma factorsThrough_conductor : FactorsThrough χ (conductor χ) := conductor_mem_conductorSet χ
+ 254  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L251">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.conductor_inv"><h2>DirichletCharacter.conductor_inv</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 405</small><pre> 403  
+ 404  /-- The conductor of χ⁻¹ equals the conductor of χ. -/
+<mark> 405  theorem conductor_inv (χ : DirichletCharacter R n) :</mark>
+ 406      χ⁻¹.conductor = χ.conductor := by
+ 407    rw [← zpow_neg_one]
+ 408    refine dvd_antisymm (conductor_zpow_dvd ..) ?_
+ 409    nth_rewrite 1 [← inv_inv χ, ← zpow_neg_one, ← zpow_neg_one]
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L405">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.conductor_ne_zero"><h2>DirichletCharacter.conductor_ne_zero</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 255</small><pre> 253  lemma factorsThrough_conductor : FactorsThrough χ (conductor χ) := conductor_mem_conductorSet χ
+ 254  
+<mark> 255  lemma conductor_ne_zero [NeZero n] : conductor χ ≠ 0 :=</mark>
+ 256    fun h ↦ NeZero.ne n &lt;| Nat.eq_zero_of_zero_dvd &lt;| h ▸ conductor_dvd_level _
+ 257  
+ 258  /-- The conductor of the trivial character is 1. -/
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L255">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.even_or_odd"><h2>DirichletCharacter.even_or_odd</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 538</small><pre> 536  def Even : Prop := ψ (-1) = 1
+ 537  
+<mark> 538  lemma even_or_odd [NoZeroDivisors S] : ψ.Even ∨ ψ.Odd := by</mark>
+ 539    suffices ψ (-1) ^ 2 = 1 by convert! sq_eq_one_iff.mp this
+ 540    rw [← map_pow _, neg_one_sq, map_one]
+ 541  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L538">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.gammaFactor"><h2>DirichletCharacter.gammaFactor</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 207</small><pre> 205  open scoped Classical in
+ 206  /-- The Archimedean Gamma factor: `Gammaℝ s` if `χ` is even, and `Gammaℝ (s + 1)` otherwise. -/
+<mark> 207  noncomputable def gammaFactor (χ : DirichletCharacter ℂ N) (s : ℂ) :=</mark>
+ 208    if χ.Even then Gammaℝ s else Gammaℝ (s + 1)
+ 209  
+ 210  lemma Even.gammaFactor_def {χ : DirichletCharacter ℂ N} (hχ : χ.Even) (s : ℂ) :
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L207">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.isPrimitive_def"><h2>DirichletCharacter.isPrimitive_def</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 294</small><pre> 292  def IsPrimitive : Prop := conductor χ = n
+ 293  
+<mark> 294  lemma isPrimitive_def : IsPrimitive χ ↔ conductor χ = n := Iff.rfl</mark>
+ 295  
+ 296  lemma isPrimitive_one_level_one : IsPrimitive (1 : DirichletCharacter R 1) :=
+ 297    Nat.dvd_one.mp (conductor_dvd_level _)
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L294">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.norm_le_one"><h2>DirichletCharacter.norm_le_one</h2><small>Mathlib/NumberTheory/DirichletCharacter/Bounds.lean · line 33</small><pre>  31  
+  32  /-- The values of a Dirichlet character with target a normed field have norm bounded by `1`. -/
+<mark>  33  lemma norm_le_one (a : ZMod n) : ‖χ a‖ ≤ 1 := by</mark>
+  34    by_cases h : IsUnit a
+  35    · exact (χ.unit_norm_eq_one h.unit).le
+  36    · rw [χ.map_nonunit h, norm_zero]
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Bounds.lean#L33">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.primitiveCharacter"><h2>DirichletCharacter.primitiveCharacter</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 307</small><pre> 305  
+ 306  /-- The primitive character associated to a Dirichlet character. -/
+<mark> 307  noncomputable def primitiveCharacter : DirichletCharacter R χ.conductor :=</mark>
+ 308    Classical.choose (factorsThrough_conductor χ).choose_spec
+ 309  
+ 310  theorem changeLevel_primitiveCharacter :
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L307">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.primitiveCharacter_isPrimitive"><h2>DirichletCharacter.primitiveCharacter_isPrimitive</h2><small>Mathlib/NumberTheory/DirichletCharacter/Basic.lean · line 314</small><pre> 312    (factorsThrough_conductor χ).choose_spec.choose_spec.symm
+ 313  
+<mark> 314  lemma primitiveCharacter_isPrimitive : IsPrimitive (χ.primitiveCharacter) := by</mark>
+ 315    by_cases h : χ.conductor = 0
+ 316    · rw [isPrimitive_def]
+ 317      convert! conductor_eq_zero_iff_level_eq_zero.mpr h
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean#L314">View pinned Mathlib source</a></section><section id="math-DirichletCharacter.rootNumber"><h2>DirichletCharacter.rootNumber</h2><small>Mathlib/NumberTheory/LSeries/DirichletContinuation.lean · line 272</small><pre> 270  `1 / I ^ a` is the Archimedean root number.) This is a complex number of absolute value 1.
+ 271  -/
+<mark> 272  noncomputable def rootNumber (χ : DirichletCharacter ℂ N) : ℂ :=</mark>
+ 273    gaussSum χ stdAddChar / I ^ (if χ.Even then 0 else 1) / N ^ (1 / 2 : ℂ)
+ 274  
+ 275  /-- The root number of the unique Dirichlet character modulo 1 is 1. -/
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean#L272">View pinned Mathlib source</a></section><section id="math-Real.pi_ne_zero"><h2>Real.pi_ne_zero</h2><small>Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean · line 165</small><pre> 163  
+ 164  @[simp]
+<mark> 165  theorem pi_ne_zero : π ≠ 0 :=</mark>
+ 166    pi_pos.ne&#x27;
+ 167  
+ 168  theorem pi_div_two_pos : 0 &lt; π / 2 :=
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean#L165">View pinned Mathlib source</a></section><section id="math-Real.rpow_lt_one_of_one_lt_of_neg"><h2>Real.rpow_lt_one_of_one_lt_of_neg</h2><small>Mathlib/Analysis/SpecialFunctions/Pow/Real.lean · line 664</small><pre> 662    gcongr
+ 663  
+<mark> 664  theorem rpow_lt_one_of_one_lt_of_neg {x z : ℝ} (hx : 1 &lt; x) (hz : z &lt; 0) : x ^ z &lt; 1 := by</mark>
+ 665    convert! rpow_lt_rpow_of_exponent_lt hx hz
+ 666    exact (rpow_zero x).symm
+ 667  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean#L664">View pinned Mathlib source</a></section><section id="math-RiemannHypothesis"><h2>RiemannHypothesis</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 185</small><pre> 183  million dollars. -/
+ 184  @[wikidata Q205966]
+<mark> 185  def RiemannHypothesis : Prop :=</mark>
+ 186    ∀ (s : ℂ) (_ : riemannZeta s = 0) (_ : ¬∃ n : ℕ, s = -2 * (n + 1)) (_ : s ≠ 1), s.re = 1 / 2
+ 187  
+ 188  /-!
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L185">View pinned Mathlib source</a></section><section id="math-completedRiemannZeta"><h2>completedRiemannZeta</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 68</small><pre>  66  /-- The completed Riemann zeta function, `Λ(s)`, which satisfies
+  67  `Λ(s) = π ^ (-s / 2) Γ(s / 2) ζ(s)` (up to a minor correction at `s = 0`). -/
+<mark>  68  def completedRiemannZeta (s : ℂ) : ℂ := completedHurwitzZetaEven 0 s</mark>
+  69  
+  70  lemma HurwitzZeta.completedHurwitzZetaEven_zero (s : ℂ) :
+  71      completedHurwitzZetaEven 0 s = completedRiemannZeta s := rfl
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L68">View pinned Mathlib source</a></section><section id="math-completedRiemannZeta_one_sub"><h2>completedRiemannZeta_one_sub</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 106</small><pre> 104  /-- Riemann zeta functional equation, formulated for `Λ`: for any complex `s` we have
+ 105  `Λ (1 - s) = Λ s`. -/
+<mark> 106  theorem completedRiemannZeta_one_sub (s : ℂ) :</mark>
+ 107      completedRiemannZeta (1 - s) = completedRiemannZeta s := by
+ 108    rw [← completedHurwitzZetaEven_zero, ← completedCosZeta_zero, completedHurwitzZetaEven_one_sub]
+ 109  
+ 110  /-- The residue of `Λ(s)` at `s = 1` is equal to `1`. -/
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L106">View pinned Mathlib source</a></section><section id="math-riemannZeta"><h2>riemannZeta</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 121</small><pre> 119  /-- The Riemann zeta function `ζ(s)`. -/
+ 120  @[wikidata Q187235]
+<mark> 121  def riemannZeta := hurwitzZetaEven 0</mark>
+ 122  
+ 123  lemma HurwitzZeta.hurwitzZetaEven_zero : hurwitzZetaEven 0 = riemannZeta := rfl
+ 124  
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L121">View pinned Mathlib source</a></section><section id="math-riemannZeta_def_of_ne_zero"><h2>riemannZeta_def_of_ne_zero</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 154</small><pre> 152    simp_rw [riemannZeta, hurwitzZetaEven, Function.update_self, if_true]
+ 153  
+<mark> 154  lemma riemannZeta_def_of_ne_zero {s : ℂ} (hs : s ≠ 0) :</mark>
+ 155      riemannZeta s = completedRiemannZeta s / Gammaℝ s := by
+ 156    rw [riemannZeta, hurwitzZetaEven, Function.update_of_ne hs, completedHurwitzZetaEven_zero]
+ 157  
+ 158  /-- Definition of the zeta function in terms of `completedRiemannZeta₀`. -/
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L154">View pinned Mathlib source</a></section><section id="math-riemannZeta_ne_zero_of_one_le_re"><h2>riemannZeta_ne_zero_of_one_le_re</h2><small>Mathlib/NumberTheory/LSeries/Nonvanishing.lean · line 411</small><pre> 409  /-- The Riemann Zeta Function does not vanish on the closed half-plane `re s ≥ 1`.
+ 410  (Note that the value at `s = 1` is a junk value, which happens to be nonzero.) -/
+<mark> 411  lemma _root_.riemannZeta_ne_zero_of_one_le_re ⦃s : ℂ⦄ (hs : 1 ≤ s.re) :</mark>
+ 412      riemannZeta s ≠ 0 := by
+ 413    rcases eq_or_ne s 1 with rfl | hs₀
+ 414    · exact riemannZeta_one_ne_zero
+ 415    · exact LFunction_modOne_eq (χ := 1) ▸ LFunction_ne_zero_of_one_le_re _ (.inr hs₀) hs
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/Nonvanishing.lean#L411">View pinned Mathlib source</a></section><section id="math-riemannZeta_one_sub"><h2>riemannZeta_one_sub</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 178</small><pre> 176  /-- Riemann zeta functional equation, formulated for `ζ`: if `1 - s ∉ ℕ`, then we have
+ 177  `ζ (1 - s) = 2 ^ (1 - s) * π ^ (-s) * Γ s * sin (π * (1 - s) / 2) * ζ s`. -/
+<mark> 178  theorem riemannZeta_one_sub {s : ℂ} (hs : ∀ n : ℕ, s ≠ -n) (hs&#x27; : s ≠ 1) :</mark>
+ 179      riemannZeta (1 - s) = 2 * (2 * π) ^ (-s) * Gamma s * cos (π * s / 2) * riemannZeta s := by
+ 180    rw [riemannZeta, hurwitzZetaEven_one_sub 0 hs (Or.inr hs&#x27;), cosZeta_zero, hurwitzZetaEven_zero]
+ 181  
+ 182  /-- A formal statement of the **Riemann hypothesis** – constructing a term of this type is worth a
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L178">View pinned Mathlib source</a></section><section id="math-riemannZeta_zero"><h2>riemannZeta_zero</h2><small>Mathlib/NumberTheory/LSeries/RiemannZeta.lean · line 151</small><pre> 149  
+ 150  /-- We have `ζ(0) = -1 / 2`. -/
+<mark> 151  theorem riemannZeta_zero : riemannZeta 0 = -1 / 2 := by</mark>
+ 152    simp_rw [riemannZeta, hurwitzZetaEven, Function.update_self, if_true]
+ 153  
+ 154  lemma riemannZeta_def_of_ne_zero {s : ℂ} (hs : s ≠ 0) :
+</pre><a href="https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L151">View pinned Mathlib source</a></section></body></html>

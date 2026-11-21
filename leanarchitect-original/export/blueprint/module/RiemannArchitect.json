@@ -1,0 +1,445 @@
+[{"type": "node",
+  "data":
+  {"title": "Dirichlet nonvanishing premise",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Every Dirichlet L-function is nonzero to the right of one half, excluding the principal-character point at one.",
+    "latexEnv": "definition",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof": null,
+   "notReady": false,
+   "name": "UpperTheory.EveryCharacter",
+   "location":
+   {"range":
+    {"pos": {"line": 8, "column": 0}, "endPos": {"line": 11, "column": 130}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "everyDef",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Right half-plane predicate",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Nonvanishing in the open right half-plane for every positive level, subject to the exception at one.",
+    "latexEnv": "definition",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof": null,
+   "notReady": false,
+   "name": "Claim.HalfPlane",
+   "location":
+   {"range":
+    {"pos": {"line": 14, "column": 0}, "endPos": {"line": 17, "column": 130}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "half",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Strip predicate",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "A Dirichlet L-function zero in the open critical strip has real part one half.",
+    "latexEnv": "definition",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof": null,
+   "notReady": false,
+   "name": "Claim.Strip",
+   "location":
+   {"range":
+    {"pos": {"line": 20, "column": 0}, "endPos": {"line": 23, "column": 134}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "stripDef",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Zeta-zero predicate",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Every nontrivial zeta zero distinct from one lies on the critical line.",
+    "latexEnv": "definition",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof": null,
+   "notReady": false,
+   "name": "Claim.Zeta",
+   "location":
+   {"range":
+    {"pos": {"line": 26, "column": 0}, "endPos": {"line": 29, "column": 83}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "zetaDef",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Euler factor is nonzero",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "At positive real part the prime-power term has norm less than one, so a deleted Euler factor cannot vanish.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.factor_ne_zero",
+   "location":
+   {"range":
+    {"pos": {"line": 33, "column": 0}, "endPos": {"line": 49, "column": 22}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "factor",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Pass a zero to the primitive character",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Change level to the conductor and rule out zeros of the deleted Euler factors.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.prim_zero",
+   "location":
+   {"range":
+    {"pos": {"line": 54, "column": 0}, "endPos": {"line": 66, "column": 80}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "primZero",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Gamma factor is nonzero",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Both possible archimedean factors are nonzero at positive real part.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.gamma_ne_zero",
+   "location":
+   {"range":
+    {"pos": {"line": 71, "column": 0}, "endPos": {"line": 78, "column": 93}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "gamma",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Reflect a primitive zero",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "The completed functional equation transfers a primitive zero to the inverse character at one minus the original argument.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.prim_reflect",
+   "location":
+   {"range":
+    {"pos": {"line": 83, "column": 0}, "endPos": {"line": 100, "column": 13}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "reflect",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "All Dirichlet zeros in the strip",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Use half-plane nonvanishing on the right. On the left, pass to the primitive character and reflect its zero to the right.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.strip",
+   "location":
+   {"range":
+    {"pos": {"line": 105, "column": 0}, "endPos": {"line": 121, "column": 45}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "strip",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Zeta consequence of nonvanishing",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Use the level-one character in the strip and the zeta functional equation and nonvanishing outside it.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Claim.zeta",
+   "location":
+   {"range":
+    {"pos": {"line": 126, "column": 0}, "endPos": {"line": 153, "column": 97}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "zeta",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Reflect a hypothetical zeta zero",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Right-half-plane nonvanishing implies RH by the zeta functional equation, with the exceptional gamma and trigonometric factors handled explicitly.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Formalism.VW.rh_of_right",
+   "location":
+   {"range":
+    {"pos": {"line": 157, "column": 0}, "endPos": {"line": 216, "column": 34}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "right",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Archimedean factor for the primitive proof",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Compute the gamma factor according to character parity on the positive half-plane.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Formalism.VW.gammaFactor_ne_zero",
+   "location":
+   {"range":
+    {"pos": {"line": 219, "column": 0}, "endPos": {"line": 224, "column": 93}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "vGamma",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Primitive zeros on the critical line",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Half-plane nonvanishing and the primitive functional equation force a zero in the strip onto the critical line.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Formalism.VW.critLine",
+   "location":
+   {"range":
+    {"pos": {"line": 227, "column": 0}, "endPos": {"line": 245, "column": 37}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "crit",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "node",
+  "data":
+  {"title": "Specialize to the level-one character",
+   "statement":
+   {"usesLabels": [],
+    "uses": [],
+    "text":
+    "Apply the zeta reduction to the trivial character modulo one, whose L-function is zeta.",
+    "latexEnv": "theorem",
+    "excludesLabels": [],
+    "excludes": []},
+   "proof":
+   {"usesLabels": [],
+    "uses": [],
+    "text": "",
+    "latexEnv": "proof",
+    "excludesLabels": [],
+    "excludes": []},
+   "notReady": false,
+   "name": "Formalism.VW.rh_of_every",
+   "location":
+   {"range":
+    {"pos": {"line": 248, "column": 0}, "endPos": {"line": 253, "column": 37}},
+    "module": "RiemannArchitect"},
+   "latexLabel": "rhEvery",
+   "hasLean": true,
+   "file":
+   "/home/ubuntu/riemann-original-apolge/leanarchitect-blueprint/RiemannArchitect.lean",
+   "discussion": null}},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Primitive zero-free criterion]\n\\label{topG}\nCombine the top-level condition with the required host data for each primitive character.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.Top.zeroFreeAll\\_of\\_topG}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Primitive character nonvanishing]\n\\label{greenZero}\nThe Green and window hypotheses and a definite-side witness provide the inputs of the primitive criterion.\n\\end{theorem}\n\\begin{proof}\n\\uses{topG}\nSource-traced declaration \\texttt{UpperTheory.Top.zero\\_free\\_all\\_of\\_green\\_v\\_win}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Extend to imprimitive characters]\n\\label{imprimitive}\nUse the character of minimal conductor and show that the remaining Euler factors cannot vanish.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.Top.imprimitive}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[From windows to all characters]\n\\label{greenEvery}\nFirst derive the primitive zero-free result, then extend to arbitrary positive levels.\n\\end{theorem}\n\\begin{proof}\n\\uses{greenZero,imprimitive}\nSource-traced declaration \\texttt{UpperTheory.Top.every\\_character\\_of\\_green\\_v\\_win}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Construct a definite-side witness]\n\\label{definite}\nTheta integrals, local matching, a covolume bound, and local parameters supply a nonempty family of definite-side hypotheses.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.Lit.nonempty\\_hyps\\_definite\\_side\\_of\\_closed\\_bound}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Theta integrals and local matching]\n\\label{match}\nCombine the definite-side witness with the Green and window input to obtain the all-character conclusion.\n\\end{theorem}\n\\begin{proof}\n\\uses{definite,greenEvery}\nSource-traced declaration \\texttt{UpperTheory.Lit.every\\_character\\_of\\_theta\\_integrals\\_local\\_matching}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Assemble the literature inputs]\n\\label{literature}\nPackage published results, local matching, theta integrals and a covolume estimate for the theta-to-nonvanishing theorem.\n\\end{theorem}\n\\begin{proof}\n\\uses{match}\nSource-traced declaration \\texttt{UpperTheory.LiteratureTheorems.every\\_character\\_of\\_literature\\_of\\_vWin}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Galois row for the local parameter]\n\\label{row}\nThe source obtains its local–global row by applying a Galois-representations result to a theta lift.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.Gal.Int.galoisLocalGlobalStrong\\_recParameter}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Local parameter construction]\n\\label{local}\nThe project constructs the local parameter with the required compatibilities.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.Zero.LLC.recTExists}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Window condition from a row]\n\\label{window}\nUse open-image and base-change inputs together with the given row to obtain the automorphic window.\n\\end{theorem}\n\\begin{proof}\nSource-traced declaration \\texttt{UpperTheory.One.vwin\\_of\\_row}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Nonvanishing given the Galois row]\n\\label{ofRow}\nAssemble the literature package using the supplied row and local parameter existence. Apply the window result to that same row.\n\\end{theorem}\n\\begin{proof}\n\\uses{literature,local,window}\nSource-traced declaration \\texttt{UpperTheory.FinalTheorems.everyCharacter\\_of\\_row}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Nonvanishing for all characters]\n\\label{every}\nDischarge the row assumption with the local–global result. This is the unconditional input consumed by the public analytic deductions.\n\\end{theorem}\n\\begin{proof}\n\\uses{ofRow,row}\nSource-traced declaration \\texttt{UpperTheory.FinalTheorems.everyCharacter}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Public nonvanishing bridge]\n\\label{allChi}\nExpose the unconditional all-character result to the final deduction module.\n\\end{theorem}\n\\begin{proof}\n\\uses{every}\nSource-traced declaration \\texttt{allChi}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Riemann hypothesis from all characters]\n\\label{rhAll}\nApply the checked level-one reduction to the nonvanishing bridge.\n\\end{theorem}\n\\begin{proof}\n\\uses{rhEvery,allChi}\nSource-traced declaration \\texttt{rhOfAll}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Primitive critical-line bridge]\n\\label{critAll}\nApply the primitive critical-line theorem with the unconditional nonvanishing input.\n\\end{theorem}\n\\begin{proof}\n\\uses{crit,allChi}\nSource-traced declaration \\texttt{critAll}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Package the three analytic claims]\n\\label{claimAll}\nAssemble the half-plane result, the general Dirichlet strip result and the zeta statement in a conjunction.\n\\end{theorem}\n\\begin{proof}\n\\uses{allChi,strip,zeta}\nSource-traced declaration \\texttt{claimAll}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Riemann hypothesis]\n\\label{mainRH}\nThe first public theorem takes its proof from the zeta bridge.\n\\end{theorem}\n\\begin{proof}\n\\uses{rhAll}\nSource-traced declaration \\texttt{riemannHypothesis}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Nontrivial zeta zeros on the line]\n\\label{mainZeta}\nThe second public statement uses the same bridge under a definitionally equal type.\n\\end{theorem}\n\\begin{proof}\n\\uses{rhAll}\nSource-traced declaration \\texttt{riemannZeta\\_eq\\_zero\\_re}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Dirichlet half-plane nonvanishing]\n\\label{mainNV}\nThe public theorem is the all-character nonvanishing bridge.\n\\end{theorem}\n\\begin{proof}\n\\uses{allChi}\nSource-traced declaration \\texttt{LFunction\\_ne\\_zero\\_of\\_half\\_lt\\_re}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[All Dirichlet zeros on the line]\n\\label{mainStrip}\nProject the strip proof from the three-part conjunction. Only the strip component is selected at this use.\n\\end{theorem}\n\\begin{proof}\n\\uses{claimAll}\nSource-traced declaration \\texttt{LFunction\\_eq\\_zero\\_re}.\n\\end{proof}\n"},
+ {"type": "moduleDoc",
+  "data":
+  "\\begin{theorem}[Primitive Dirichlet zeros on the line]\n\\label{mainPrim}\nThe original public theorem uses the dedicated primitive bridge.\n\\end{theorem}\n\\begin{proof}\n\\uses{critAll}\nSource-traced declaration \\texttt{LFunction\\_eq\\_zero\\_re\\_of\\_isPrimitive}.\n\\end{proof}\n"}]
