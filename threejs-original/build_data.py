@@ -1,4 +1,4 @@
-"""Build the Riemann proof atlas from both blueprints and the pinned Lean environment."""
+"""Build the Riemann Proof Map from both blueprints and the pinned Lean environment."""
 import csv
 import hashlib
 import html
@@ -213,9 +213,9 @@ def build():
 
 def publish_sources(sources,pin):
     esc = html.escape
-    parts = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mathlib source excerpts · Proof atlas</title>',
+    parts = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mathlib source excerpts · Proof Map</title>',
         '<style>body{max-width:85ch;margin:auto;padding:2rem 1.2rem;background:#11151d;color:#eef0f1;font:16px/1.55 system-ui,sans-serif}section{margin:2.2rem 0;scroll-margin:1.2rem}h2,code{overflow-wrap:anywhere}h2{font-size:1.1rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#1c222e;padding:1rem;font-size:.88rem}a{color:#9bdcde}small{color:#b8c5cf}mark{background:#544520;color:#fff}nav{display:flex;gap:1rem}</style></head><body>',
-        '<nav><a href="index.html">Back to the proof atlas</a></nav><h1>Mathlib source excerpts</h1>',f'<p>Exact source lines from Mathlib revision <code>{esc(pin)}</code>.</p>']
+        '<nav><a href="index.html">Back to the Proof Map</a></nav><h1>Mathlib source excerpts</h1>',f'<p>Exact source lines from Mathlib revision <code>{esc(pin)}</code>.</p>']
     for key,name,file,line,lines,start,url in sources:
         parts.append(f'<section id="{esc(key)}"><h2>{esc(name)}</h2><small>{esc(file)} · line {line}</small><pre>')
         for n,text in enumerate(lines,start):

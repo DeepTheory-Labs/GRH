@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0a111d" />
-    <title>Riemann hypothesis · Proof Atlas</title>
+    <title>Riemann hypothesis · Proof Map</title>
     <link rel="stylesheet" href="atlas.css" />
     <script defer src="vendor/three-0.182.0.min.js"></script>
     <script defer src="graph-data.js"></script>
@@ -54,6 +54,8 @@
           <path d="M12 5v14M5 12h14" />
         </symbol>
         <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+        <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" /></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5-10-6.5" /></symbol>
         <symbol id="i-reset" viewBox="0 0 24 24">
           <path d="M4 10a8 8 0 1 1 .9 6.1M4 5v5h5" />
         </symbol>
@@ -83,7 +85,7 @@
         <a class="brand" href="index.html"
           ><span class="brand-icon"
             ><svg><use href="#i-orbit" /></svg></span
-          >Proof Atlas</a
+          >Proof Map</a
         >
         <div class="mast-right">
           <a href="../leanarchitect-original/index.html"
@@ -198,7 +200,15 @@
                   aria-label="Reset graph view"
                   title="Reset view"
                 >
-                  <svg><use href="#i-reset" /></svg>
+                  <svg><use href="#i-reset" /></svg></button
+                ><button
+                  type="button"
+                  id="spin"
+                  aria-label="Pause rotation"
+                  title="Pause rotation"
+                  aria-pressed="false"
+                >
+                  <svg><use href="#i-pause" /></svg>
                 </button>
               </div>
               <div class="graph-hint">
