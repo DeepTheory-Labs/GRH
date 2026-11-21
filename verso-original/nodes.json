@@ -1,0 +1,518 @@
+[
+  {
+    "label": "reciprocity_from_literature",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 313,
+    "decl": "UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature",
+    "summary": "Extracts existence of local reciprocity from the supplied literature record.",
+    "uses": []
+  },
+  {
+    "label": "covolume_bound",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopCovolSlim2Use.lean",
+    "line": 16,
+    "decl": "SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt",
+    "summary": "Derives the required covolume bound from arithmetic geometry inputs including Hilbert–Samuel, positivity, toroidal compactifications and deformation theory.",
+    "uses": []
+  },
+  {
+    "label": "theta_to_Galois",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GaloisRepresentationsOfThetaLift.lean",
+    "line": 6,
+    "decl": "UpperTheory.Gal.Int.galoisRepresentations_of_thetaLift",
+    "summary": "Converts the theta lift and the geometric input into the local–global reciprocity row.",
+    "uses": []
+  },
+  {
+    "label": "theta_lift",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/ThetaKernels/TLiftK.lean",
+    "line": 4,
+    "decl": "UpperTheory.TP.K.tLiftK",
+    "summary": "Supplies the theta lift fed into the Galois representation construction.",
+    "uses": []
+  },
+  {
+    "label": "Galois_row",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean",
+    "line": 6,
+    "decl": "UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter",
+    "summary": "The local–global Galois row for the reciprocity parameter comes from the theta-lift construction.",
+    "uses": [
+      {
+        "node": "theta_lift",
+        "line": 6
+      },
+      {
+        "node": "theta_to_Galois",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "label": "local_Langlands",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean",
+    "line": 20,
+    "decl": "UpperTheory.Zero.LLC.recTExists",
+    "summary": "Constructs the local reciprocity datum and proves its required compatibility properties.",
+    "uses": []
+  },
+  {
+    "label": "automorphic_window",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean",
+    "line": 4,
+    "decl": "UpperTheory.One.vwin_of_row",
+    "summary": "Turns the local–global row and base-change input into the automorphic window.",
+    "uses": []
+  },
+  {
+    "label": "third_place_inputs",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 666,
+    "decl": "UpperTheory.LiteratureTheorems.published_results_eigen",
+    "summary": "Assembles the unitary-group third-place hypotheses from the literature package.",
+    "uses": []
+  },
+  {
+    "label": "theta_local_inputs",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 727,
+    "decl": "UpperTheory.LiteratureTheorems.published_results_first",
+    "summary": "Builds the local theta input record used in the matching argument.",
+    "uses": []
+  },
+  {
+    "label": "theta_matching",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 565,
+    "decl": "UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature",
+    "summary": "Produces both agreement of theta integrals and local matching.",
+    "uses": []
+  },
+  {
+    "label": "definite_side",
+    "group": "Arithmetic inputs",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+    "line": 44,
+    "decl": "UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound",
+    "summary": "Uses the theta, covolume and reciprocity data to construct the definite-side hypotheses.",
+    "uses": []
+  },
+  {
+    "label": "family_zero_free",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean",
+    "line": 26,
+    "decl": "UpperTheory.Top.zeroFreeAll_of_topG",
+    "summary": "Derives primitive-character zero-freeness from connected families and a host for each character.",
+    "uses": []
+  },
+  {
+    "label": "primitive_zero_free",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean",
+    "line": 12,
+    "decl": "UpperTheory.Top.zero_free_all_of_green_v_win",
+    "summary": "Supplies the family and host inputs using the Green condition, the window and the definite-side hypotheses.",
+    "uses": [
+      {
+        "node": "family_zero_free",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "label": "change_of_level",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean",
+    "line": 5,
+    "decl": "UpperTheory.Top.imprimitive",
+    "summary": "Extends primitive-character nonvanishing to arbitrary level by the change-of-level formula and nonzero Euler factors.",
+    "uses": []
+  },
+  {
+    "label": "all_levels",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean",
+    "line": 16,
+    "decl": "UpperTheory.Top.every_character_of_green_v_win",
+    "summary": "Combines primitive nonvanishing with change of level to cover every Dirichlet character.",
+    "uses": [
+      {
+        "node": "primitive_zero_free",
+        "line": 18
+      },
+      {
+        "node": "change_of_level",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "label": "theta_to_nonvanishing",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+    "line": 69,
+    "decl": "UpperTheory.Lit.every_character_of_theta_integrals_local_matching",
+    "summary": "Uses regular characters for the Green condition and theta matching for the definite-side hypotheses, then applies the all-level theorem.",
+    "uses": [
+      {
+        "node": "all_levels",
+        "line": 72
+      },
+      {
+        "node": "definite_side",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "label": "literature_to_nonvanishing",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+    "line": 810,
+    "decl": "UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin",
+    "summary": "Feeds the assembled third-place and theta inputs, both matching facts, a covolume bound, local reciprocity and the window into the theta argument.",
+    "uses": [
+      {
+        "node": "third_place_inputs",
+        "line": 811
+      },
+      {
+        "node": "theta_local_inputs",
+        "line": 811
+      },
+      {
+        "node": "theta_matching",
+        "line": 811
+      },
+      {
+        "node": "theta_to_nonvanishing",
+        "line": 811
+      },
+      {
+        "node": "covolume_bound",
+        "line": 812
+      },
+      {
+        "node": "reciprocity_from_literature",
+        "line": 813
+      }
+    ]
+  },
+  {
+    "label": "row_to_nonvanishing",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+    "line": 7,
+    "decl": "UpperTheory.FinalTheorems.everyCharacter_of_row",
+    "summary": "Supplies the row twice in the literature record, supplies local reciprocity, and builds the required window from that row.",
+    "uses": [
+      {
+        "node": "local_Langlands",
+        "line": 8
+      },
+      {
+        "node": "automorphic_window",
+        "line": 8
+      },
+      {
+        "node": "literature_to_nonvanishing",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "label": "every_character",
+    "group": "Nonvanishing",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+    "line": 10,
+    "decl": "UpperTheory.FinalTheorems.everyCharacter",
+    "summary": "Applies the row-to-nonvanishing implication to the constructed Galois row.",
+    "uses": [
+      {
+        "node": "Galois_row",
+        "line": 11
+      },
+      {
+        "node": "row_to_nonvanishing",
+        "line": 11
+      }
+    ]
+  },
+  {
+    "label": "Euler_factor",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 7,
+    "decl": "Claim.factor_ne_zero",
+    "summary": "A removed prime Euler factor cannot vanish when the real part is positive.",
+    "uses": []
+  },
+  {
+    "label": "primitive_zero",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 23,
+    "decl": "Claim.prim_zero",
+    "summary": "A zero in the open strip descends to the primitive character after removing the nonvanishing Euler factors.",
+    "uses": [
+      {
+        "node": "Euler_factor",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "label": "strip_gamma",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 35,
+    "decl": "Claim.gamma_ne_zero",
+    "summary": "The character gamma factor is nonzero in the open right half-plane.",
+    "uses": []
+  },
+  {
+    "label": "reflect_zero",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 42,
+    "decl": "Claim.prim_reflect",
+    "summary": "Reflects a primitive zero to the inverse character at one minus the original point by the completed functional equation.",
+    "uses": [
+      {
+        "node": "strip_gamma",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "label": "Dirichlet_strip",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 59,
+    "decl": "Claim.strip",
+    "summary": "For a zero left of the critical line, descend to the primitive character and reflect it into the zero-free half-plane. Right-side zeros are excluded directly.",
+    "uses": [
+      {
+        "node": "primitive_zero",
+        "line": 67
+      },
+      {
+        "node": "reflect_zero",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "label": "zeta_claim",
+    "group": "Analytic reductions",
+    "file": "Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean",
+    "line": 75,
+    "decl": "Claim.zeta",
+    "summary": "Uses the level-one instance of the strip result and the zeta functional equation outside the strip. This is a component of the conjunction used by an export.",
+    "uses": [
+      {
+        "node": "Dirichlet_strip",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "label": "primitive_gamma",
+    "group": "Analytic reductions",
+    "file": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 6,
+    "decl": "Formalism.VW.gammaFactor_ne_zero",
+    "summary": "Proves gamma-factor nonvanishing in the separate primitive-character reduction.",
+    "uses": []
+  },
+  {
+    "label": "primitive_line",
+    "group": "Analytic reductions",
+    "file": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 11,
+    "decl": "Formalism.VW.critLine",
+    "summary": "Reflects a primitive Dirichlet zero and applies the half-plane hypothesis. This is the reduction used by the original primitive export.",
+    "uses": [
+      {
+        "node": "primitive_gamma",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "label": "zeta_reflection",
+    "group": "Analytic reductions",
+    "file": "Formalism/GammaFactorNonvanishing/RhOfRight.lean",
+    "line": 5,
+    "decl": "Formalism.VW.rh_of_right",
+    "summary": "Reflects a nontrivial zeta zero to show that right-half-plane nonvanishing forces real part one half.",
+    "uses": []
+  },
+  {
+    "label": "level_one_zeta",
+    "group": "Analytic reductions",
+    "file": "Formalism/GammaFactorNonvanishing/CritLine.lean",
+    "line": 29,
+    "decl": "Formalism.VW.rh_of_every",
+    "summary": "Specializes all-character nonvanishing to the trivial character at level one, identifies its L-function with zeta, and applies reflection.",
+    "uses": [
+      {
+        "node": "zeta_reflection",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "label": "half_plane_input",
+    "group": "Export wrappers",
+    "file": "Supplements/Kernels/MainTheorems.lean",
+    "line": 7,
+    "decl": "allChi",
+    "summary": "Binds the all-character theorem used by the public-facing wrappers.",
+    "uses": [
+      {
+        "node": "every_character",
+        "line": 7
+      }
+    ]
+  },
+  {
+    "label": "RH_wrapper",
+    "group": "Export wrappers",
+    "file": "Supplements/Kernels/MainTheorems.lean",
+    "line": 9,
+    "decl": "rhOfAll",
+    "summary": "Supplies the half-plane input to the level-one zeta reduction.",
+    "uses": [
+      {
+        "node": "level_one_zeta",
+        "line": 9
+      },
+      {
+        "node": "half_plane_input",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "label": "strip_bundle",
+    "group": "Export wrappers",
+    "file": "Supplements/Kernels/MainTheorems.lean",
+    "line": 15,
+    "decl": "claimAll",
+    "summary": "Stores half-plane nonvanishing, the strip result, and the zeta result in one conjunction. The all-character strip export selects its middle field.",
+    "uses": [
+      {
+        "node": "half_plane_input",
+        "line": 16
+      },
+      {
+        "node": "Dirichlet_strip",
+        "line": 16
+      },
+      {
+        "node": "zeta_claim",
+        "line": 16
+      }
+    ]
+  },
+  {
+    "label": "primitive_wrapper",
+    "group": "Export wrappers",
+    "file": "Supplements/Kernels/MainTheorems.lean",
+    "line": 11,
+    "decl": "critAll",
+    "summary": "Supplies the half-plane input to the primitive critical-line reduction.",
+    "uses": [
+      {
+        "node": "primitive_line",
+        "line": 13
+      },
+      {
+        "node": "half_plane_input",
+        "line": 13
+      }
+    ]
+  },
+  {
+    "label": "Riemann_hypothesis",
+    "group": "Public conclusions",
+    "file": "Main.lean",
+    "line": 4,
+    "decl": "riemannHypothesis",
+    "summary": "The public Riemann hypothesis theorem in Mathlib’s formulation.",
+    "uses": [
+      {
+        "node": "RH_wrapper",
+        "line": 4
+      }
+    ]
+  },
+  {
+    "label": "zeta_zeros",
+    "group": "Public conclusions",
+    "file": "Main.lean",
+    "line": 6,
+    "decl": "riemannZeta_eq_zero_re",
+    "summary": "The explicitly quantified claim about the real parts of nontrivial zeta zeros uses the same proof as RH.",
+    "uses": [
+      {
+        "node": "RH_wrapper",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "label": "Dirichlet_nonvanishing",
+    "group": "Public conclusions",
+    "file": "Main.lean",
+    "line": 8,
+    "decl": "LFunction_ne_zero_of_half_lt_re",
+    "summary": "The public nonvanishing theorem for Dirichlet L-functions to the right of the critical line, with the stated exception at one.",
+    "uses": [
+      {
+        "node": "half_plane_input",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "label": "Dirichlet_zeros",
+    "group": "Public conclusions",
+    "file": "Main.lean",
+    "line": 10,
+    "decl": "LFunction_eq_zero_re",
+    "summary": "The public strip result for all characters projects the middle field of the conjunction.",
+    "uses": [
+      {
+        "node": "strip_bundle",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "label": "primitive_zeros",
+    "group": "Public conclusions",
+    "file": "Main.lean",
+    "line": 12,
+    "decl": "LFunction_eq_zero_re_of_isPrimitive",
+    "summary": "The public strip result for primitive characters uses the dedicated primitive wrapper.",
+    "uses": [
+      {
+        "node": "primitive_wrapper",
+        "line": 12
+      }
+    ]
+  }
+]
