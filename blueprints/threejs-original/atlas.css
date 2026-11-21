@@ -1129,3 +1129,36 @@ svg {
   display: flex;
   align-items: center;
 }
+
+/* Header: one height for logo, brand icon and tabs; two rows on phones. */
+.brand-group { gap: 10px; }
+.lab-logo { margin-right: 0; }
+.lab-logo img { width: 34px; height: 34px; }
+.brand { white-space: nowrap; font-size: 19px; gap: 10px; }
+.brand-icon { width: 34px; height: 34px; }
+.brand-icon svg { width: 22px; height: 22px; }
+.view-switch { padding: 3px; gap: 3px; font-size: 13px; }
+.view-switch a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+.mast-right { font-size: 13px; white-space: nowrap; }
+@media (max-width: 780px) {
+  .mast-inner {
+    height: auto;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 10px 0;
+  }
+  .lab-logo img, .brand-icon { width: 32px; height: 32px; }
+  .brand { font-size: 17px; }
+  .mast-right { font-size: 12px; gap: 14px; }
+  .lean-version { display: none; }
+  .view-switch { order: 3; width: 100%; }
+  .view-switch a { flex: 1; height: 30px; }
+  .metrics { flex-wrap: wrap; row-gap: 8px; }
+}
