@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/ProperLineCovers","key":"021c26634a4b","counts":{"decls":9,"thms":6,"defs":3,"modules":1},"children":[{"name":"CoverPf","path":"Development/EtaleCohomology/EtaleSheaves/ProperLineCovers/CoverPf.lean","key":"01fe5811ff95","module":true,"decls":9,"thms":6,"defs":3,"inEdges":22,"outEdges":8}],"edges":[],"edgesTotal":0}

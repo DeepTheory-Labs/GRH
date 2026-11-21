@@ -1,0 +1,1 @@
+{"path":"GroundTheory/HeightsAndTheta/Theta/Capelli","key":"07ee37e146b1","counts":{"decls":7,"thms":6,"defs":1,"modules":1},"children":[{"name":"CompleteHomogeneous","path":"GroundTheory/HeightsAndTheta/Theta/Capelli/CompleteHomogeneous.lean","key":"00039efb68eb","module":true,"decls":7,"thms":6,"defs":1,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

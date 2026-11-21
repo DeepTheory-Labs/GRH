@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicArithmetic/ExponentialBounds","key":"c32c0aed8b10","counts":{"decls":3,"thms":3,"defs":0,"modules":1},"children":[{"name":"BadShareWin","path":"Development/AutomorphicArithmetic/ExponentialBounds/BadShareWin.lean","key":"adf7c080dcc8","module":true,"decls":3,"thms":3,"defs":0,"inEdges":71,"outEdges":2}],"edges":[],"edgesTotal":0}

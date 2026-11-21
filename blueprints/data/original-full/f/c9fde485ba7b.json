@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/SimpleEigenvalues/SimpleEigenvalueExtension","key":"c9fde485ba7b","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"SimEig","path":"Development/WeilBound/SimpleEigenvalues/SimpleEigenvalueExtension/SimEig.lean","key":"1f08bff28e1a","module":true,"decls":1,"thms":1,"defs":0,"inEdges":1,"outEdges":5}],"edges":[],"edgesTotal":0}

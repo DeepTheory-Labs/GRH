@@ -1,0 +1,1 @@
+{"path":"Formalism/WachLatticeTwists/SplitClassesAll","key":"8aa311e9c8ba","counts":{"decls":1,"thms":0,"defs":1,"modules":1},"children":[{"name":"Statement","path":"Formalism/WachLatticeTwists/SplitClassesAll/Statement.lean","key":"278b2e248815","module":true,"decls":1,"thms":0,"defs":1,"inEdges":10,"outEdges":1}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleTrace/LocalSplitting","key":"761f5d01955f","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"Cover2","path":"Development/EtaleCohomology/EtaleTrace/LocalSplitting/Cover2.lean","key":"84487914522c","module":true,"decls":4,"thms":4,"defs":0,"inEdges":18,"outEdges":2}],"edges":[],"edgesTotal":0}

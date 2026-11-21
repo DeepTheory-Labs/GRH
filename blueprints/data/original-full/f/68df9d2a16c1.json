@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/GeneralLinearIntegers","key":"68df9d2a16c1","counts":{"decls":5,"thms":4,"defs":1,"modules":1},"children":[{"name":"AlgebraMapIntMemOint","path":"ReciprocityTheory/GeneralLinearIntegers/AlgebraMapIntMemOint.lean","key":"dbc5b1bb9ff8","module":true,"decls":5,"thms":4,"defs":1,"inEdges":1,"outEdges":42}],"edges":[],"edgesTotal":0}

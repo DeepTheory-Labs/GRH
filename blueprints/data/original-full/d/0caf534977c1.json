@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/AutomorphicKernels/EisensteinSeriesG2/UnitsBorelSpace/BorelSpaceDoubledGroup.lean":{"decls":[["GlobalTheory.EisBL.Borel.borelAE","thm",1,4,9],["GlobalTheory.EisBL.Borel.borelGL","thm",3,11,2],["GlobalTheory.EisBL.Borel.borelMatAE","thm",2,7,1],["GlobalTheory.EisBL.Borel.units_borelSpace","thm",4,0,1]],"edges":[[0,2],[2,1],[3,1]]}}

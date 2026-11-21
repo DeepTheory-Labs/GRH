@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/LocalDescent","key":"83b0ca202822","counts":{"decls":4,"thms":2,"defs":2,"modules":1},"children":[{"name":"DescLocOf","path":"Development/EtaleCohomology/EtaleSheaves/LocalDescent/DescLocOf.lean","key":"b7e7f982aba4","module":true,"decls":4,"thms":2,"defs":2,"inEdges":54,"outEdges":6}],"edges":[],"edgesTotal":0}

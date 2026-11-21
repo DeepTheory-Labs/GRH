@@ -1,0 +1,1 @@
+{"Formalism/WeightedDeltaMeans/LowerBoundLinearPower.lean":{"decls":[["Formalism.ShimuraLimitIdentity.Kills","def",1,2,1],["Formalism.ShimuraLimitIdentity.Pol","def",1,0,36],["Formalism.ShimuraLimitIdentity.psumAt","def",1,1,3],["Formalism.ShimuraLimitIdentity.top","def",1,0,4]],"edges":[[1,2],[1,0],[2,0]]}}

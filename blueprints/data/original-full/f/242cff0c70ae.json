@@ -1,0 +1,1 @@
+{"path":"Lemmata/CharacterDirections","key":"242cff0c70ae","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"Cdir","path":"Lemmata/CharacterDirections/Cdir.lean","key":"a0079970ab03","module":true,"decls":4,"thms":4,"defs":0,"inEdges":1,"outEdges":1}],"edges":[],"edgesTotal":0}

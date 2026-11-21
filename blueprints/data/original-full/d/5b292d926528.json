@@ -1,0 +1,1 @@
+{"CompanionTheory/AutomorphicTheory/KrullDimension/TopologicalKrullDimModel.lean":{"decls":[["ModelDimension.ModelDim.ringKrullDim_eq","thm",1,2,1],["ModelDimension.ModelDim.topologicalKrullDim_model","thm",1,16,1],["ModelDimension.ModelDim.trdeg_eq","thm",1,16,1]],"edges":[[0,1]]}}

@@ -1,0 +1,1 @@
+{"Development/AutomorphicArithmetic/CyclotomicBounds/ClassNumberBounds/TotallyRealRoots.lean":{"decls":[["KStar.exists_eq_nuStar","thm",1,1,1],["KStar.exists_exact_of_nuStar_eq","thm",2,2,1],["KStar.le_nuStar_iff","thm",1,1,1],["KStar.nuStar","def",1,0,7]],"edges":[[3,1],[3,2],[3,0],[0,1]]}}

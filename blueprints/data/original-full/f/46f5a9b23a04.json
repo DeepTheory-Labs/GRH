@@ -1,0 +1,1 @@
+{"path":"Lemmata/IdempotentTraceVanishing","key":"46f5a9b23a04","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"TraceAevalEqZero","path":"Lemmata/IdempotentTraceVanishing/TraceAevalEqZero.lean","key":"0761baf97e79","module":true,"decls":4,"thms":4,"defs":0,"inEdges":1,"outEdges":1}],"edges":[],"edgesTotal":0}

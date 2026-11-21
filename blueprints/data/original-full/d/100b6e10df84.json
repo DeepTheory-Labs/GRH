@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/WeightDualExistence/IncludeInjective.lean":{"decls":[["PI.UnitaryGroupMassFormula.AlgWtDualEx.exists_place","thm",1,0,1],["PI.UnitaryGroupMassFormula.AlgWtDualEx.nontrivial_AFplus","thm",1,3,1],["PI.UnitaryGroupMassFormula.AlgWtDualEx.nontrivial_AL","thm",1,3,1]],"edges":[[1,2],[0,1]]}}

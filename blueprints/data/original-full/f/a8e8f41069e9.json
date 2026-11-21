@@ -1,0 +1,1 @@
+{"path":"Formalism/WeightedDeltaMeans","key":"a8e8f41069e9","counts":{"decls":4,"thms":0,"defs":4,"modules":1},"children":[{"name":"LowerBoundLinearPower","path":"Formalism/WeightedDeltaMeans/LowerBoundLinearPower.lean","key":"0fb195c55d72","module":true,"decls":4,"thms":0,"defs":4,"inEdges":0,"outEdges":41}],"edges":[],"edgesTotal":0}

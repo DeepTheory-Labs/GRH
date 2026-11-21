@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/BasicDefinitions","key":"c68fc30d53d8","counts":{"decls":11,"thms":0,"defs":11,"modules":1},"children":[{"name":"AdRep","path":"ReciprocityTheory/BasicDefinitions/AdRep.lean","key":"c140d702e48e","module":true,"decls":11,"thms":0,"defs":11,"inEdges":0,"outEdges":502}],"edges":[],"edgesTotal":0}

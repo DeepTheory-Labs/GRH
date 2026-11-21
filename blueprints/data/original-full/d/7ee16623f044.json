@@ -1,0 +1,1 @@
+{"Development/WeilBound/RepresentationTheoryGL/ResidualSpectrum/ExponentialNegativity/AutomorphicLipschitz/NiceAut.lean":{"decls":[["PositivityTheory.Rg.Rs.JNiceAut.diffSum_one","thm",1,10,1],["PositivityTheory.Rg.Rs.JNiceAut.lip_of_autForm","thm",1,31,1],["PositivityTheory.Rg.Rs.niceAut_holds","thm",1,12,3]],"edges":[[0,1],[1,2]]}}

@@ -1,0 +1,1 @@
+{"path":"CompanionTheory/AutomorphicTheory/BesselSmoothness","key":"0d1b89557a80","counts":{"decls":1,"thms":0,"defs":1,"modules":1},"children":[{"name":"BesselSmoothOf","path":"CompanionTheory/AutomorphicTheory/BesselSmoothness/BesselSmoothOf.lean","key":"e7b09556d173","module":true,"decls":1,"thms":0,"defs":1,"inEdges":0,"outEdges":6}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/UnitPowerNormScale/NormUnitsZpowSq.lean":{"decls":[["PI.GTS.fockF_smul_self","thm",1,2,1],["PI.GTS.re_normFock_smul","thm",1,5,1],["_private.Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitPowerNormScale.NormUnitsZpowSq.0.PI.GTS.fockF_eq_sum_lemma","thm",1,1,1]],"edges":[[0,1],[2,0]]}}

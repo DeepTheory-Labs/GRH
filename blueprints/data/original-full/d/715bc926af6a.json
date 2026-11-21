@@ -1,0 +1,1 @@
+{"Formalism/GammaFactorNonvanishing/CritLine.lean":{"decls":[["Formalism.VW.critLine","thm",1,2,1],["Formalism.VW.gammaFactor_ne_zero","thm",1,0,1],["Formalism.VW.rh_of_every","thm",1,2,1]],"edges":[[1,0]]},"Formalism/GammaFactorNonvanishing/RhOfRight.lean":{"decls":[["Formalism.VW.rh_of_right","thm",3,0,1]],"edges":[]}}

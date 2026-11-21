@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/AdeleApproximation","key":"adb9a7f806b4","counts":{"decls":7,"thms":6,"defs":1,"modules":1},"children":[{"name":"AdeleIntA","path":"ReciprocityTheory/AdeleApproximation/AdeleIntA.lean","key":"3620852c889f","module":true,"decls":7,"thms":6,"defs":1,"inEdges":0,"outEdges":7}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/AdicCompleteness","key":"d7bd2c28746d","counts":{"decls":6,"thms":6,"defs":0,"modules":1},"children":[{"name":"IsAdicCompleteComapConstantCoeff","path":"ReciprocityTheory/AdicCompleteness/IsAdicCompleteComapConstantCoeff.lean","key":"4b366c6edc61","module":true,"decls":6,"thms":6,"defs":0,"inEdges":0,"outEdges":11}],"edges":[],"edgesTotal":0}

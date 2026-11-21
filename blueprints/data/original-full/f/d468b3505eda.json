@@ -1,0 +1,1 @@
+{"path":"Lemmata/MiscLemmasQ","key":"d468b3505eda","counts":{"decls":1,"thms":0,"defs":1,"modules":1},"children":[{"name":"Imports","path":"Lemmata/MiscLemmasQ/Imports.lean","key":"8c03c11950fe","module":true,"decls":1,"thms":0,"defs":1,"inEdges":0,"outEdges":5}],"edges":[],"edgesTotal":0}

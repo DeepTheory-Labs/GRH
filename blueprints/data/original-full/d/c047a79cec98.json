@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/TemperedRepresentationTheory/FarguesExactness/FarguesExactOfPrismatic.lean":{"decls":[["PositivityTheory.Tls2.Jfarg.exists_factor","thm",1,0,1],["PositivityTheory.Tls2.Jfarg.farguesExact_of_hodge","thm",1,36,1],["PositivityTheory.Tls2.Jfarg.primitive","thm",2,0,1]],"edges":[[0,1],[2,1]]}}

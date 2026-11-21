@@ -1,0 +1,1 @@
+{"path":"Formalism/LogFactorialBounds/LogFactorialProofs","key":"bede1b69b7ff","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"PrimeSum","path":"Formalism/LogFactorialBounds/LogFactorialProofs/PrimeSum.lean","key":"6063ac720e67","module":true,"decls":4,"thms":4,"defs":0,"inEdges":0,"outEdges":3}],"edges":[],"edgesTotal":0}

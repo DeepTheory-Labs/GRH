@@ -1,0 +1,1 @@
+{"path":"Development/DiscreteGroups/PiInvariants/CasimirInfinity","key":"e2bf93a18ed5","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"CasInfOfIm","path":"Development/DiscreteGroups/PiInvariants/CasimirInfinity/CasInfOfIm.lean","key":"e3b39ac4bee6","module":true,"decls":4,"thms":4,"defs":0,"inEdges":3,"outEdges":3}],"edges":[],"edgesTotal":0}

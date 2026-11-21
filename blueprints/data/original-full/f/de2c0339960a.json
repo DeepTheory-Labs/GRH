@@ -1,0 +1,1 @@
+{"path":"Formalism/LogFactorialBounds","key":"de2c0339960a","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"LogFactorialProofs","path":"Formalism/LogFactorialBounds/LogFactorialProofs","key":"bede1b69b7ff","module":false,"decls":4,"thms":4,"defs":0,"modules":1,"inEdges":0,"outEdges":3}],"edges":[],"edgesTotal":0}

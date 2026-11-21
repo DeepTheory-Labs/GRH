@@ -1,0 +1,1 @@
+{"path":"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/WeylProduct","key":"f33dac2215a1","counts":{"decls":4,"thms":3,"defs":1,"modules":1},"children":[{"name":"WeylProd","path":"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/WeylProduct/WeylProd.lean","key":"2a8b9011143e","module":true,"decls":4,"thms":3,"defs":1,"inEdges":3,"outEdges":1}],"edges":[],"edgesTotal":0}

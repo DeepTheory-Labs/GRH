@@ -1,0 +1,1 @@
+{"GroundTheory/ArithmeticGeometry/ModularCurves/WeierstrassGenus.lean":{"decls":[["GroundTheory.Arith.Modular.awayToSection_fromZero","thm",1,2,1],["GroundTheory.Arith.Modular.awayToSection_one_fromZero","thm",1,2,1],["GroundTheory.Arith.Modular.presheaf_map_map_apply","thm",1,0,2]],"edges":[[1,0],[2,0],[2,1]]}}

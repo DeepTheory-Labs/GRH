@@ -1,0 +1,88 @@
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+.crumbs button {
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: var(--muted);
+}
+.crumbs button:hover {
+  color: #fff;
+  background: #263b4d;
+}
+.crumbs button[aria-current='true'] {
+  color: var(--ink);
+  font-weight: 600;
+}
+.crumbs .sep {
+  color: var(--quiet);
+}
+.level-note {
+  color: var(--quiet);
+  font-size: 12px;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0;
+}
+.stat-grid div {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.stat-grid dt {
+  color: var(--quiet);
+  font-size: 11px;
+}
+.stat-grid dd {
+  margin: 0;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.open-button {
+  padding: 7px 12px;
+  border: 1px solid #2f5a60;
+  border-radius: 7px;
+  color: var(--cyan);
+  background: #12262c;
+}
+.open-button:hover {
+  color: #fff;
+}
+.kid-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  max-height: 360px;
+  overflow: auto;
+}
+.kid-list li button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 6px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 13px;
+}
+.kid-list li button:hover {
+  background: #1a2b3b;
+}
+.kid-list span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kid-list span:last-child {
+  flex: none;
+  margin-left: 8px;
+  color: var(--quiet);
+  font-variant-numeric: tabular-nums;
+}

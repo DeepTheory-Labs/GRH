@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/PeriodPairIndependence/IndepOfImNe.lean":{"decls":[["PI.KerLat.PerPairProof.im_ne","thm",1,0,1],["PI.KerLat.PerPairProof.indep_of_im_ne","thm",1,0,1],["PI.KerLat.PerPairProof.perPair","thm",1,3,1]],"edges":[[1,2],[0,2]]}}

@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/CoreStatements/IntegralTransfer","key":"ca3b238c64d6","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"PetTie","path":"Development/WeilBound/CoreStatements/IntegralTransfer/PetTie.lean","key":"b889fc351a47","module":true,"decls":1,"thms":1,"defs":0,"inEdges":23,"outEdges":1}],"edges":[],"edgesTotal":0}

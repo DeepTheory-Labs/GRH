@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/RegularisedThetaMirabolic/KFiniteCuspForms/CuspSp.lean":{"decls":[["RfCs.FrobeniusSplitPrimeDatum.exists_cusp_form_of_K_finite","thm",1,36,1],["RfCs.FrobeniusSplitPrimeDatum.mem_of_stable","thm",1,20,1],["RfCs.cuspFiniteVectorsGL","thm",1,38,1],["RfCs.cuspidalSpectrumGL","thm",1,7,3]],"edges":[[2,3],[1,2],[0,2]]}}

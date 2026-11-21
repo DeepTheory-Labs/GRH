@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/TateTwists/TensorVanishing","key":"2f7425610d09","counts":{"decls":15,"thms":12,"defs":3,"modules":1},"children":[{"name":"TensZero","path":"Development/EtaleCohomology/TateTwists/TensorVanishing/TensZero.lean","key":"0518fa1ec2d2","module":true,"decls":15,"thms":12,"defs":3,"inEdges":59,"outEdges":44}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Lemmata/GeneralBFactAltForm","key":"406a2144d71c","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"Imports","path":"Lemmata/GeneralBFactAltForm/Imports.lean","key":"353838d479bc","module":true,"decls":1,"thms":1,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

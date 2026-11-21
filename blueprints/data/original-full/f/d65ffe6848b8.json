@@ -1,0 +1,1 @@
+{"path":"Formalism/SharpRestriction/LevelLetterCocycles/SmallTwists","key":"d65ffe6848b8","counts":{"decls":3,"thms":0,"defs":3,"modules":1},"children":[{"name":"RowSmall","path":"Formalism/SharpRestriction/LevelLetterCocycles/SmallTwists/RowSmall.lean","key":"6121ad717d69","module":true,"decls":3,"thms":0,"defs":3,"inEdges":17,"outEdges":21}],"edges":[],"edgesTotal":0}

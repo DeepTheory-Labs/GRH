@@ -1,0 +1,1 @@
+{"Development/WeilBound/RepresentationTheoryGL/UnitaryDualProof/CompactOrbits/AdjointSemisimple/AdjunctionCharZero.lean":{"decls":[["PositivityTheory.RgUd.T.AdjPf.dc","thm",1,0,1],["PositivityTheory.RgUd.T.AdjPf.isSemisimple_of_mem","thm",1,0,1],["PositivityTheory.RgUd.T.adjunction_char_zero","thm",1,7,1]],"edges":[[0,2],[1,2]]}}

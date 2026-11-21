@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/GreenLabelSurjective/Simple.lean":{"decls":[["PI.GreenLabelSurjWork.exists_simple_constituent","thm",2,3,1],["PI.GreenLabelSurjWork.nontrivial_of_simple","thm",1,0,2],["PI.GreenLabelSurjWork.repHomLin","def",5,0,1],["PI.GreenLabelSurjWork.simple_of_irr","thm",1,1,2]],"edges":[[3,0],[2,3]]}}

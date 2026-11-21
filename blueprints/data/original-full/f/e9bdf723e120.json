@@ -1,0 +1,1 @@
+{"path":"Formalism/PeriodIntegrals/AdmissibleModel","key":"e9bdf723e120","counts":{"decls":36,"thms":28,"defs":8,"modules":1},"children":[{"name":"WeylDim","path":"Formalism/PeriodIntegrals/AdmissibleModel/WeylDim.lean","key":"44992fc5b93d","module":true,"decls":36,"thms":28,"defs":8,"inEdges":64,"outEdges":38}],"edges":[],"edgesTotal":0}

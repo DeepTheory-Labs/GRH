@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/AutomorphicKernels/WeilSiegelFormula/WeilSiegelSchwartz/EcHeisSch.lean":{"decls":[["PositivityTheory.RdEc.heisSch","thm",2,37,1],["PositivityTheory.RdEc.quad_mem","thm",1,45,1],["PositivityTheory.RdEc.translate_mem","thm",1,29,1]],"edges":[[1,0],[2,0]]}}

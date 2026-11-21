@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicArithmetic/RealSpanData","key":"7bcc0dcd7351","counts":{"decls":1,"thms":0,"defs":1,"modules":1},"children":[{"name":"RealData","path":"Development/AutomorphicArithmetic/RealSpanData/RealData.lean","key":"8f4a6bbeb46e","module":true,"decls":1,"thms":0,"defs":1,"inEdges":14,"outEdges":3}],"edges":[],"edgesTotal":0}

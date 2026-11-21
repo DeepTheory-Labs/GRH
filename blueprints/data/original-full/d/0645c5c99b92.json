@@ -1,0 +1,1 @@
+{"Development/AutomorphicArithmetic/IntegralCasts/TransposeInverse/TransposeInv.lean":{"decls":[["Reformulated.TransposeInverseTheory.transposeInv","def",2,2,3],["Reformulated.TransposeInverseTheory.transposeInvFun","def",3,0,2],["Reformulated.TransposeInverseTheory.transposeInvFun_involutive","thm",1,1,1]],"edges":[[1,0],[1,2],[2,0]]}}

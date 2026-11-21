@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/GenusGluing","key":"11165781c101","counts":{"decls":124,"thms":90,"defs":34,"modules":15},"children":[{"name":"GenusApproximation","path":"Formalism/LocalToGlobal/GenusGluing/GenusApproximation","key":"5d3d9435f60f","module":false,"decls":124,"thms":90,"defs":34,"modules":15,"inEdges":461,"outEdges":1}],"edges":[],"edgesTotal":0}

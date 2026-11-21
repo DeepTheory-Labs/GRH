@@ -1,0 +1,1 @@
+{"path":"GroundTheory/GlobalFields/PowerSubgroupIndex","key":"5fc624e9e141","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"Existence","path":"GroundTheory/GlobalFields/PowerSubgroupIndex/Existence.lean","key":"064ec4debfd8","module":true,"decls":1,"thms":1,"defs":0,"inEdges":8,"outEdges":1}],"edges":[],"edgesTotal":0}

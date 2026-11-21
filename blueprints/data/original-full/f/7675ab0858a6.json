@@ -1,0 +1,1 @@
+{"path":"GroundTheory/HeightsAndTheta/Heights/Slopes","key":"7675ab0858a6","counts":{"decls":4,"thms":3,"defs":1,"modules":1},"children":[{"name":"PCanonicalFiltration","path":"GroundTheory/HeightsAndTheta/Heights/Slopes/PCanonicalFiltration.lean","key":"37f0faa0d3ad","module":true,"decls":4,"thms":3,"defs":1,"inEdges":27,"outEdges":4}],"edges":[],"edgesTotal":0}

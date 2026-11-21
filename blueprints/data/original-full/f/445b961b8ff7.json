@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicArithmetic/SpecialMaps","key":"445b961b8ff7","counts":{"decls":37,"thms":19,"defs":12,"modules":1},"children":[{"name":"QuotObjDefs","path":"Development/AutomorphicArithmetic/SpecialMaps/QuotObjDefs.lean","key":"5a0c039db349","module":true,"decls":37,"thms":19,"defs":12,"inEdges":307,"outEdges":142}],"edges":[],"edgesTotal":0}

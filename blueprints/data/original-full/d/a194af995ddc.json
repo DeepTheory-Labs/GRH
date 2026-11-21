@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/AutomorphicKernels/SiegelWeilFormula/DiagonalColumns/AdChar.lean":{"decls":[["PositivityTheory.SiegelWeilFormula.Ald.Ldx.adaptedChar","thm",1,23,2],["PositivityTheory.SiegelWeilFormula.Ald.Ldx.crdB_zero","thm",1,4,1],["PositivityTheory.SiegelWeilFormula.Ald.Ldx.diagCols_eq","thm",1,9,1]],"edges":[[2,0],[1,0]]}}
