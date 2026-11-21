@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/GlobalTheory/GL1","key":"4e929a34322a","counts":{"decls":46,"thms":36,"defs":10,"modules":7},"children":[{"name":"CompactFixesLattice","path":"Formalism/LocalToGlobal/GlobalTheory/GL1/CompactFixesLattice","key":"d3487ef6fc7f","module":false,"decls":46,"thms":36,"defs":10,"modules":7,"inEdges":0,"outEdges":73}],"edges":[],"edgesTotal":0}

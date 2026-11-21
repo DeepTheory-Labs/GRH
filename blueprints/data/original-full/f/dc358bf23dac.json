@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/ThetaOperatorCommutation","key":"dc358bf23dac","counts":{"decls":7,"thms":0,"defs":7,"modules":1},"children":[{"name":"RealTh","path":"Formalism/LocalToGlobal/ThetaOperatorCommutation/RealTh.lean","key":"ae2123f6fc45","module":true,"decls":7,"thms":0,"defs":7,"inEdges":25,"outEdges":125}],"edges":[],"edgesTotal":0}

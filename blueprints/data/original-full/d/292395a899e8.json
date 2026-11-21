@@ -1,0 +1,1 @@
+{"Development/WeilBound/HeckeVectors/SmoothVectors/ContinuousUnits/LocInCompT.lean":{"decls":[["CompanionTheory.D.gk.Br.LIC.continuous_finGL","thm",1,7,1],["CompanionTheory.D.gk.Br.LIC.continuous_infGL","thm",1,10,1],["CompanionTheory.D.gk.Br.LIC.continuous_infGL_toUnits","thm",1,7,1],["CompanionTheory.D.gk.Br.LIC.continuous_toUnits_Kinf","thm",1,2,1]],"edges":[[1,2],[3,2]]}}

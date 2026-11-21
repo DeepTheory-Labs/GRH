@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/PlaceMapInjectivity","key":"485b6d7b97fc","counts":{"decls":1,"thms":0,"defs":1,"modules":1},"children":[{"name":"MapPlInjective","path":"Formalism/LocalToGlobal/PlaceMapInjectivity/MapPlInjective.lean","key":"68950722a9fe","module":true,"decls":1,"thms":0,"defs":1,"inEdges":0,"outEdges":2}],"edges":[],"edgesTotal":0}

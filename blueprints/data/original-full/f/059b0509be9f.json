@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/KummerInduction","key":"059b0509be9f","counts":{"decls":7,"thms":6,"defs":1,"modules":1},"children":[{"name":"StepKOf","path":"Development/EtaleCohomology/EtaleSheaves/KummerInduction/StepKOf.lean","key":"35f64d0b7659","module":true,"decls":7,"thms":6,"defs":1,"inEdges":73,"outEdges":12}],"edges":[],"edgesTotal":0}

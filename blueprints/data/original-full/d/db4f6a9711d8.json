@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/RowWeightSpan/RowWtSpanOfBideterminant.lean":{"decls":[["PI.RWS.RE_eq_of_hom","thm",1,2,1],["PI.RWS.bidet_hom","thm",1,4,1],["PI.RWS.minor_hom","thm",1,2,1],["PI.RWS.rowW","def",1,0,3],["PI.RWS.rowWtSpan_of_bideterminant","thm",1,10,1],["PI.RWS.wt_le","thm",3,1,1]],"edges":[[5,4],[1,4],[2,1],[3,1],[3,2],[3,0],[0,4]]}}

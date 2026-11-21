@@ -1,0 +1,1 @@
+{"Formalism/LocalToGlobal/ProjectiveLattices/LocalIntegralPolynomials/ExistsValuationAdaptedIndex.lean":{"decls":[["Formalism.L2.Pj.LocAlg.C_mem_intPoly","thm",1,1,1],["Formalism.L2.Pj.LocAlg.X_mem_intPoly","thm",1,1,1],["Formalism.L2.Pj.LocAlg.intPoly","def",6,0,3]],"edges":[[2,1],[2,0]]}}

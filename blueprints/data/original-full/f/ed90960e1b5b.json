@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/KatoCoprimality","key":"ed90960e1b5b","counts":{"decls":5,"thms":0,"defs":5,"modules":1},"children":[{"name":"CoprimePowers","path":"Development/WeilBound/KatoCoprimality/CoprimePowers","key":"3b4d6f46820b","module":false,"decls":5,"thms":0,"defs":5,"modules":1,"inEdges":1,"outEdges":11}],"edges":[],"edgesTotal":0}

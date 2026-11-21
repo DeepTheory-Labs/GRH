@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/ThetaLifts/SphericalSplitting","key":"31de6ad92ae3","counts":{"decls":5,"thms":4,"defs":1,"modules":1},"children":[{"name":"SphSplitGeo","path":"Development/WeilBound/ThetaLifts/SphericalSplitting/SphSplitGeo.lean","key":"ef00decc9f9b","module":true,"decls":5,"thms":4,"defs":1,"inEdges":142,"outEdges":2}],"edges":[],"edgesTotal":0}

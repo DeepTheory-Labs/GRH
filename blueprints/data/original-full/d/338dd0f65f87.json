@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/AutomorphicKernels/SiegelWeilFormula/MassOneBase/MassOne.lean":{"decls":[["PositivityTheory.SiegelWeilFormula.BaseOne.eR_eq","thm",1,3,1],["PositivityTheory.SiegelWeilFormula.BaseOne.massOne","thm",2,25,2],["PositivityTheory.SiegelWeilFormula.Densx.cfac.eq_1","thm",1,2,2]],"edges":[[2,1],[0,1]]}}

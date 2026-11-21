@@ -1,0 +1,1 @@
+{"path":"GroundTheory/ArithmeticGeometry/ModularCurves","key":"d0969eca0237","counts":{"decls":3,"thms":3,"defs":0,"modules":1},"children":[{"name":"WeierstrassGenus","path":"GroundTheory/ArithmeticGeometry/ModularCurves/WeierstrassGenus.lean","key":"7aedccb4aba6","module":true,"decls":3,"thms":3,"defs":0,"inEdges":1,"outEdges":1}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/BesselDerivatives/ExpSup.lean":{"decls":[["PI.BesselDerivW.exp_contDiff","thm",1,1,1],["PI.BesselDerivW.exp_entry_contDiff","thm",1,0,1],["PI.BesselDerivW.mulLc","def",2,1,2],["PI.BesselDerivW.mulRc","def",10,0,2]],"edges":[[3,2],[1,0]]}}

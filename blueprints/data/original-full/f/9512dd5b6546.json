@@ -1,0 +1,1 @@
+{"path":"GroundTheory/AutomorphicForms/HarishChandraInvariance","key":"9512dd5b6546","counts":{"decls":12,"thms":11,"defs":1,"modules":1},"children":[{"name":"Compact","path":"GroundTheory/AutomorphicForms/HarishChandraInvariance/Compact.lean","key":"6fa3d8f12ebc","module":true,"decls":12,"thms":11,"defs":1,"inEdges":12,"outEdges":10}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/CoreStatements/AdicCompleteSpans","key":"c457d132b496","counts":{"decls":5,"thms":5,"defs":0,"modules":1},"children":[{"name":"MinorC","path":"Development/WeilBound/CoreStatements/AdicCompleteSpans/MinorC.lean","key":"d00c2c95167f","module":true,"decls":5,"thms":5,"defs":0,"inEdges":16,"outEdges":2}],"edges":[],"edgesTotal":0}

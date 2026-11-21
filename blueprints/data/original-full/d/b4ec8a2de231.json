@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/AdicFiniteOrder/Assembly.lean":{"decls":[["PI.charpoly_int_of_powers_in_compact","thm",1,4,1],["PI.continuous_conj_entry","thm",1,1,1],["PI.finOrdAd_of","thm",1,14,1]],"edges":[[0,2],[1,2]]}}

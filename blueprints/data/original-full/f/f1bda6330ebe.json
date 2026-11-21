@@ -1,0 +1,1 @@
+{"path":"Formalism/WachLatticeTwists/SplitLocalLifts/SplitLocalLiftProofs","key":"f1bda6330ebe","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"LocLift","path":"Formalism/WachLatticeTwists/SplitLocalLifts/SplitLocalLiftProofs/LocLift.lean","key":"30f58947a1c4","module":true,"decls":4,"thms":4,"defs":0,"inEdges":34,"outEdges":3}],"edges":[],"edgesTotal":0}

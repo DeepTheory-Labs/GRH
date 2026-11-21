@@ -1,0 +1,1 @@
+{"path":"GroundTheory/GlobalFields/InfiniteNormIndex","key":"d5a35e465670","counts":{"decls":37,"thms":31,"defs":6,"modules":1},"children":[{"name":"LocalSymbol","path":"GroundTheory/GlobalFields/InfiniteNormIndex/LocalSymbol.lean","key":"c9cda38b5f35","module":true,"decls":37,"thms":31,"defs":6,"inEdges":45,"outEdges":65}],"edges":[],"edgesTotal":0}

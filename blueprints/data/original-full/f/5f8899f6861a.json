@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/ThetaLifts/DoubleEigenvalues","key":"5f8899f6861a","counts":{"decls":5,"thms":4,"defs":1,"modules":1},"children":[{"name":"DblEigenW","path":"Development/WeilBound/ThetaLifts/DoubleEigenvalues/DblEigenW.lean","key":"2585e4b91ad8","module":true,"decls":5,"thms":4,"defs":1,"inEdges":347,"outEdges":2}],"edges":[],"edgesTotal":0}

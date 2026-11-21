@@ -1,0 +1,1 @@
+{"Formalism/LocalToGlobal/Divisibility/JetBounds/JetBoundsProofs/NormEqOneOfNotMem.lean":{"decls":[["Formalism.L2.DIV.EmbeddingLemmas.cZero","thm",1,0,1],["Formalism.L2.DIV.EmbeddingLemmas.exists_clear","thm",4,6,1],["Formalism.L2.DIV.EmbeddingLemmas.mem_pow_iff","thm",1,2,2]],"edges":[[0,1],[2,1]]}}

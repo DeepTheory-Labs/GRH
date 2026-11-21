@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/LatticeArea/ImConjMulCombo.lean":{"decls":[["PI.AreaLatWork.areaLat","thm",1,4,1],["PI.AreaLatWork.im_conj_mul_combo","thm",1,0,1],["PI.AreaLatWork.im_integral","thm",1,2,1]],"edges":[[2,0],[1,2]]}}

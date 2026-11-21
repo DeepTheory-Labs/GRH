@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/UnitExistence","key":"939f7fe6e3b2","counts":{"decls":14,"thms":10,"defs":4,"modules":1},"children":[{"name":"CocycleOfSec","path":"Development/EtaleCohomology/EtaleSheaves/UnitExistence/CocycleOfSec.lean","key":"4f1cbb877057","module":true,"decls":14,"thms":10,"defs":4,"inEdges":130,"outEdges":2}],"edges":[],"edgesTotal":0}

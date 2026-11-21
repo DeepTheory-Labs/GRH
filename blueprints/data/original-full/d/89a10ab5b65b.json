@@ -1,0 +1,1 @@
+{"Development/AbelianVarietyTheory/Statements/ShortVectorBound/ScaledLatticesInSupLattices.lean":{"decls":[["GlobalTheory.PlaceTop.ScaledLatticesInSupLattices","def",6,56,3],["GlobalTheory.PlaceTop.ShortBoundSt","def",2,55,4],["GlobalTheory.PlaceTop.ThBoundSt","def",5,48,8],["GlobalTheory.PlaceTop.ramLoss","def",2,11,9]],"edges":[[2,1],[2,0],[3,2],[3,1]]}}

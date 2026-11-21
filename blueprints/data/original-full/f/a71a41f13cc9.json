@@ -1,0 +1,1 @@
+{"path":"CompanionTheory/RealGroups/BaseChange","key":"a71a41f13cc9","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"ArchimedeanBaseChange","path":"CompanionTheory/RealGroups/BaseChange/ArchimedeanBaseChange","key":"b92810498fc0","module":false,"decls":1,"thms":1,"defs":0,"modules":1,"inEdges":3,"outEdges":1}],"edges":[],"edgesTotal":0}

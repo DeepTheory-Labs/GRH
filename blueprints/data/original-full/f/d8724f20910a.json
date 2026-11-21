@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/RatioJoints","key":"d8724f20910a","counts":{"decls":4,"thms":0,"defs":4,"modules":1},"children":[{"name":"IsRatioAt","path":"Formalism/LocalToGlobal/RatioJoints/IsRatioAt.lean","key":"f113b9a07918","module":true,"decls":4,"thms":0,"defs":4,"inEdges":42,"outEdges":10}],"edges":[],"edgesTotal":0}

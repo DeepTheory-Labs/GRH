@@ -1,0 +1,1 @@
+{"Development/WeilBound/RepresentationTheoryGL/TubeMeasures/DisjointTubes/UpperFactors/FactorUpper.lean":{"decls":[["MainStatements.Tam.N.fac_le","thm",2,0,1],["MainStatements.Tam.N.factor_lower","thm",1,1,1],["MainStatements.Tam.N.factor_upper","thm",3,0,1],["MainStatements.Tam.num","thm",1,4,3]],"edges":[[0,1],[1,3],[2,3]]}}

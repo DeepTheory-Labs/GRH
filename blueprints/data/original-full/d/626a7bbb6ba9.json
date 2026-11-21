@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/MaximalCompactConjugacy/Assembly.lean":{"decls":[["PI.BridgeMaxCptWork.bridgeMaxCpt_of","thm",1,32,1],["PI.BridgeMaxCptWork.conj_unitary_iff","thm",1,0,1],["PI.BridgeMaxCptWork.kf_iff","thm",1,45,1],["PI.BridgeMaxCptWork.kinf_iff","thm",1,39,1],["PI.BridgeMaxCptWork.mem_KGA_iff","thm",1,36,1]],"edges":[[1,3],[4,0],[2,4],[3,4]]}}

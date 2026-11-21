@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/QuotientSigmaFiniteness/SigmaFiniteOfWeil.lean":{"decls":[["PI.UnitaryGroupMassFormula.QuotNuSigma.pos_open_one","thm",1,0,1],["PI.UnitaryGroupMassFormula.QuotNuSigma.pos_open_one_mul","thm",1,1,1],["PI.UnitaryGroupMassFormula.QuotNuSigma.sigmaFinite_of_weil","thm",1,1,1]],"edges":[[1,2],[0,1]]}}

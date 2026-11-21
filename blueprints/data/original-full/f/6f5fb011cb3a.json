@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/ReductiveGroups/TraceFormulas","key":"6f5fb011cb3a","counts":{"decls":90,"thms":51,"defs":24,"modules":1},"children":[{"name":"LatDefs","path":"ReciprocityTheory/ReductiveGroups/TraceFormulas/LatDefs.lean","key":"b6df9b61fe59","module":true,"decls":90,"thms":51,"defs":24,"inEdges":342,"outEdges":1536}],"edges":[],"edgesTotal":0}

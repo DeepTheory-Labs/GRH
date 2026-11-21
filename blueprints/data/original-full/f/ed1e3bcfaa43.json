@@ -1,0 +1,1 @@
+{"path":"Lemmata/GeneralBFactThirdAlt","key":"ed1e3bcfaa43","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"Imports","path":"Lemmata/GeneralBFactThirdAlt/Imports.lean","key":"6b42c5a1c1ce","module":true,"decls":1,"thms":1,"defs":0,"inEdges":0,"outEdges":2}],"edges":[],"edgesTotal":0}

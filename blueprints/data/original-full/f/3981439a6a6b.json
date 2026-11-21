@@ -1,0 +1,1 @@
+{"path":"Lemmata/FirstBlockLemmaH","key":"3981439a6a6b","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"Imports","path":"Lemmata/FirstBlockLemmaH/Imports.lean","key":"fb9ef7917741","module":true,"decls":1,"thms":1,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

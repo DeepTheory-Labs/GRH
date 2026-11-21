@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicArithmetic/CrystallineRing","key":"0722857c64f1","counts":{"decls":19,"thms":3,"defs":16,"modules":1},"children":[{"name":"Acris0","path":"Development/AutomorphicArithmetic/CrystallineRing/Acris0.lean","key":"c0c0d5ec915f","module":true,"decls":19,"thms":3,"defs":16,"inEdges":83,"outEdges":12}],"edges":[],"edgesTotal":0}

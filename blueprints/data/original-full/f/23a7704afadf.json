@@ -1,0 +1,1 @@
+{"path":"Lemmata/DiscreteValuationQuotients","key":"23a7704afadf","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"LenQuotSpan","path":"Lemmata/DiscreteValuationQuotients/LenQuotSpan.lean","key":"259247422cac","module":true,"decls":4,"thms":4,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

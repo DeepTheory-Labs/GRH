@@ -1,0 +1,1 @@
+{"path":"Lemmata/GeneralBFactSecondBisForm","key":"b9f64836fc09","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"Goal1","path":"Lemmata/GeneralBFactSecondBisForm/Goal1.lean","key":"24b1bceb0632","module":true,"decls":1,"thms":1,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

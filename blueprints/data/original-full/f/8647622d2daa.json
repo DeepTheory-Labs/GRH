@@ -1,0 +1,1 @@
+{"path":"Formalism/GaloisCohomology/GaloisCohomologyProofs","key":"8647622d2daa","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"LdataNonempty","path":"Formalism/GaloisCohomology/GaloisCohomologyProofs/LdataNonempty.lean","key":"d5f1d0778eb6","module":true,"decls":4,"thms":4,"defs":0,"inEdges":26,"outEdges":11}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"Development/AbelianVarietyTheory/Statements/HyperbolicHypotheses/HypothesesInhabitedHyperbolic.lean":{"decls":[["GlobalTheory.AllClasses.exists_isTypeFn","thm",1,4,16],["GlobalTheory.AllClasses.isTorsionFree","thm",1,6,1],["GlobalTheory.AllClasses.subsingleton_of_rank_zero","thm",1,10,1],["GlobalTheory.AllClassesSt","def",5,23,3]],"edges":[[1,2]]}}

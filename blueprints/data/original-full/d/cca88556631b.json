@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/HasseDerivativeFiltration/HasseMemHfr.lean":{"decls":[["PI.UnitaryGroupMassFormula.HassePresH.hasse_frac_eq","thm",1,31,1],["PI.UnitaryGroupMassFormula.HassePresH.hasse_mem_Hfr","thm",1,40,1],["PI.UnitaryGroupMassFormula.HassePresH.main","thm",1,17,1]],"edges":[[0,1],[1,2]]}}

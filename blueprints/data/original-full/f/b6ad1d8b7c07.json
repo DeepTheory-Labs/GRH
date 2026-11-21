@@ -1,0 +1,1 @@
+{"path":"ReciprocityTheory/ReductiveGroups/PlaceCounting","key":"b6ad1d8b7c07","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"RaySplA","path":"ReciprocityTheory/ReductiveGroups/PlaceCounting/RaySplA.lean","key":"1b559ee0da4b","module":true,"decls":1,"thms":1,"defs":0,"inEdges":0,"outEdges":2}],"edges":[],"edgesTotal":0}

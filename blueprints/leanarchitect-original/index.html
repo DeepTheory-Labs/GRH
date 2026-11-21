@@ -1,0 +1,980 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Riemann proof · LeanArchitect</title><style>
+*{box-sizing:border-box}body{margin:0;color:#1f3040;background:#f7f8fa;font:16px/1.5 system-ui,sans-serif}main{max-width:1500px;padding:clamp(16px,3vw,44px);margin:auto}h1,h2,h3{line-height:1.18;margin:.2rem 0 .65rem;font-family:Georgia,serif}h1{font-size:clamp(2.25rem,5vw,4.5rem);font-weight:500}h2{font-size:1.7rem;margin-top:1.3rem}.intro{max-width:83ch}.toolbar,.legend{display:flex;align-items:center;gap:1em;flex-wrap:wrap;margin:.8em 0}.toolbar select,button{font:inherit;padding:.4em .65em;border:1px solid #91a4b8;border-radius:4px;background:white;color:#183349}.viewport{background:white;border:1px solid #cbd5df;overflow:auto}.viewport svg{display:block;width:100%;height:auto}.viewport.actual svg{width:auto;max-width:none}.node,.edge{transition:opacity .14s}.dim{opacity:.10}.legend{font-size:.88rem}.line{display:inline-block;width:2rem;border-top:2px solid #425975;vertical-align:middle}.line.trace{border-top-style:dashed}.line.type{border-top-style:dotted}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,355px),1fr));gap:1rem}.card{padding:1rem;background:white;border:1px solid #d3dbe4;border-radius:5px;min-width:0;scroll-margin-top:1rem}.card:target{outline:3px solid #ab722b}.card h3{margin:.4em 0}.card ul{padding-left:1.2em}.file,.name{overflow-wrap:anywhere}.file,small,.status{font-size:.80rem}.status{color:#476187;font-weight:650}.status.compiled{color:#28654e}.file{display:block;margin-top:.5rem}summary{cursor:pointer}a{color:#245581}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.78rem;line-height:1.38;background:#f5f7fa;padding:.65rem}.cards code{font-size:.82rem}label{font-weight:550}button{cursor:pointer}
+</style><link rel="stylesheet" href="../shared/blueprint-full.css?v=202611211038"><link rel="icon" type="image/png" href="../../assets/dtheta-tile-dark.png"></head><body><main><div class="bf-top"><div class="bf-left"><a class="lab-logo" href="https://github.com/DeepTheory-Labs" title="DeepTheory Labs" aria-label="DeepTheory Labs"><img src="../../assets/dtheta-tile-dark.png" alt="DeepTheory Labs" width="34" height="34"></a><nav class="bf-tabs" aria-label="Graph view"><a href="index.html" aria-current="page">Simplified</a><a href="full.html">Full proof</a></nav></div></div><h1>Riemann proof structure</h1><p class="intro">The archive derives the five public statements from nonvanishing of Dirichlet L-functions to the right of the critical line. Follow the Galois row, local parameters and theta-matching inputs into that result, then follow each analytic deduction to its public name.</p><p class="intro">LeanArchitect checked the selected analytic statements and their proofs on Lean 4.33.1. The unconditional nonvanishing result and the five public exports were traced in the original source. A compiled proof of the unconditional theorem was unavailable in this checkout.</p><div class="toolbar"><label>Follow a conclusion <select id="focus"><option value="">All five conclusions</option><option value="mainRH">Riemann hypothesis</option><option value="mainZeta">Nontrivial zeta zeros on the line</option><option value="mainNV">Dirichlet half-plane nonvanishing</option><option value="mainStrip">All Dirichlet zeros on the line</option><option value="mainPrim">Primitive Dirichlet zeros on the line</option></select></label><button id="zoom">Actual size</button><a href="dependencies.svg">Open SVG</a><a href="export/blueprint/module/RiemannArchitect.json">LeanArchitect JSON</a></div><div class="legend"><span><i class="line"></i> checked proof</span><span><i class="line type"></i> checked statement</span><span><i class="line trace"></i> source reference</span><span>Arrows point from prerequisite to consumer. Select a node for its source.</span></div><div class="viewport" id="graph"><svg width="1098pt" height="759pt"
+ viewBox="0.00 0.00 1098.00 759.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(10.08 749.28)">
+<title>Proof</title>
+<polygon fill="white" stroke="none" points="-10.08,10.08 -10.08,-749.28 1088.02,-749.28 1088.02,10.08 -10.08,10.08"/>
+<!-- everyDef&#45;&gt;crit -->
+<g id="e&#45;everyDef&#45;crit" class="edge">
+<title>everyDef&#45;&gt;crit</title>
+<g id="a_e&#45;everyDef&#45;crit"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M196.63,-233.34C190.94,-223.53 183.86,-211.31 177.69,-200.66"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="179.52,-199.78 174.85,-195.78 176.01,-201.81 179.52,-199.78"/>
+</a>
+</g>
+</g>
+<!-- everyDef&#45;&gt;rhEvery -->
+<g id="e&#45;everyDef&#45;rhEvery" class="edge">
+<title>everyDef&#45;&gt;rhEvery</title>
+<g id="a_e&#45;everyDef&#45;rhEvery"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M240.92,-233.34C260.5,-222.65 285.3,-209.1 305.92,-197.84"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="306.81,-199.67 310.93,-195.11 304.87,-196.11 306.81,-199.67"/>
+</a>
+</g>
+</g>
+<!-- half&#45;&gt;strip -->
+<g id="e&#45;half&#45;strip" class="edge">
+<title>half&#45;&gt;strip</title>
+<g id="a_e&#45;half&#45;strip"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M678.26,-311.26C696.21,-300.62 718.93,-287.14 737.87,-275.91"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="738.68,-277.78 742.64,-273.08 736.61,-274.29 738.68,-277.78"/>
+</a>
+</g>
+</g>
+<!-- half&#45;&gt;zeta -->
+<g id="e&#45;half&#45;zeta" class="edge">
+<title>half&#45;&gt;zeta</title>
+<g id="a_e&#45;half&#45;zeta"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M657.94,-311.16C663.9,-300.05 670.98,-285.44 675.28,-271.68 682.5,-248.54 686.34,-221.12 688.32,-201.54"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="690.33,-201.89 688.85,-195.92 686.29,-201.5 690.33,-201.89"/>
+</a>
+</g>
+</g>
+<!-- stripDef&#45;&gt;strip -->
+<g id="e&#45;stripDef&#45;strip" class="edge">
+<title>stripDef&#45;&gt;strip</title>
+<g id="a_e&#45;stripDef&#45;strip"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M871.6,-312.22C853.86,-301.45 830.91,-287.51 811.86,-275.94"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="813.06,-274.29 807.05,-273.02 810.96,-277.77 813.06,-274.29"/>
+</a>
+</g>
+</g>
+<!-- zetaDef&#45;&gt;zeta -->
+<g id="e&#45;zetaDef&#45;zeta" class="edge">
+<title>zetaDef&#45;&gt;zeta</title>
+<g id="a_e&#45;zetaDef&#45;zeta"><a xlink:title="type">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="1,5" d="M629.2,-234.49C640.02,-224.1 653.95,-210.71 665.77,-199.35"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="667.01,-200.97 669.79,-195.49 664.2,-198.05 667.01,-200.97"/>
+</a>
+</g>
+</g>
+<!-- factor&#45;&gt;primZero -->
+<g id="e&#45;factor&#45;primZero" class="edge">
+<title>factor&#45;&gt;primZero</title>
+<g id="a_e&#45;factor&#45;primZero"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M1014.28,-390.33C1014.28,-380.59 1014.28,-368.23 1014.28,-357.36"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="1016.31,-357.67 1014.28,-351.87 1012.25,-357.67 1016.31,-357.67"/>
+</a>
+</g>
+</g>
+<!-- primZero&#45;&gt;strip -->
+<g id="e&#45;primZero&#45;strip" class="edge">
+<title>primZero&#45;&gt;strip</title>
+<g id="a_e&#45;primZero&#45;strip"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M960.34,-312.51C924.57,-301.14 877.44,-286.17 839.7,-274.18"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="840.57,-272.33 834.43,-272.51 839.34,-276.2 840.57,-272.33"/>
+</a>
+</g>
+</g>
+<!-- gamma&#45;&gt;reflect -->
+<g id="e&#45;gamma&#45;reflect" class="edge">
+<title>gamma&#45;&gt;reflect</title>
+<g id="a_e&#45;gamma&#45;reflect"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M775.28,-390.33C775.28,-380.31 775.28,-367.5 775.28,-356.41"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="777.31,-356.6 775.28,-350.8 773.25,-356.6 777.31,-356.6"/>
+</a>
+</g>
+</g>
+<!-- reflect&#45;&gt;strip -->
+<g id="e&#45;reflect&#45;strip" class="edge">
+<title>reflect&#45;&gt;strip</title>
+<g id="a_e&#45;reflect&#45;strip"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M775.28,-312.41C775.28,-302.67 775.28,-290.31 775.28,-279.44"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="777.31,-279.75 775.28,-273.95 773.25,-279.75 777.31,-279.75"/>
+</a>
+</g>
+</g>
+<!-- strip&#45;&gt;zeta -->
+<g id="e&#45;strip&#45;zeta" class="edge">
+<title>strip&#45;&gt;zeta</title>
+<g id="a_e&#45;strip&#45;zeta"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M754.7,-233.34C743.2,-223.07 728.74,-210.16 716.44,-199.17"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="717.93,-197.78 712.26,-195.43 715.23,-200.81 717.93,-197.78"/>
+</a>
+</g>
+</g>
+<!-- strip&#45;&gt;claimAll -->
+<g id="e&#45;strip&#45;claimAll" class="edge">
+<title>strip&#45;&gt;claimAll</title>
+<g id="a_e&#45;strip&#45;claimAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M775.62,-233.16C775.2,-212.88 772.14,-180.04 758.28,-155.84 750.46,-142.19 738.16,-130.26 726.17,-120.83"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="727.56,-119.34 721.71,-117.45 725.11,-122.57 727.56,-119.34"/>
+</a>
+</g>
+</g>
+<!-- zeta&#45;&gt;claimAll -->
+<g id="e&#45;zeta&#45;claimAll" class="edge">
+<title>zeta&#45;&gt;claimAll</title>
+<g id="a_e&#45;zeta&#45;claimAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M690.28,-155.42C690.28,-145.89 690.28,-134.08 690.28,-123.65"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="692.31,-123.89 690.28,-118.09 688.25,-123.89 692.31,-123.89"/>
+</a>
+</g>
+</g>
+<!-- right&#45;&gt;rhEvery -->
+<g id="e&#45;right&#45;rhEvery" class="edge">
+<title>right&#45;&gt;rhEvery</title>
+<g id="a_e&#45;right&#45;rhEvery"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M347.03,-233.34C346.91,-223.81 346.75,-212 346.62,-201.57"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="348.65,-201.79 346.54,-196.01 344.59,-201.84 348.65,-201.79"/>
+</a>
+</g>
+</g>
+<!-- vGamma&#45;&gt;crit -->
+<g id="e&#45;vGamma&#45;crit" class="edge">
+<title>vGamma&#45;&gt;crit</title>
+<g id="a_e&#45;vGamma&#45;crit"><a xlink:title="proof">
+<path fill="none" stroke="#70869a" stroke-width="1.15" d="M88.24,-233.34C101.88,-222.88 119.08,-209.69 133.58,-198.58"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="134.44,-200.47 137.81,-195.33 131.97,-197.25 134.44,-200.47"/>
+</a>
+</g>
+</g>
+<!-- crit&#45;&gt;critAll -->
+<g id="e&#45;crit&#45;critAll" class="edge">
+<title>crit&#45;&gt;critAll</title>
+<g id="a_e&#45;crit&#45;critAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M163.28,-155.42C163.28,-145.89 163.28,-134.08 163.28,-123.65"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="165.31,-123.89 163.28,-118.09 161.25,-123.89 165.31,-123.89"/>
+</a>
+</g>
+</g>
+<!-- rhEvery&#45;&gt;rhAll -->
+<g id="e&#45;rhEvery&#45;rhAll" class="edge">
+<title>rhEvery&#45;&gt;rhAll</title>
+<g id="a_e&#45;rhEvery&#45;rhAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M351.84,-155.42C354.76,-145.79 358.38,-133.85 361.56,-123.35"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="363.44,-124.16 363.18,-118.02 359.55,-122.98 363.44,-124.16"/>
+</a>
+</g>
+</g>
+<!-- topG&#45;&gt;greenZero -->
+<g id="e&#45;topG&#45;greenZero" class="edge">
+<title>topG&#45;&gt;greenZero</title>
+<g id="a_e&#45;topG&#45;greenZero"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M225.28,-700.86C225.28,-691.33 225.28,-679.52 225.28,-669.09"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="227.31,-669.33 225.28,-663.53 223.25,-669.33 227.31,-669.33"/>
+</a>
+</g>
+</g>
+<!-- greenZero&#45;&gt;greenEvery -->
+<g id="e&#45;greenZero&#45;greenEvery" class="edge">
+<title>greenZero&#45;&gt;greenEvery</title>
+<g id="a_e&#45;greenZero&#45;greenEvery"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M241.01,-622.94C249.65,-612.85 260.46,-600.22 269.76,-589.36"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="271.1,-590.92 273.33,-585.19 268.02,-588.28 271.1,-590.92"/>
+</a>
+</g>
+</g>
+<!-- imprimitive&#45;&gt;greenEvery -->
+<g id="e&#45;imprimitive&#45;greenEvery" class="edge">
+<title>imprimitive&#45;&gt;greenEvery</title>
+<g id="a_e&#45;imprimitive&#45;greenEvery"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M339.54,-622.94C330.9,-612.85 320.09,-600.22 310.79,-589.36"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="312.54,-588.28 307.22,-585.19 309.45,-590.92 312.54,-588.28"/>
+</a>
+</g>
+</g>
+<!-- greenEvery&#45;&gt;match -->
+<g id="e&#45;greenEvery&#45;match" class="edge">
+<title>greenEvery&#45;&gt;match</title>
+<g id="a_e&#45;greenEvery&#45;match"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M306.01,-545.02C314.65,-534.93 325.46,-522.3 334.76,-511.44"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="336.1,-513 338.33,-507.27 333.02,-510.36 336.1,-513"/>
+</a>
+</g>
+</g>
+<!-- definite&#45;&gt;match -->
+<g id="e&#45;definite&#45;match" class="edge">
+<title>definite&#45;&gt;match</title>
+<g id="a_e&#45;definite&#45;match"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M405.3,-545.02C396.53,-534.93 385.55,-522.3 376.11,-511.44"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="377.81,-510.31 372.48,-507.27 374.75,-512.97 377.81,-510.31"/>
+</a>
+</g>
+</g>
+<!-- match&#45;&gt;literature -->
+<g id="e&#45;match&#45;literature" class="edge">
+<title>match&#45;&gt;literature</title>
+<g id="a_e&#45;match&#45;literature"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M355.28,-467.1C355.28,-457.57 355.28,-445.76 355.28,-435.33"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="357.31,-435.57 355.28,-429.77 353.25,-435.57 357.31,-435.57"/>
+</a>
+</g>
+</g>
+<!-- literature&#45;&gt;ofRow -->
+<g id="e&#45;literature&#45;ofRow" class="edge">
+<title>literature&#45;&gt;ofRow</title>
+<g id="a_e&#45;literature&#45;ofRow"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M386.5,-389.18C404.59,-378.54 427.49,-365.06 446.57,-353.83"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="447.42,-355.69 451.39,-350.99 445.36,-352.19 447.42,-355.69"/>
+</a>
+</g>
+</g>
+<!-- row&#45;&gt;every -->
+<g id="e&#45;row&#45;every" class="edge">
+<title>row&#45;&gt;every</title>
+<g id="a_e&#45;row&#45;every"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M373.13,-311.26C393.5,-300.52 419.33,-286.91 440.75,-275.62"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="441.52,-277.5 445.7,-273 439.62,-273.91 441.52,-277.5"/>
+</a>
+</g>
+</g>
+<!-- local&#45;&gt;ofRow -->
+<g id="e&#45;local&#45;ofRow" class="edge">
+<title>local&#45;&gt;ofRow</title>
+<g id="a_e&#45;local&#45;ofRow"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M484.28,-389.18C484.28,-379.65 484.28,-367.84 484.28,-357.41"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="486.31,-357.65 484.28,-351.85 482.25,-357.65 486.31,-357.65"/>
+</a>
+</g>
+</g>
+<!-- window&#45;&gt;ofRow -->
+<g id="e&#45;window&#45;ofRow" class="edge">
+<title>window&#45;&gt;ofRow</title>
+<g id="a_e&#45;window&#45;ofRow"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M585.08,-389.18C566.43,-378.54 542.83,-365.06 523.15,-353.83"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="524.19,-352.09 518.15,-350.97 522.18,-355.61 524.19,-352.09"/>
+</a>
+</g>
+</g>
+<!-- ofRow&#45;&gt;every -->
+<g id="e&#45;ofRow&#45;every" class="edge">
+<title>ofRow&#45;&gt;every</title>
+<g id="a_e&#45;ofRow&#45;every"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M483.79,-311.26C483.54,-301.73 483.23,-289.92 482.96,-279.49"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="484.99,-279.68 482.81,-273.93 480.93,-279.78 484.99,-279.68"/>
+</a>
+</g>
+</g>
+<!-- every&#45;&gt;allChi -->
+<g id="e&#45;every&#45;allChi" class="edge">
+<title>every&#45;&gt;allChi</title>
+<g id="a_e&#45;every&#45;allChi"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M482.52,-233.34C482.64,-223.81 482.8,-212 482.94,-201.57"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="484.96,-201.84 483.01,-196.01 480.9,-201.79 484.96,-201.84"/>
+</a>
+</g>
+</g>
+<!-- allChi&#45;&gt;rhAll -->
+<g id="e&#45;allChi&#45;rhAll" class="edge">
+<title>allChi&#45;&gt;rhAll</title>
+<g id="a_e&#45;allChi&#45;rhAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M455.68,-155.42C439.83,-144.87 419.81,-131.54 403.03,-120.36"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="404.42,-118.84 398.46,-117.32 402.16,-122.22 404.42,-118.84"/>
+</a>
+</g>
+</g>
+<!-- allChi&#45;&gt;critAll -->
+<g id="e&#45;allChi&#45;critAll" class="edge">
+<title>allChi&#45;&gt;critAll</title>
+<g id="a_e&#45;allChi&#45;critAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M425.19,-157.61C422.86,-157 420.55,-156.41 418.28,-155.84 353.84,-139.62 279.73,-123 228.07,-111.74"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="228.73,-109.81 222.63,-110.56 227.87,-113.78 228.73,-109.81"/>
+</a>
+</g>
+</g>
+<!-- allChi&#45;&gt;claimAll -->
+<g id="e&#45;allChi&#45;claimAll" class="edge">
+<title>allChi&#45;&gt;claimAll</title>
+<g id="a_e&#45;allChi&#45;claimAll"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M533.65,-155.32C563.58,-144.35 601.64,-130.39 632.75,-118.98"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="633.3,-120.94 638.04,-117.04 631.9,-117.13 633.3,-120.94"/>
+</a>
+</g>
+</g>
+<!-- allChi&#45;&gt;mainNV -->
+<g id="e&#45;allChi&#45;mainNV" class="edge">
+<title>allChi&#45;&gt;mainNV</title>
+<g id="a_e&#45;allChi&#45;mainNV"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M487.98,-155.24C494.96,-127.72 508.07,-76.02 515.9,-45.11"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="517.79,-45.91 517.25,-39.79 513.86,-44.92 517.79,-45.91"/>
+</a>
+</g>
+</g>
+<!-- rhAll&#45;&gt;mainRH -->
+<g id="e&#45;rhAll&#45;mainRH" class="edge">
+<title>rhAll&#45;&gt;mainRH</title>
+<g id="a_e&#45;rhAll&#45;mainRH"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M375.09,-77.5C378.22,-67.59 382.13,-55.22 385.52,-44.5"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="387.43,-45.19 387.24,-39.05 383.56,-43.96 387.43,-45.19"/>
+</a>
+</g>
+</g>
+<!-- rhAll&#45;&gt;mainZeta -->
+<g id="e&#45;rhAll&#45;mainZeta" class="edge">
+<title>rhAll&#45;&gt;mainZeta</title>
+<g id="a_e&#45;rhAll&#45;mainZeta"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M340.95,-77.5C324.69,-66.95 304.14,-53.62 286.92,-42.44"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="288.17,-40.83 282.2,-39.38 285.96,-44.24 288.17,-40.83"/>
+</a>
+</g>
+</g>
+<!-- critAll&#45;&gt;mainPrim -->
+<g id="e&#45;critAll&#45;mainPrim" class="edge">
+<title>critAll&#45;&gt;mainPrim</title>
+<g id="a_e&#45;critAll&#45;mainPrim"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M152.63,-77.5C146.94,-67.69 139.86,-55.47 133.69,-44.82"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="135.52,-43.94 130.85,-39.94 132.01,-45.97 135.52,-43.94"/>
+</a>
+</g>
+</g>
+<!-- claimAll&#45;&gt;mainStrip -->
+<g id="e&#45;claimAll&#45;mainStrip" class="edge">
+<title>claimAll&#45;&gt;mainStrip</title>
+<g id="a_e&#45;claimAll&#45;mainStrip"><a xlink:title="trace">
+<path fill="none" stroke="#70869a" stroke-width="1.15" stroke-dasharray="5,2" d="M690.28,-77.5C690.28,-67.97 690.28,-56.16 690.28,-45.73"/>
+<polygon fill="#70869a" stroke="#70869a" stroke-width="1.15" points="692.31,-45.97 690.28,-40.17 688.25,-45.97 692.31,-45.97"/>
+</a>
+</g>
+</g>
+<!-- everyDef -->
+<g id="n&#45;everyDef" class="node">
+<title>everyDef</title>
+<g id="a_n&#45;everyDef"><a xlink:href="#everyDef" xlink:title="UpperTheory.EveryCharacter">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M257.72,-271.68C257.72,-271.68 156.83,-271.68 156.83,-271.68 150.83,-271.68 144.83,-265.68 144.83,-259.68 144.83,-259.68 144.83,-245.76 144.83,-245.76 144.83,-239.76 150.83,-233.76 156.83,-233.76 156.83,-233.76 257.72,-233.76 257.72,-233.76 263.72,-233.76 269.72,-239.76 269.72,-245.76 269.72,-245.76 269.72,-259.68 269.72,-259.68 269.72,-265.68 263.72,-271.68 257.72,-271.68"/>
+<text xml:space="preserve" text-anchor="middle" x="207.28" y="-256.02" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Dirichlet nonvanishing</text>
+<text xml:space="preserve" text-anchor="middle" x="207.28" y="-242.82" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">premise</text>
+</a>
+</g>
+</g>
+<!-- half -->
+<g id="n&#45;half" class="node">
+<title>half</title>
+<g id="a_n&#45;half"><a xlink:href="#half" xlink:title="Claim.HalfPlane">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M682.44,-349.6C682.44,-349.6 612.11,-349.6 612.11,-349.6 606.11,-349.6 600.11,-343.6 600.11,-337.6 600.11,-337.6 600.11,-323.68 600.11,-323.68 600.11,-317.68 606.11,-311.68 612.11,-311.68 612.11,-311.68 682.44,-311.68 682.44,-311.68 688.44,-311.68 694.44,-317.68 694.44,-323.68 694.44,-323.68 694.44,-337.6 694.44,-337.6 694.44,-343.6 688.44,-349.6 682.44,-349.6"/>
+<text xml:space="preserve" text-anchor="middle" x="647.28" y="-333.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Right half&#45;plane</text>
+<text xml:space="preserve" text-anchor="middle" x="647.28" y="-320.74" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">predicate</text>
+</a>
+</g>
+</g>
+<!-- stripDef -->
+<g id="n&#45;stripDef" class="node">
+<title>stripDef</title>
+<g id="a_n&#45;stripDef"><a xlink:href="#stripDef" xlink:title="Claim.Strip">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M932.38,-348.64C932.38,-348.64 868.17,-348.64 868.17,-348.64 862.17,-348.64 856.17,-342.64 856.17,-336.64 856.17,-336.64 856.17,-324.64 856.17,-324.64 856.17,-318.64 862.17,-312.64 868.17,-312.64 868.17,-312.64 932.38,-312.64 932.38,-312.64 938.38,-312.64 944.38,-318.64 944.38,-324.64 944.38,-324.64 944.38,-336.64 944.38,-336.64 944.38,-342.64 938.38,-348.64 932.38,-348.64"/>
+<text xml:space="preserve" text-anchor="middle" x="900.28" y="-327.34" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Strip predicate</text>
+</a>
+</g>
+</g>
+<!-- zetaDef -->
+<g id="n&#45;zetaDef" class="node">
+<title>zetaDef</title>
+<g id="a_n&#45;zetaDef"><a xlink:href="#zetaDef" xlink:title="Claim.Zeta">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M655.61,-270.72C655.61,-270.72 566.95,-270.72 566.95,-270.72 560.95,-270.72 554.95,-264.72 554.95,-258.72 554.95,-258.72 554.95,-246.72 554.95,-246.72 554.95,-240.72 560.95,-234.72 566.95,-234.72 566.95,-234.72 655.61,-234.72 655.61,-234.72 661.61,-234.72 667.61,-240.72 667.61,-246.72 667.61,-246.72 667.61,-258.72 667.61,-258.72 667.61,-264.72 661.61,-270.72 655.61,-270.72"/>
+<text xml:space="preserve" text-anchor="middle" x="611.28" y="-249.42" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Zeta&#45;zero predicate</text>
+</a>
+</g>
+</g>
+<!-- factor -->
+<g id="n&#45;factor" class="node">
+<title>factor</title>
+<g id="a_n&#45;factor"><a xlink:href="#factor" xlink:title="Claim.factor_ne_zero">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M1065.94,-426.56C1065.94,-426.56 962.61,-426.56 962.61,-426.56 956.61,-426.56 950.61,-420.56 950.61,-414.56 950.61,-414.56 950.61,-402.56 950.61,-402.56 950.61,-396.56 956.61,-390.56 962.61,-390.56 962.61,-390.56 1065.94,-390.56 1065.94,-390.56 1071.94,-390.56 1077.94,-396.56 1077.94,-402.56 1077.94,-402.56 1077.94,-414.56 1077.94,-414.56 1077.94,-420.56 1071.94,-426.56 1065.94,-426.56"/>
+<text xml:space="preserve" text-anchor="middle" x="1014.28" y="-405.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Euler factor is nonzero</text>
+</a>
+</g>
+</g>
+<!-- primZero -->
+<g id="n&#45;primZero" class="node">
+<title>primZero</title>
+<g id="a_n&#45;primZero"><a xlink:href="#primZero" xlink:title="Claim.prim_zero">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M1055.85,-349.6C1055.85,-349.6 972.71,-349.6 972.71,-349.6 966.71,-349.6 960.71,-343.6 960.71,-337.6 960.71,-337.6 960.71,-323.68 960.71,-323.68 960.71,-317.68 966.71,-311.68 972.71,-311.68 972.71,-311.68 1055.85,-311.68 1055.85,-311.68 1061.85,-311.68 1067.85,-317.68 1067.85,-323.68 1067.85,-323.68 1067.85,-337.6 1067.85,-337.6 1067.85,-343.6 1061.85,-349.6 1055.85,-349.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1014.28" y="-333.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Pass a zero to the</text>
+<text xml:space="preserve" text-anchor="middle" x="1014.28" y="-320.74" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">primitive character</text>
+</a>
+</g>
+</g>
+<!-- gamma -->
+<g id="n&#45;gamma" class="node">
+<title>gamma</title>
+<g id="a_n&#45;gamma"><a xlink:href="#gamma" xlink:title="Claim.gamma_ne_zero">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M833.66,-426.56C833.66,-426.56 716.89,-426.56 716.89,-426.56 710.89,-426.56 704.89,-420.56 704.89,-414.56 704.89,-414.56 704.89,-402.56 704.89,-402.56 704.89,-396.56 710.89,-390.56 716.89,-390.56 716.89,-390.56 833.66,-390.56 833.66,-390.56 839.66,-390.56 845.66,-396.56 845.66,-402.56 845.66,-402.56 845.66,-414.56 845.66,-414.56 845.66,-420.56 839.66,-426.56 833.66,-426.56"/>
+<text xml:space="preserve" text-anchor="middle" x="775.28" y="-405.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Gamma factor is nonzero</text>
+</a>
+</g>
+</g>
+<!-- reflect -->
+<g id="n&#45;reflect" class="node">
+<title>reflect</title>
+<g id="a_n&#45;reflect"><a xlink:href="#reflect" xlink:title="Claim.prim_reflect">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M827.85,-348.64C827.85,-348.64 722.7,-348.64 722.7,-348.64 716.7,-348.64 710.7,-342.64 710.7,-336.64 710.7,-336.64 710.7,-324.64 710.7,-324.64 710.7,-318.64 716.7,-312.64 722.7,-312.64 722.7,-312.64 827.85,-312.64 827.85,-312.64 833.85,-312.64 839.85,-318.64 839.85,-324.64 839.85,-324.64 839.85,-336.64 839.85,-336.64 839.85,-342.64 833.85,-348.64 827.85,-348.64"/>
+<text xml:space="preserve" text-anchor="middle" x="775.28" y="-327.34" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Reflect a primitive zero</text>
+</a>
+</g>
+</g>
+<!-- strip -->
+<g id="n&#45;strip" class="node">
+<title>strip</title>
+<g id="a_n&#45;strip"><a xlink:href="#strip" xlink:title="Claim.strip">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M820.21,-271.68C820.21,-271.68 730.34,-271.68 730.34,-271.68 724.34,-271.68 718.34,-265.68 718.34,-259.68 718.34,-259.68 718.34,-245.76 718.34,-245.76 718.34,-239.76 724.34,-233.76 730.34,-233.76 730.34,-233.76 820.21,-233.76 820.21,-233.76 826.21,-233.76 832.21,-239.76 832.21,-245.76 832.21,-245.76 832.21,-259.68 832.21,-259.68 832.21,-265.68 826.21,-271.68 820.21,-271.68"/>
+<text xml:space="preserve" text-anchor="middle" x="775.28" y="-256.02" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">All Dirichlet zeros in</text>
+<text xml:space="preserve" text-anchor="middle" x="775.28" y="-242.82" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">the strip</text>
+</a>
+</g>
+</g>
+<!-- zeta -->
+<g id="n&#45;zeta" class="node">
+<title>zeta</title>
+<g id="a_n&#45;zeta"><a xlink:href="#zeta" xlink:title="Claim.zeta">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M738.29,-193.76C738.29,-193.76 642.27,-193.76 642.27,-193.76 636.27,-193.76 630.27,-187.76 630.27,-181.76 630.27,-181.76 630.27,-167.84 630.27,-167.84 630.27,-161.84 636.27,-155.84 642.27,-155.84 642.27,-155.84 738.29,-155.84 738.29,-155.84 744.29,-155.84 750.29,-161.84 750.29,-167.84 750.29,-167.84 750.29,-181.76 750.29,-181.76 750.29,-187.76 744.29,-193.76 738.29,-193.76"/>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-178.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Zeta consequence of</text>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-164.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">nonvanishing</text>
+</a>
+</g>
+</g>
+<!-- right -->
+<g id="n&#45;right" class="node">
+<title>right</title>
+<g id="a_n&#45;right"><a xlink:href="#right" xlink:title="Formalism.VW.rh_of_right">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M396.5,-271.68C396.5,-271.68 298.05,-271.68 298.05,-271.68 292.05,-271.68 286.05,-265.68 286.05,-259.68 286.05,-259.68 286.05,-245.76 286.05,-245.76 286.05,-239.76 292.05,-233.76 298.05,-233.76 298.05,-233.76 396.5,-233.76 396.5,-233.76 402.5,-233.76 408.5,-239.76 408.5,-245.76 408.5,-245.76 408.5,-259.68 408.5,-259.68 408.5,-265.68 402.5,-271.68 396.5,-271.68"/>
+<text xml:space="preserve" text-anchor="middle" x="347.28" y="-256.02" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Reflect a hypothetical</text>
+<text xml:space="preserve" text-anchor="middle" x="347.28" y="-242.82" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">zeta zero</text>
+</a>
+</g>
+</g>
+<!-- vGamma -->
+<g id="n&#45;vGamma" class="node">
+<title>vGamma</title>
+<g id="a_n&#45;vGamma"><a xlink:href="#vGamma" xlink:title="Formalism.VW.gammaFactor_ne_zero">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M116.55,-271.68C116.55,-271.68 12,-271.68 12,-271.68 6,-271.68 0,-265.68 0,-259.68 0,-259.68 0,-245.76 0,-245.76 0,-239.76 6,-233.76 12,-233.76 12,-233.76 116.55,-233.76 116.55,-233.76 122.55,-233.76 128.55,-239.76 128.55,-245.76 128.55,-245.76 128.55,-259.68 128.55,-259.68 128.55,-265.68 122.55,-271.68 116.55,-271.68"/>
+<text xml:space="preserve" text-anchor="middle" x="64.28" y="-256.02" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Archimedean factor for</text>
+<text xml:space="preserve" text-anchor="middle" x="64.28" y="-242.82" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">the primitive proof</text>
+</a>
+</g>
+</g>
+<!-- crit -->
+<g id="n&#45;crit" class="node">
+<title>crit</title>
+<g id="a_n&#45;crit"><a xlink:href="#crit" xlink:title="Formalism.VW.critLine">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M212.8,-193.76C212.8,-193.76 113.76,-193.76 113.76,-193.76 107.76,-193.76 101.76,-187.76 101.76,-181.76 101.76,-181.76 101.76,-167.84 101.76,-167.84 101.76,-161.84 107.76,-155.84 113.76,-155.84 113.76,-155.84 212.8,-155.84 212.8,-155.84 218.8,-155.84 224.8,-161.84 224.8,-167.84 224.8,-167.84 224.8,-181.76 224.8,-181.76 224.8,-187.76 218.8,-193.76 212.8,-193.76"/>
+<text xml:space="preserve" text-anchor="middle" x="163.28" y="-178.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Primitive zeros on the</text>
+<text xml:space="preserve" text-anchor="middle" x="163.28" y="-164.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">critical line</text>
+</a>
+</g>
+</g>
+<!-- rhEvery -->
+<g id="n&#45;rhEvery" class="node">
+<title>rhEvery</title>
+<g id="a_n&#45;rhEvery"><a xlink:href="#rhEvery" xlink:title="Formalism.VW.rh_of_every">
+<path fill="#e0f4ee" stroke="#2a7059" stroke-width="1.2" d="M397.95,-193.76C397.95,-193.76 294.61,-193.76 294.61,-193.76 288.61,-193.76 282.61,-187.76 282.61,-181.76 282.61,-181.76 282.61,-167.84 282.61,-167.84 282.61,-161.84 288.61,-155.84 294.61,-155.84 294.61,-155.84 397.95,-155.84 397.95,-155.84 403.95,-155.84 409.95,-161.84 409.95,-167.84 409.95,-167.84 409.95,-181.76 409.95,-181.76 409.95,-187.76 403.95,-193.76 397.95,-193.76"/>
+<text xml:space="preserve" text-anchor="middle" x="346.28" y="-178.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Specialize to the level&#45;</text>
+<text xml:space="preserve" text-anchor="middle" x="346.28" y="-164.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">one character</text>
+</a>
+</g>
+</g>
+<!-- topG -->
+<g id="n&#45;topG" class="node">
+<title>topG</title>
+<g id="a_n&#45;topG"><a xlink:href="#topG" xlink:title="UpperTheory.Top.zeroFreeAll_of_topG">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M266.54,-739.2C266.54,-739.2 184.02,-739.2 184.02,-739.2 178.02,-739.2 172.02,-733.2 172.02,-727.2 172.02,-727.2 172.02,-713.28 172.02,-713.28 172.02,-707.28 178.02,-701.28 184.02,-701.28 184.02,-701.28 266.54,-701.28 266.54,-701.28 272.54,-701.28 278.54,-707.28 278.54,-713.28 278.54,-713.28 278.54,-727.2 278.54,-727.2 278.54,-733.2 272.54,-739.2 266.54,-739.2"/>
+<text xml:space="preserve" text-anchor="middle" x="225.28" y="-723.54" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Primitive zero&#45;free</text>
+<text xml:space="preserve" text-anchor="middle" x="225.28" y="-710.34" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">criterion</text>
+</a>
+</g>
+</g>
+<!-- greenZero -->
+<g id="n&#45;greenZero" class="node">
+<title>greenZero</title>
+<g id="a_n&#45;greenZero"><a xlink:href="#greenZero" xlink:title="UpperTheory.Top.zero_free_all_of_green_v_win">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M267.46,-661.28C267.46,-661.28 183.1,-661.28 183.1,-661.28 177.1,-661.28 171.1,-655.28 171.1,-649.28 171.1,-649.28 171.1,-635.36 171.1,-635.36 171.1,-629.36 177.1,-623.36 183.1,-623.36 183.1,-623.36 267.46,-623.36 267.46,-623.36 273.46,-623.36 279.46,-629.36 279.46,-635.36 279.46,-635.36 279.46,-649.28 279.46,-649.28 279.46,-655.28 273.46,-661.28 267.46,-661.28"/>
+<text xml:space="preserve" text-anchor="middle" x="225.28" y="-645.62" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Primitive character</text>
+<text xml:space="preserve" text-anchor="middle" x="225.28" y="-632.42" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">nonvanishing</text>
+</a>
+</g>
+</g>
+<!-- imprimitive -->
+<g id="n&#45;imprimitive" class="node">
+<title>imprimitive</title>
+<g id="a_n&#45;imprimitive"><a xlink:href="#imprimitive" xlink:title="UpperTheory.Top.imprimitive">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M402.96,-661.28C402.96,-661.28 307.59,-661.28 307.59,-661.28 301.59,-661.28 295.59,-655.28 295.59,-649.28 295.59,-649.28 295.59,-635.36 295.59,-635.36 295.59,-629.36 301.59,-623.36 307.59,-623.36 307.59,-623.36 402.96,-623.36 402.96,-623.36 408.96,-623.36 414.96,-629.36 414.96,-635.36 414.96,-635.36 414.96,-649.28 414.96,-649.28 414.96,-655.28 408.96,-661.28 402.96,-661.28"/>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-645.62" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Extend to imprimitive</text>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-632.42" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">characters</text>
+</a>
+</g>
+</g>
+<!-- greenEvery -->
+<g id="n&#45;greenEvery" class="node">
+<title>greenEvery</title>
+<g id="a_n&#45;greenEvery"><a xlink:href="#greenEvery" xlink:title="UpperTheory.Top.every_character_of_green_v_win">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M335.51,-583.36C335.51,-583.36 245.04,-583.36 245.04,-583.36 239.04,-583.36 233.04,-577.36 233.04,-571.36 233.04,-571.36 233.04,-557.44 233.04,-557.44 233.04,-551.44 239.04,-545.44 245.04,-545.44 245.04,-545.44 335.51,-545.44 335.51,-545.44 341.51,-545.44 347.51,-551.44 347.51,-557.44 347.51,-557.44 347.51,-571.36 347.51,-571.36 347.51,-577.36 341.51,-583.36 335.51,-583.36"/>
+<text xml:space="preserve" text-anchor="middle" x="290.28" y="-567.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">From windows to all</text>
+<text xml:space="preserve" text-anchor="middle" x="290.28" y="-554.5" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">characters</text>
+</a>
+</g>
+</g>
+<!-- definite -->
+<g id="n&#45;definite" class="node">
+<title>definite</title>
+<g id="a_n&#45;definite"><a xlink:href="#definite" xlink:title="UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M467.13,-583.36C467.13,-583.36 375.42,-583.36 375.42,-583.36 369.42,-583.36 363.42,-577.36 363.42,-571.36 363.42,-571.36 363.42,-557.44 363.42,-557.44 363.42,-551.44 369.42,-545.44 375.42,-545.44 375.42,-545.44 467.13,-545.44 467.13,-545.44 473.13,-545.44 479.13,-551.44 479.13,-557.44 479.13,-557.44 479.13,-571.36 479.13,-571.36 479.13,-577.36 473.13,-583.36 467.13,-583.36"/>
+<text xml:space="preserve" text-anchor="middle" x="421.28" y="-567.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Construct a definite&#45;</text>
+<text xml:space="preserve" text-anchor="middle" x="421.28" y="-554.5" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">side witness</text>
+</a>
+</g>
+</g>
+<!-- match -->
+<g id="n&#45;match" class="node">
+<title>match</title>
+<g id="a_n&#45;match"><a xlink:href="#match" xlink:title="UpperTheory.Lit.every_character_of_theta_integrals_local_matching">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M399,-505.44C399,-505.44 311.55,-505.44 311.55,-505.44 305.55,-505.44 299.55,-499.44 299.55,-493.44 299.55,-493.44 299.55,-479.52 299.55,-479.52 299.55,-473.52 305.55,-467.52 311.55,-467.52 311.55,-467.52 399,-467.52 399,-467.52 405,-467.52 411,-473.52 411,-479.52 411,-479.52 411,-493.44 411,-493.44 411,-499.44 405,-505.44 399,-505.44"/>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-489.78" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Theta integrals and</text>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-476.58" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">local matching</text>
+</a>
+</g>
+</g>
+<!-- literature -->
+<g id="n&#45;literature" class="node">
+<title>literature</title>
+<g id="a_n&#45;literature"><a xlink:href="#literature" xlink:title="UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M408.17,-427.52C408.17,-427.52 302.39,-427.52 302.39,-427.52 296.39,-427.52 290.39,-421.52 290.39,-415.52 290.39,-415.52 290.39,-401.6 290.39,-401.6 290.39,-395.6 296.39,-389.6 302.39,-389.6 302.39,-389.6 408.17,-389.6 408.17,-389.6 414.17,-389.6 420.17,-395.6 420.17,-401.6 420.17,-401.6 420.17,-415.52 420.17,-415.52 420.17,-421.52 414.17,-427.52 408.17,-427.52"/>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-411.86" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Assemble the literature</text>
+<text xml:space="preserve" text-anchor="middle" x="355.28" y="-398.66" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">inputs</text>
+</a>
+</g>
+</g>
+<!-- row -->
+<g id="n&#45;row" class="node">
+<title>row</title>
+<g id="a_n&#45;row"><a xlink:href="#row" xlink:title="UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M390.86,-349.6C390.86,-349.6 285.7,-349.6 285.7,-349.6 279.7,-349.6 273.7,-343.6 273.7,-337.6 273.7,-337.6 273.7,-323.68 273.7,-323.68 273.7,-317.68 279.7,-311.68 285.7,-311.68 285.7,-311.68 390.86,-311.68 390.86,-311.68 396.86,-311.68 402.86,-317.68 402.86,-323.68 402.86,-323.68 402.86,-337.6 402.86,-337.6 402.86,-343.6 396.86,-349.6 390.86,-349.6"/>
+<text xml:space="preserve" text-anchor="middle" x="338.28" y="-333.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Galois row for the local</text>
+<text xml:space="preserve" text-anchor="middle" x="338.28" y="-320.74" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">parameter</text>
+</a>
+</g>
+</g>
+<!-- local -->
+<g id="n&#45;local" class="node">
+<title>local</title>
+<g id="a_n&#45;local"><a xlink:href="#local" xlink:title="UpperTheory.Zero.LLC.recTExists">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M520.66,-427.52C520.66,-427.52 447.89,-427.52 447.89,-427.52 441.89,-427.52 435.89,-421.52 435.89,-415.52 435.89,-415.52 435.89,-401.6 435.89,-401.6 435.89,-395.6 441.89,-389.6 447.89,-389.6 447.89,-389.6 520.66,-389.6 520.66,-389.6 526.66,-389.6 532.66,-395.6 532.66,-401.6 532.66,-401.6 532.66,-415.52 532.66,-415.52 532.66,-421.52 526.66,-427.52 520.66,-427.52"/>
+<text xml:space="preserve" text-anchor="middle" x="484.28" y="-411.86" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Local parameter</text>
+<text xml:space="preserve" text-anchor="middle" x="484.28" y="-398.66" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">construction</text>
+</a>
+</g>
+</g>
+<!-- window -->
+<g id="n&#45;window" class="node">
+<title>window</title>
+<g id="a_n&#45;window"><a xlink:href="#window" xlink:title="UpperTheory.One.vwin_of_row">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M674.14,-427.52C674.14,-427.52 560.42,-427.52 560.42,-427.52 554.42,-427.52 548.42,-421.52 548.42,-415.52 548.42,-415.52 548.42,-401.6 548.42,-401.6 548.42,-395.6 554.42,-389.6 560.42,-389.6 560.42,-389.6 674.14,-389.6 674.14,-389.6 680.14,-389.6 686.14,-395.6 686.14,-401.6 686.14,-401.6 686.14,-415.52 686.14,-415.52 686.14,-421.52 680.14,-427.52 674.14,-427.52"/>
+<text xml:space="preserve" text-anchor="middle" x="617.28" y="-411.86" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Window condition from a</text>
+<text xml:space="preserve" text-anchor="middle" x="617.28" y="-398.66" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">row</text>
+</a>
+</g>
+</g>
+<!-- ofRow -->
+<g id="n&#45;ofRow" class="node">
+<title>ofRow</title>
+<g id="a_n&#45;ofRow"><a xlink:href="#ofRow" xlink:title="UpperTheory.FinalTheorems.everyCharacter_of_row">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M538.09,-349.6C538.09,-349.6 430.46,-349.6 430.46,-349.6 424.46,-349.6 418.46,-343.6 418.46,-337.6 418.46,-337.6 418.46,-323.68 418.46,-323.68 418.46,-317.68 424.46,-311.68 430.46,-311.68 430.46,-311.68 538.09,-311.68 538.09,-311.68 544.09,-311.68 550.09,-317.68 550.09,-323.68 550.09,-323.68 550.09,-337.6 550.09,-337.6 550.09,-343.6 544.09,-349.6 538.09,-349.6"/>
+<text xml:space="preserve" text-anchor="middle" x="484.28" y="-333.94" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Nonvanishing given the</text>
+<text xml:space="preserve" text-anchor="middle" x="484.28" y="-320.74" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Galois row</text>
+</a>
+</g>
+</g>
+<!-- every -->
+<g id="n&#45;every" class="node">
+<title>every</title>
+<g id="a_n&#45;every"><a xlink:href="#every" xlink:title="UpperTheory.FinalTheorems.everyCharacter">
+<path fill="#fff0d7" stroke="#a46622" stroke-width="1.2" d="M527.22,-271.68C527.22,-271.68 437.33,-271.68 437.33,-271.68 431.33,-271.68 425.33,-265.68 425.33,-259.68 425.33,-259.68 425.33,-245.76 425.33,-245.76 425.33,-239.76 431.33,-233.76 437.33,-233.76 437.33,-233.76 527.22,-233.76 527.22,-233.76 533.22,-233.76 539.22,-239.76 539.22,-245.76 539.22,-245.76 539.22,-259.68 539.22,-259.68 539.22,-265.68 533.22,-271.68 527.22,-271.68"/>
+<text xml:space="preserve" text-anchor="middle" x="482.28" y="-256.02" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Nonvanishing for all</text>
+<text xml:space="preserve" text-anchor="middle" x="482.28" y="-242.82" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">characters</text>
+</a>
+</g>
+</g>
+<!-- allChi -->
+<g id="n&#45;allChi" class="node">
+<title>allChi</title>
+<g id="a_n&#45;allChi"><a xlink:href="#allChi" xlink:title="allChi">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M528.84,-193.76C528.84,-193.76 437.71,-193.76 437.71,-193.76 431.71,-193.76 425.71,-187.76 425.71,-181.76 425.71,-181.76 425.71,-167.84 425.71,-167.84 425.71,-161.84 431.71,-155.84 437.71,-155.84 437.71,-155.84 528.84,-155.84 528.84,-155.84 534.84,-155.84 540.84,-161.84 540.84,-167.84 540.84,-167.84 540.84,-181.76 540.84,-181.76 540.84,-187.76 534.84,-193.76 528.84,-193.76"/>
+<text xml:space="preserve" text-anchor="middle" x="483.28" y="-178.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Public nonvanishing</text>
+<text xml:space="preserve" text-anchor="middle" x="483.28" y="-164.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">bridge</text>
+</a>
+</g>
+</g>
+<!-- rhAll -->
+<g id="n&#45;rhAll" class="node">
+<title>rhAll</title>
+<g id="a_n&#45;rhAll"><a xlink:href="#rhAll" xlink:title="rhOfAll">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M428.28,-115.84C428.28,-115.84 310.28,-115.84 310.28,-115.84 304.28,-115.84 298.28,-109.84 298.28,-103.84 298.28,-103.84 298.28,-89.92 298.28,-89.92 298.28,-83.92 304.28,-77.92 310.28,-77.92 310.28,-77.92 428.28,-77.92 428.28,-77.92 434.28,-77.92 440.28,-83.92 440.28,-89.92 440.28,-89.92 440.28,-103.84 440.28,-103.84 440.28,-109.84 434.28,-115.84 428.28,-115.84"/>
+<text xml:space="preserve" text-anchor="middle" x="369.28" y="-100.18" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Riemann hypothesis from</text>
+<text xml:space="preserve" text-anchor="middle" x="369.28" y="-86.98" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">all characters</text>
+</a>
+</g>
+</g>
+<!-- critAll -->
+<g id="n&#45;critAll" class="node">
+<title>critAll</title>
+<g id="a_n&#45;critAll"><a xlink:href="#critAll" xlink:title="critAll">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M208.51,-115.84C208.51,-115.84 118.05,-115.84 118.05,-115.84 112.05,-115.84 106.05,-109.84 106.05,-103.84 106.05,-103.84 106.05,-89.92 106.05,-89.92 106.05,-83.92 112.05,-77.92 118.05,-77.92 118.05,-77.92 208.51,-77.92 208.51,-77.92 214.51,-77.92 220.51,-83.92 220.51,-89.92 220.51,-89.92 220.51,-103.84 220.51,-103.84 220.51,-109.84 214.51,-115.84 208.51,-115.84"/>
+<text xml:space="preserve" text-anchor="middle" x="163.28" y="-100.18" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Primitive critical&#45;line</text>
+<text xml:space="preserve" text-anchor="middle" x="163.28" y="-86.98" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">bridge</text>
+</a>
+</g>
+</g>
+<!-- claimAll -->
+<g id="n&#45;claimAll" class="node">
+<title>claimAll</title>
+<g id="a_n&#45;claimAll"><a xlink:href="#claimAll" xlink:title="claimAll">
+<path fill="#edf2fb" stroke="#516c94" stroke-width="1.2" d="M731.56,-115.84C731.56,-115.84 648.99,-115.84 648.99,-115.84 642.99,-115.84 636.99,-109.84 636.99,-103.84 636.99,-103.84 636.99,-89.92 636.99,-89.92 636.99,-83.92 642.99,-77.92 648.99,-77.92 648.99,-77.92 731.56,-77.92 731.56,-77.92 737.56,-77.92 743.56,-83.92 743.56,-89.92 743.56,-89.92 743.56,-103.84 743.56,-103.84 743.56,-109.84 737.56,-115.84 731.56,-115.84"/>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-100.18" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">Package the three</text>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-86.98" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#183349">analytic claims</text>
+</a>
+</g>
+</g>
+<!-- mainRH -->
+<g id="n&#45;mainRH" class="node">
+<title>mainRH</title>
+<g id="a_n&#45;mainRH"><a xlink:href="#mainRH" xlink:title="riemannHypothesis">
+<path fill="#223f65" stroke="#223f65" stroke-width="1.2" d="M439.75,-36.96C439.75,-36.96 346.8,-36.96 346.8,-36.96 340.8,-36.96 334.8,-30.96 334.8,-24.96 334.8,-24.96 334.8,-12.96 334.8,-12.96 334.8,-6.96 340.8,-0.96 346.8,-0.96 346.8,-0.96 439.75,-0.96 439.75,-0.96 445.75,-0.96 451.75,-6.96 451.75,-12.96 451.75,-12.96 451.75,-24.96 451.75,-24.96 451.75,-30.96 445.75,-36.96 439.75,-36.96"/>
+<text xml:space="preserve" text-anchor="middle" x="393.28" y="-15.66" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Riemann hypothesis</text>
+</a>
+</g>
+</g>
+<!-- mainZeta -->
+<g id="n&#45;mainZeta" class="node">
+<title>mainZeta</title>
+<g id="a_n&#45;mainZeta"><a xlink:href="#mainZeta" xlink:title="riemannZeta_eq_zero_re">
+<path fill="#223f65" stroke="#223f65" stroke-width="1.2" d="M306.39,-37.92C306.39,-37.92 198.17,-37.92 198.17,-37.92 192.17,-37.92 186.17,-31.92 186.17,-25.92 186.17,-25.92 186.17,-12 186.17,-12 186.17,-6 192.17,0 198.17,0 198.17,0 306.39,0 306.39,0 312.39,0 318.39,-6 318.39,-12 318.39,-12 318.39,-25.92 318.39,-25.92 318.39,-31.92 312.39,-37.92 306.39,-37.92"/>
+<text xml:space="preserve" text-anchor="middle" x="252.28" y="-22.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Nontrivial zeta zeros on</text>
+<text xml:space="preserve" text-anchor="middle" x="252.28" y="-9.06" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">the line</text>
+</a>
+</g>
+</g>
+<!-- mainNV -->
+<g id="n&#45;mainNV" class="node">
+<title>mainNV</title>
+<g id="a_n&#45;mainNV"><a xlink:href="#mainNV" xlink:title="LFunction_ne_zero_of_half_lt_re">
+<path fill="#223f65" stroke="#223f65" stroke-width="1.2" d="M564.47,-37.92C564.47,-37.92 480.09,-37.92 480.09,-37.92 474.09,-37.92 468.09,-31.92 468.09,-25.92 468.09,-25.92 468.09,-12 468.09,-12 468.09,-6 474.09,0 480.09,0 480.09,0 564.47,0 564.47,0 570.47,0 576.47,-6 576.47,-12 576.47,-12 576.47,-25.92 576.47,-25.92 576.47,-31.92 570.47,-37.92 564.47,-37.92"/>
+<text xml:space="preserve" text-anchor="middle" x="522.28" y="-22.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Dirichlet half&#45;plane</text>
+<text xml:space="preserve" text-anchor="middle" x="522.28" y="-9.06" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">nonvanishing</text>
+</a>
+</g>
+</g>
+<!-- mainStrip -->
+<g id="n&#45;mainStrip" class="node">
+<title>mainStrip</title>
+<g id="a_n&#45;mainStrip"><a xlink:href="#mainStrip" xlink:title="LFunction_eq_zero_re">
+<path fill="#223f65" stroke="#223f65" stroke-width="1.2" d="M737.04,-37.92C737.04,-37.92 643.51,-37.92 643.51,-37.92 637.51,-37.92 631.51,-31.92 631.51,-25.92 631.51,-25.92 631.51,-12 631.51,-12 631.51,-6 637.51,0 643.51,0 643.51,0 737.04,0 737.04,0 743.04,0 749.04,-6 749.04,-12 749.04,-12 749.04,-25.92 749.04,-25.92 749.04,-31.92 743.04,-37.92 737.04,-37.92"/>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-22.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">All Dirichlet zeros on</text>
+<text xml:space="preserve" text-anchor="middle" x="690.28" y="-9.06" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">the line</text>
+</a>
+</g>
+</g>
+<!-- mainPrim -->
+<g id="n&#45;mainPrim" class="node">
+<title>mainPrim</title>
+<g id="a_n&#45;mainPrim"><a xlink:href="#mainPrim" xlink:title="LFunction_eq_zero_re_of_isPrimitive">
+<path fill="#223f65" stroke="#223f65" stroke-width="1.2" d="M158.39,-37.92C158.39,-37.92 80.16,-37.92 80.16,-37.92 74.16,-37.92 68.16,-31.92 68.16,-25.92 68.16,-25.92 68.16,-12 68.16,-12 68.16,-6 74.16,0 80.16,0 80.16,0 158.39,0 158.39,0 164.39,0 170.39,-6 170.39,-12 170.39,-12 170.39,-25.92 170.39,-25.92 170.39,-31.92 164.39,-37.92 158.39,-37.92"/>
+<text xml:space="preserve" text-anchor="middle" x="119.28" y="-22.26" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Primitive Dirichlet</text>
+<text xml:space="preserve" text-anchor="middle" x="119.28" y="-9.06" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">zeros on the line</text>
+</a>
+</g>
+</g>
+</g>
+</svg>
+</div><h2>Declarations</h2><section class="cards"><article id="everyDef" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Dirichlet nonvanishing premise</h3></header><code class="name">UpperTheory.EveryCharacter</code><p>Every Dirichlet L-function is nonzero to the right of one half, excluding the principal-character point at one.</p><details><summary>Original Lean declaration · line 13</summary><pre><code>def UpperTheory.EveryCharacter : Prop :=
+  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 1 / 2 &lt; s.re → (χ ≠ 1 ∨ s ≠ 1) → DirichletCharacter.LFunction χ s ≠ 0</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/EveryCharacter.lean">Development/AutomorphicArithmetic/CharacterBoxes/EveryCharacter.lean</a></article><article id="half" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Right half-plane predicate</h3></header><code class="name">Claim.HalfPlane</code><p>Nonvanishing in the open right half-plane for every positive level, subject to the exception at one.</p><details><summary>Original Lean declaration · line 3</summary><pre><code>def Claim.HalfPlane : Prop :=
+  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 1 / 2 &lt; s.re → (χ ≠ 1 ∨ s ≠ 1) → DirichletCharacter.LFunction χ s ≠ 0</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean">Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean</a></article><article id="stripDef" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Strip predicate</h3></header><code class="name">Claim.Strip</code><p>A Dirichlet L-function zero in the open critical strip has real part one half.</p><details><summary>Original Lean declaration · line 6</summary><pre><code>def Claim.Strip : Prop :=
+  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 0 &lt; s.re → s.re &lt; 1 → DirichletCharacter.LFunction χ s = 0 → s.re = 1 / 2</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean">Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean</a></article><article id="zetaDef" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Zeta-zero predicate</h3></header><code class="name">Claim.Zeta</code><p>Every nontrivial zeta zero distinct from one lies on the critical line.</p><details><summary>Original Lean declaration · line 9</summary><pre><code>def Claim.Zeta : Prop :=
+  ∀ s : ℂ, riemannZeta s = 0 → (¬ ∃ n : ℕ, s = -2 * (n + 1)) → s ≠ 1 → s.re = 1 / 2</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean">Development/AutomorphicArithmetic/CharacterBoxes/HalfPlane.lean</a></article><article id="factor" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Euler factor is nonzero</h3></header><code class="name">Claim.factor_ne_zero</code><p>At positive real part the prime-power term has norm less than one, so a deleted Euler factor cannot vanish.</p><details><summary>Original Lean declaration · line 7</summary><pre><code>theorem factor_ne_zero {M : ℕ} (ψ : DirichletCharacter ℂ M) {s : ℂ} (hs : 0 &lt; s.re) (p : ℕ)
+    (hp : p.Prime) : (1 : ℂ) - ψ p * (p : ℂ) ^ (-s) ≠ 0 := by
+  intro h
+  have h1 : ψ p * (p : ℂ) ^ (-s) = 1 := by linear_combination -h
+  have hp1 : (1 : ℝ) &lt; p := by exact_mod_cast hp.one_lt
+  have hpow : ‖(p : ℂ) ^ (-s)‖ &lt; 1 := by
+    rw [Complex.norm_natCast_cpow_of_pos hp.pos, Complex.neg_re]
+    exact Real.rpow_lt_one_of_one_lt_of_neg hp1 (by linarith)
+  have hn : ‖ψ p * (p : ℂ) ^ (-s)‖ &lt; 1 := by
+    rw [norm_mul]
+    calc ‖ψ p‖ * ‖(p : ℂ) ^ (-s)‖ ≤ 1 * ‖(p : ℂ) ^ (-s)‖ := by
+          gcongr; exact ψ.norm_le_one _
+      _ &lt; 1 := by rw [one_mul]; exact hpow
+  rw [h1, norm_one] at hn
+  exact lt_irrefl _ hn</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="primZero" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Pass a zero to the primitive character</h3></header><code class="name">Claim.prim_zero</code><p>Change level to the conductor and rule out zeros of the deleted Euler factors.</p><ul><li><a href="#factor">Euler factor is nonzero</a> <small>checked proof</small></li></ul><details><summary>Original Lean declaration · line 23</summary><pre><code>theorem prim_zero {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N) [NeZero χ.conductor] {s : ℂ}
+    (hs0 : 0 &lt; s.re) (hs1 : s.re &lt; 1) (h : DirichletCharacter.LFunction χ s = 0) :
+    DirichletCharacter.LFunction χ.primitiveCharacter s = 0 := by
+  have hs : s ≠ 1 := fun e =&gt; by rw [e, Complex.one_re] at hs1; exact lt_irrefl _ hs1
+  have key := DirichletCharacter.LFunction_changeLevel χ.conductor_dvd_level
+    χ.primitiveCharacter (Or.inr hs)
+  rw [χ.changeLevel_primitiveCharacter, h] at key
+  rcases mul_eq_zero.mp key.symm with h&#x27; | h&#x27;
+  · exact h&#x27;
+  · obtain ⟨p, hp, hp0⟩ := Finset.prod_eq_zero_iff.mp h&#x27;
+    exact absurd hp0 (factor_ne_zero _ hs0 p (Nat.prime_of_mem_primeFactors hp))</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="gamma" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Gamma factor is nonzero</h3></header><code class="name">Claim.gamma_ne_zero</code><p>Both possible archimedean factors are nonzero at positive real part.</p><details><summary>Original Lean declaration · line 35</summary><pre><code>theorem gamma_ne_zero {M : ℕ} [NeZero M] (φ : DirichletCharacter ℂ M) {t : ℂ} (ht : 0 &lt; t.re) :
+    DirichletCharacter.gammaFactor φ t ≠ 0 := by
+  rcases φ.even_or_odd with hφ | hφ
+  · rw [hφ.gammaFactor_def]; exact Complex.Gammaℝ_ne_zero_of_re_pos ht
+  · rw [hφ.gammaFactor_def]
+    exact Complex.Gammaℝ_ne_zero_of_re_pos (by rw [Complex.add_re, Complex.one_re]; linarith)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="reflect" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Reflect a primitive zero</h3></header><code class="name">Claim.prim_reflect</code><p>The completed functional equation transfers a primitive zero to the inverse character at one minus the original argument.</p><ul><li><a href="#gamma">Gamma factor is nonzero</a> <small>checked proof</small></li></ul><details><summary>Original Lean declaration · line 42</summary><pre><code>theorem prim_reflect {M : ℕ} [NeZero M] (ψ : DirichletCharacter ℂ M) (hψ : ψ.IsPrimitive) {s : ℂ}
+    (hs0 : 0 &lt; s.re) (hs1 : s.re &lt; 1) (h : DirichletCharacter.LFunction ψ s = 0) :
+    DirichletCharacter.LFunction ψ⁻¹ (1 - s) = 0 := by
+  have hs0&#x27; : s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at hs0; exact lt_irrefl _ hs0
+  have ht0 : 0 &lt; (1 - s).re := by rw [Complex.sub_re, Complex.one_re]; linarith
+  have ht0&#x27; : 1 - s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at ht0; exact lt_irrefl _ ht0
+  have hc : DirichletCharacter.completedLFunction ψ s = 0 := by
+    rw [DirichletCharacter.LFunction_eq_completed_div_gammaFactor ψ s (Or.inl hs0&#x27;),
+      div_eq_zero_iff] at h
+    exact h.resolve_right (gamma_ne_zero ψ hs0)
+  have hψ&#x27; : (ψ⁻¹).IsPrimitive := by
+    rw [DirichletCharacter.isPrimitive_def, DirichletCharacter.conductor_inv]; exact hψ
+  have fe := hψ&#x27;.completedLFunction_one_sub s
+  rw [inv_inv, hc, mul_zero] at fe
+  rw [DirichletCharacter.LFunction_eq_completed_div_gammaFactor ψ⁻¹ (1 - s) (Or.inl ht0&#x27;), fe,
+    zero_div]</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="strip" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>All Dirichlet zeros in the strip</h3></header><code class="name">Claim.strip</code><p>Use half-plane nonvanishing on the right. On the left, pass to the primitive character and reflect its zero to the right.</p><ul><li><a href="#primZero">Pass a zero to the primitive character</a> <small>checked proof</small></li><li><a href="#reflect">Reflect a primitive zero</a> <small>checked proof</small></li><li><a href="#half">Right half-plane predicate</a> <small>statement</small></li><li><a href="#stripDef">Strip predicate</a> <small>statement</small></li></ul><details><summary>Original Lean declaration · line 59</summary><pre><code>theorem strip (h : HalfPlane) : Strip := by
+  unfold HalfPlane at h
+  intro N _ χ s hs0 hs1 hz
+  have hs : s ≠ 1 := fun e =&gt; by rw [e, Complex.one_re] at hs1; exact lt_irrefl _ hs1
+  have hs0&#x27; : s ≠ 0 := fun e =&gt; by rw [e, Complex.zero_re] at hs0; exact lt_irrefl _ hs0
+  rcases lt_trichotomy s.re (1 / 2) with hlt | heq | hgt
+  · exfalso
+    haveI : NeZero χ.conductor := ⟨χ.conductor_ne_zero⟩
+    have hp := prim_zero χ hs0 hs1 hz
+    have hr := prim_reflect χ.primitiveCharacter χ.primitiveCharacter_isPrimitive hs0 hs1 hp
+    have ht : (1 : ℂ) - s ≠ 1 := fun e =&gt; hs0&#x27; (sub_eq_self.mp e)
+    exact h χ.conductor χ.primitiveCharacter⁻¹ (1 - s)
+      (by rw [Complex.sub_re, Complex.one_re]; linarith) (Or.inr ht) hr
+  · exact heq
+  · exact absurd hz (h N χ s hgt (Or.inr hs))</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="zeta" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Zeta consequence of nonvanishing</h3></header><code class="name">Claim.zeta</code><p>Use the level-one character in the strip and the zeta functional equation and nonvanishing outside it.</p><ul><li><a href="#strip">All Dirichlet zeros in the strip</a> <small>checked proof</small></li><li><a href="#half">Right half-plane predicate</a> <small>statement</small></li><li><a href="#zetaDef">Zeta-zero predicate</a> <small>statement</small></li></ul><details><summary>Original Lean declaration · line 75</summary><pre><code>theorem zeta (h : HalfPlane) : Zeta := by
+  intro s hz htriv hs1
+  have hs0 : s ≠ 0 := fun e =&gt; by rw [e, riemannZeta_zero] at hz; norm_num at hz
+  rcases lt_or_ge 0 s.re with hpos | hnpos
+  · rcases lt_or_ge s.re 1 with hlt1 | hge1
+    · have hL : DirichletCharacter.LFunction (1 : DirichletCharacter ℂ 1) s = 0 := by
+        rw [DirichletCharacter.LFunction_modOne_eq]; exact hz
+      exact strip h 1 1 s hpos hlt1 hL
+    · exact absurd hz (riemannZeta_ne_zero_of_one_le_re hge1)
+  · exfalso
+    have hG : Gammaℝ s ≠ 0 := by
+      intro hg
+      obtain ⟨n, hn⟩ := Complex.Gammaℝ_eq_zero_iff.mp hg
+      rcases n with _ | n
+      · exact hs0 (by simpa using hn)
+      · exact htriv ⟨n, by rw [hn]; push_cast; ring⟩
+    have hc : completedRiemannZeta s = 0 := by
+      rw [riemannZeta_def_of_ne_zero hs0, div_eq_zero_iff] at hz
+      exact hz.resolve_right hG
+    have h1s : 1 - s ≠ 0 := fun e =&gt; by
+      have := congrArg Complex.re e
+      rw [Complex.sub_re, Complex.one_re, Complex.zero_re] at this
+      linarith
+    have hz&#x27; : riemannZeta (1 - s) = 0 := by
+      rw [riemannZeta_def_of_ne_zero h1s, completedRiemannZeta_one_sub, hc, zero_div]
+    exact riemannZeta_ne_zero_of_one_le_re (by rw [Complex.sub_re, Complex.one_re]; linarith) hz&#x27;</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean">Development/AutomorphicArithmetic/CharacterBoxes/ClaimStrip.lean</a></article><article id="right" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Reflect a hypothetical zeta zero</h3></header><code class="name">Formalism.VW.rh_of_right</code><p>Right-half-plane nonvanishing implies RH by the zeta functional equation, with the exceptional gamma and trigonometric factors handled explicitly.</p><details><summary>Original Lean declaration · line 5</summary><pre><code>theorem Formalism.VW.rh_of_right (hz : ∀ s : ℂ, 1 / 2 &lt; s.re → s ≠ 1 → riemannZeta s ≠ 0) : RiemannHypothesis := by
+  unfold RiemannHypothesis
+  intro s hs htriv hs1
+  rcases lt_trichotomy s.re (1 / 2) with hlt | heq | hgt
+  · exfalso
+    have hpi : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
+    have hs0 : s ≠ 0 := by
+      rintro rfl
+      rw [riemannZeta_zero] at hs
+      norm_num at hs
+    have ht : 1 / 2 &lt; (1 - s).re := by
+      rw [Complex.sub_re, Complex.one_re]
+      linarith
+    have h1 : (1 - s) ≠ 1 := by
+      intro h
+      apply hs0
+      linear_combination -h
+    have hnat : ∀ n : ℕ, (1 - s) ≠ -(n : ℂ) := by
+      intro n h
+      have hr := congrArg Complex.re h
+      rw [Complex.sub_re, Complex.one_re, Complex.neg_re, Complex.natCast_re] at hr
+      have : (0 : ℝ) ≤ n := n.cast_nonneg
+      linarith
+    have key := riemannZeta_one_sub hnat h1
+    rw [sub_sub_cancel, hs] at key
+    have hz&#x27; := hz (1 - s) ht h1
+    have h2pi : (2 : ℂ) * (2 * (Real.pi : ℂ)) ^ (-(1 - s)) ≠ 0 :=
+      mul_ne_zero two_ne_zero (Complex.cpow_ne_zero_iff.2 (Or.inl (mul_ne_zero two_ne_zero hpi)))
+    have hG : Complex.Gamma (1 - s) ≠ 0 := Complex.Gamma_ne_zero_of_re_pos (by linarith)
+    have hcos : Complex.cos ((Real.pi : ℂ) * (1 - s) / 2) ≠ 0 := by
+      rw [Ne, Complex.cos_eq_zero_iff]
+      rintro ⟨k, hk⟩
+      have h3 : ((1 - s) - (2 * (k : ℂ) + 1)) * (Real.pi : ℂ) = 0 := by
+        linear_combination 2 * hk
+      rcases mul_eq_zero.1 h3 with h | h
+      · have hsk : s = -2 * (k : ℂ) := by linear_combination -h
+        have hre : s.re = -2 * (k : ℝ) := by
+          rw [hsk, Complex.mul_re]
+          simp
+        rcases lt_trichotomy k 0 with hk0 | hk0 | hk0
+        · have : (k : ℝ) ≤ -1 := by exact_mod_cast (show k ≤ -1 by omega)
+          linarith
+        · apply hs0
+          rw [hsk, hk0]
+          simp
+        · apply htriv
+          refine ⟨(k - 1).toNat, ?_⟩
+          have hnk : ((k - 1).toNat : ℤ) = k - 1 := Int.toNat_of_nonneg (by omega)
+          have h&#x27; : (((k - 1).toNat : ℕ) : ℂ) = (k : ℂ) - 1 := by
+            have := congrArg (fun m : ℤ =&gt; (m : ℂ)) hnk
+            push_cast at this
+            exact this
+          rw [hsk, h&#x27;]
+          ring
+      · exact hpi h
+    exact (mul_ne_zero (mul_ne_zero (mul_ne_zero h2pi hG) hcos) hz&#x27;) key.symm
+  · exact heq
+  · exact absurd hs (hz s hgt hs1)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/RhOfRight.lean">Formalism/GammaFactorNonvanishing/RhOfRight.lean</a></article><article id="vGamma" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Archimedean factor for the primitive proof</h3></header><code class="name">Formalism.VW.gammaFactor_ne_zero</code><p>Compute the gamma factor according to character parity on the positive half-plane.</p><details><summary>Original Lean declaration · line 6</summary><pre><code>theorem Formalism.VW.gammaFactor_ne_zero {N : ℕ} (χ : DirichletCharacter ℂ N) {s : ℂ} (hs : 0 &lt; s.re) : gammaFactor χ s ≠ 0 := by
+  rcases χ.even_or_odd with h | h
+  · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos hs
+  · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos (by rw [add_re, one_re]; linarith)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a></article><article id="crit" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Primitive zeros on the critical line</h3></header><code class="name">Formalism.VW.critLine</code><p>Half-plane nonvanishing and the primitive functional equation force a zero in the strip onto the critical line.</p><ul><li><a href="#vGamma">Archimedean factor for the primitive proof</a> <small>checked proof</small></li><li><a href="#everyDef">Dirichlet nonvanishing premise</a> <small>statement</small></li></ul><details><summary>Original Lean declaration · line 11</summary><pre><code>theorem Formalism.VW.critLine (h : UpperTheory.EveryCharacter) (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)
+    (h0 : 0 &lt; s.re) (h1 : s.re &lt; 1) (hz : LFunction χ s = 0) : s.re = 1 / 2 := by
+  have hs0 : s ≠ 0 := fun e =&gt; by simp [e] at h0
+  have hs1 : s ≠ 1 := fun e =&gt; by simp [e] at h1
+  by_contra hne
+  rcases lt_or_gt_of_ne hne with hlt | hgt
+  · have hinv : χ⁻¹.IsPrimitive := by
+      rw [isPrimitive_def, conductor_inv]; exact hχ
+    have hc : completedLFunction χ s = 0 := by
+      rw [LFunction_eq_completed_div_gammaFactor χ s (Or.inl hs0)] at hz
+      exact (div_eq_zero_iff.1 hz).resolve_right (Formalism.VW.gammaFactor_ne_zero χ h0)
+    have hfe := hinv.completedLFunction_one_sub s
+    rw [inv_inv, hc, mul_zero] at hfe
+    have h2 : (1 - s) ≠ 0 := sub_ne_zero.2 hs1.symm
+    refine h N χ⁻¹ (1 - s) (by rw [sub_re, one_re]; linarith) (Or.inr fun e =&gt; hs0 (by linear_combination -e)) ?_
+    rw [LFunction_eq_completed_div_gammaFactor χ⁻¹ (1 - s) (Or.inl h2), hfe, zero_div]
+  · exact h N χ s hgt (Or.inr hs1) hz</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a></article><article id="rhEvery" class="card"><header><span class="status compiled">Checked analytic declaration</span><h3>Specialize to the level-one character</h3></header><code class="name">Formalism.VW.rh_of_every</code><p>Apply the zeta reduction to the trivial character modulo one, whose L-function is zeta.</p><ul><li><a href="#everyDef">Dirichlet nonvanishing premise</a> <small>statement</small></li><li><a href="#right">Reflect a hypothetical zeta zero</a> <small>checked proof</small></li></ul><details><summary>Original Lean declaration · line 29</summary><pre><code>theorem Formalism.VW.rh_of_every (h : UpperTheory.EveryCharacter) : RiemannHypothesis :=
+  Formalism.VW.rh_of_right fun s hs hs1 =&gt; by
+    have := h 1 (1 : DirichletCharacter ℂ 1) s hs (Or.inr hs1)
+    rwa [LFunction_modOne_eq] at this</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Formalism/GammaFactorNonvanishing/CritLine.lean">Formalism/GammaFactorNonvanishing/CritLine.lean</a></article><article id="topG" class="card"><header><span class="status source">Source-traced declaration</span><h3>Primitive zero-free criterion</h3></header><code class="name">UpperTheory.Top.zeroFreeAll_of_topG</code><p>Combine the top-level condition with the required host data for each primitive character.</p><details><summary>Original Lean declaration · line 26</summary><pre><code>theorem zeroFreeAll_of_topG {la : ℝ} (hla : 1 &lt; la) (h : TopG) (hS : ∀ ψ : PChar, HostExW la (GChi ψ).req) : ZeroFreeAll := by
+  have key : ZeroFreeOn fun _ =&gt; True :=
+    zeroFreeOn_of_tiedWin_cyc (Fam := FamP) (core := fun Fm =&gt; Fm.toFamCore) (Tied := fun Fm =&gt; ChainTied Fm) hla
+      (fun ψ _ =&gt; UpperTheory.Comparison₂.level_gm_le_on_family_scales _) (fun ψ _ =&gt; UpperTheory.Comparison₂.formB _) fun ψ _ =&gt; by
+        obtain ⟨eD, eL, ε₁, h1, h2⟩ := h la (GChi ψ) hla (hS ψ) (hypV_of_cls ψ la)
+        refine ⟨eD, eL, ε₁, h1, fun eps a b =&gt; ?_⟩
+        obtain ⟨Fm, c, d⟩ := h2 eps a b
+        exact ⟨Fm, eFamC_of_cls ψ la Fm c, c.1, d⟩
+  exact key</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean">Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean</a></article><article id="greenZero" class="card"><header><span class="status source">Source-traced declaration</span><h3>Primitive character nonvanishing</h3></header><code class="name">UpperTheory.Top.zero_free_all_of_green_v_win</code><p>The Green and window hypotheses and a definite-side witness provide the inputs of the primitive criterion.</p><ul><li><a href="#topG">Primitive zero-free criterion</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 12</summary><pre><code>theorem UpperTheory.Top.zero_free_all_of_green_v_win (hG : GlobalTheory.GLq.Green) (hV : UpperTheory.Top.VWin)
+    (h : Nonempty (_root_.GlobalTheory.Fc.HypsAlt (fun 𝒞 =&gt; Closed 𝒞 fun Fm _ =&gt; LinkN Fm) _root_.GlobalTheory.Fc.DefiniteSideCondition)) : Formalism.HC.ZeroFreeAll :=
+  h.elim fun h =&gt; UpperTheory.Top.zeroFreeAll_of_topG (la := 3 / 2) (by norm_num)
+    (_root_.GlobalTheory.Fc.forall_goal_of_shape_of_hyps _ _ _ _ (_root_.UpperTheory.Top.shape_closed_link_n_of_green hG) trivial trivial h) fun ψ =&gt; UpperTheory.Top.supplyChi ψ (hV ψ)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean</a></article><article id="imprimitive" class="card"><header><span class="status source">Source-traced declaration</span><h3>Extend to imprimitive characters</h3></header><code class="name">UpperTheory.Top.imprimitive</code><p>Use the character of minimal conductor and show that the remaining Euler factors cannot vanish.</p><details><summary>Original Lean declaration · line 5</summary><pre><code>theorem UpperTheory.Top.imprimitive :
+    ZeroFreeAll → ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 1 / 2 &lt; s.re → (χ ≠ 1 ∨ s ≠ 1) →
+      DirichletCharacter.LFunction χ s ≠ 0 := by
+  intro h N _ χ s hs hχs
+  haveI : NeZero χ.conductor := (PChar.of χ).ne
+  have hL : DirichletCharacter.LFunction χ.primitiveCharacter s ≠ 0 := h (PChar.of χ) trivial s hs
+  have hχ&#x27; : χ.primitiveCharacter ≠ 1 ∨ s ≠ 1 := by
+    rcases hχs with hχ | hs1
+    · left
+      intro h1
+      apply hχ
+      rw [← χ.changeLevel_primitiveCharacter, h1, DirichletCharacter.changeLevel_one]
+    · exact Or.inr hs1
+  have hrw := DirichletCharacter.LFunction_changeLevel χ.conductor_dvd_level χ.primitiveCharacter hχ&#x27;
+  rw [χ.changeLevel_primitiveCharacter] at hrw
+  rw [hrw]
+  refine mul_ne_zero hL (Finset.prod_ne_zero_iff.mpr fun p hp =&gt; ?_)
+  have hp&#x27; := Nat.prime_of_mem_primeFactors hp
+  intro h0
+  have key : χ.primitiveCharacter p * (p : ℂ) ^ (-s) = 1 := by linear_combination -h0
+  have h1 : ‖χ.primitiveCharacter (p : ZMod χ.conductor)‖ ≤ 1 := DirichletCharacter.norm_le_one _ _
+  have h2 : ‖(p : ℂ) ^ (-s)‖ &lt; 1 := by
+    rw [Complex.norm_natCast_cpow_of_pos hp&#x27;.pos, Complex.neg_re]
+    exact Real.rpow_lt_one_of_one_lt_of_neg (by exact_mod_cast hp&#x27;.one_lt) (by linarith)
+  have hn : ‖χ.primitiveCharacter p * (p : ℂ) ^ (-s)‖ &lt; 1 := by
+    rw [norm_mul]
+    calc ‖χ.primitiveCharacter (p : ZMod χ.conductor)‖ * ‖(p : ℂ) ^ (-s)‖
+        ≤ 1 * ‖(p : ℂ) ^ (-s)‖ := by gcongr
+      _ &lt; 1 := by simpa using h2
+  rw [key, norm_one] at hn
+  exact lt_irrefl _ hn</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean">Development/AutomorphicArithmetic/CharacterBoxes/Imprimitive.lean</a></article><article id="greenEvery" class="card"><header><span class="status source">Source-traced declaration</span><h3>From windows to all characters</h3></header><code class="name">UpperTheory.Top.every_character_of_green_v_win</code><p>First derive the primitive zero-free result, then extend to arbitrary positive levels.</p><ul><li><a href="#imprimitive">Extend to imprimitive characters</a> <small>source reference</small></li><li><a href="#greenZero">Primitive character nonvanishing</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 16</summary><pre><code>theorem UpperTheory.Top.every_character_of_green_v_win (hG : GlobalTheory.GLq.Green) (hV : UpperTheory.Top.VWin)
+    (h : Nonempty (_root_.GlobalTheory.Fc.HypsAlt (fun 𝒞 =&gt; Closed 𝒞 fun Fm _ =&gt; LinkN Fm) _root_.GlobalTheory.Fc.DefiniteSideCondition)) : UpperTheory.EveryCharacter :=
+  UpperTheory.Top.imprimitive (_root_.UpperTheory.Top.zero_free_all_of_green_v_win hG hV h)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/TopPlug.lean</a></article><article id="definite" class="card"><header><span class="status source">Source-traced declaration</span><h3>Construct a definite-side witness</h3></header><code class="name">UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound</code><p>Theta integrals, local matching, a covolume bound, and local parameters supply a nonempty family of definite-side hypotheses.</p><details><summary>Original Lean declaration · line 44</summary><pre><code>theorem nonempty_hyps_definite_side_of_closed_bound : _root_.GlobalTheory.Fc.S0.UnitaryGroupThirdPlaceHypotheses → _root_.GlobalTheory.FunPr.ThetaLocalInputs → GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ThetaIntegralsAgree → GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.LocalMatching → _root_.GlobalTheory.CovTop.CovolumeBoundOfX → ∀ (hL : _root_.UpperTheory.Zero.LLC.RecTExists), (∀ cDep : ℝ, _root_.GlobalTheory.Fc.RL.LinkedAt (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL cDep) (fun Q L =&gt; _root_.GlobalTheory.Fc.R1.SlotNormCondition Q L fun 𝒞 =&gt; Formalism.MainNotions.Closed 𝒞 fun Fm _ =&gt; _root_.GlobalTheory.NLink.BoundAtTwoThreeFamilyFonAlt Fm)) → Nonempty (_root_.GlobalTheory.Fc.HypsAlt S0.NL _root_.GlobalTheory.Fc.DefiniteSideCondition) := by
+  intro P F hA hM hX hL hN
+  have C := P.litN
+  have hS : GlobalTheory.IndefiniteRowSideFullHecke.LevelPlusSubgroup.FunctionalsSeparate :=
+    _root_.UpperTheory.Lit.functionalsSeparate_of_howeUnram_of_siegelWeil F GlobalTheory.Hk3.howeUnram_holds P.siegelWeilUnitaryConvergent
+  have hRat : S0.RowRat := GlobalTheory.Mem.LiteralAutomorphy.rowRatW_of_rowTest (_root_.GlobalTheory.T.test_vector_assembly_holds F.siegelSetUnitary F.howeDualityReal
+    P.greenCuspidal F C.join C.fe hA hM hS)
+  have hFit : _root_.GlobalTheory.BigTop.Fun.ConstantFunctionFits @GlobalTheory.BigTop.Fun.Fld := _root_.GlobalTheory.BigTop.Fun.Close.fourier_coefficient_fit_of_join_alt F C.join C.fe hA hM hS (_root_.GlobalTheory.Fc.S0.ontoX_and_lamLow_of_unitaryGroupHypotheses&#x27; P).2
+  obtain ⟨CF1, hCF1⟩ := _root_.GlobalTheory.Mem.LiteralAutomorphy.evaluation_grid_of_join F.howeDualityReal hM F C.join C.fe hA
+    (_root_.GlobalTheory.WeilConv.twisted_weil_representation_convergence F.siegelSetUnitary F) (_root_.GlobalTheory.T.twisted_local_factors_match F.howeDualityReal F hA hM)
+    (_root_.GlobalTheory.T.twisted_square_theta_integrals_eq F hA hM) hS
+  obtain ⟨CF0, hCF0⟩ := _root_.GlobalTheory.Fc.StageOne.rowFun_at_gridA_alt P.discreteSeriesCover P.harishChandraModules P.cuspRapidDecay P.casselmanWallach
+    P.rayClassFieldSt hFit
+  have hEv : EvLgG (GridA (max CF0 CF1)) := hCF1 _ (le_max_right _ _)
+  have hOpen1 : _root_.GlobalTheory.Fc.S0.OpenParameterStatements (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL (max CF0 CF1)) := _root_.GlobalTheory.T.open0_of_unitary_group_hypotheses P hL (max CF0 CF1)
+  have hMono := _root_.GlobalTheory.Glob.open_and_linked_of_stronger_extension_alt hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithList hL (max CF0 CF1))
+    (_root_.GlobalTheory.Mem.LiteralAutomorphy.extensionWithAtProperty hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) (GridA (max CF0 CF1))) SExt.none (geoCl anyGeometry)
+    (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1.1⟩)
+  have hOpenA := hMono.2 hOpen1
+  have hFun := hCF0 (max CF0 CF1) (le_max_left _ _) hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) SExt.none (geoCl anyGeometry)
+    (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1⟩) hOpenA
+  have hL3 := _root_.GlobalTheory.Glob.CovolRow.linked_bundles_l3_of_open_alt P.discreteSeriesCover P.harishChandraModules P.cuspRapidDecay
+    P.casselmanWallach P.rayClassFieldSt hX hL (_root_.GlobalTheory.Mem.LiteralAutomorphy.extensionWithAtProperty hL (_root_.GlobalTheory.HeightCounting.Up.extensionWithOrigin hL (max CF0 CF1)) (GridA (max CF0 CF1)))
+    SExt.none (geoCl anyGeometry) (fun _ _ _ _ _ _ _ _ _ _ _ _ _ x =&gt; ⟨x.1.1.1⟩) hOpenA
+  exact _root_.GlobalTheory.Fc.S0.StageU.hypotheses_nonempty_of_unramified_exponents_alt P hRat hL (max CF0 CF1) (GridA (max CF0 CF1)) hEv (hN (max CF0 CF1)) hFun hL3</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean</a></article><article id="match" class="card"><header><span class="status source">Source-traced declaration</span><h3>Theta integrals and local matching</h3></header><code class="name">UpperTheory.Lit.every_character_of_theta_integrals_local_matching</code><p>Combine the definite-side witness with the Green and window input to obtain the all-character conclusion.</p><ul><li><a href="#definite">Construct a definite-side witness</a> <small>source reference</small></li><li><a href="#greenEvery">From windows to all characters</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 69</summary><pre><code>theorem every_character_of_theta_integrals_local_matching (P : _root_.GlobalTheory.Fc.S0.UnitaryGroupThirdPlaceHypotheses) (F : _root_.GlobalTheory.FunPr.ThetaLocalInputs) (hA : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ThetaIntegralsAgree)
+    (hM : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.LocalMatching) (hX : _root_.GlobalTheory.CovTop.CovolumeBoundOfX) (hL : _root_.UpperTheory.Zero.LLC.RecTExists) (hV : VWin) :
+    UpperTheory.EveryCharacter :=
+  _root_.UpperTheory.Top.every_character_of_green_v_win (GlobalTheory.GreenBridge.green_of_regular P.greenRegularCharacters) hV
+    (_root_.UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound P F hA hM hX hL fun cDep =&gt; _root_.UpperTheory.N.boundAtTwoThree_linked_of_recT P.nLink (_root_.GlobalTheory.Mem.Top.Bl.parametersOfDependence hL cDep))</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean</a></article><article id="literature" class="card"><header><span class="status source">Source-traced declaration</span><h3>Assemble the literature inputs</h3></header><code class="name">UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin</code><p>Package published results, local matching, theta integrals and a covolume estimate for the theta-to-nonvanishing theorem.</p><ul><li><a href="#match">Theta integrals and local matching</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 810</summary><pre><code>theorem UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin (O : _root_.UpperTheory.LiteratureTheorems.OpenLiteratureStatements) (hV : UpperTheory.Top.VWin) : UpperTheory.EveryCharacter :=
+  _root_.UpperTheory.Lit.every_character_of_theta_integrals_local_matching (_root_.UpperTheory.LiteratureTheorems.published_results_eigen O) (_root_.UpperTheory.LiteratureTheorems.published_results_first O) (_root_.UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature O).1 (_root_.UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature O).2
+    (_root_.SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt (_root_.UpperTheory.LiteratureTheorems.resolution_char_zero_of_literature O) (_root_.UpperTheory.LiteratureTheorems.principalisation_char_zero_of_literature O) (_root_.UpperTheory.LiteratureTheorems.poincare_lelong_inv_of_literature O) PositivityTheory.Pf1.HilbertSamuelMoriwaki.hsUse_outright PositivityTheory.Pf1.HilbertSamuelMoriwaki.moriwakiBig_outright (_root_.UpperTheory.LiteratureTheorems.fargues_exact_of_literature O) (_root_.UpperTheory.LiteratureTheorems.zarhin_statement O) (_root_.UpperTheory.LiteratureTheorems.nef_rr_of_literature O) (_root_.UpperTheory.LiteratureTheorems.siegel_toroidal_integral_of_literature O) (_root_.UpperTheory.LiteratureTheorems.toroidal_for_fan_ks_of_literature O) (_root_.UpperTheory.LiteratureTheorems.semi_abelian_lie_seminegative_of_literature O) (_root_.UpperTheory.LiteratureTheorems.point_separation_pair_of_literature O) (_root_.UpperTheory.LiteratureTheorems.ar_degree_of_literature O) (_root_.UpperTheory.LiteratureTheorems.published_results_arithmetic O) (_root_.UpperTheory.LiteratureTheorems.grothendieck_deformation_of_literature O))
+    (_root_.UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature O) hV</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean">Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean</a></article><article id="row" class="card"><header><span class="status source">Source-traced declaration</span><h3>Galois row for the local parameter</h3></header><code class="name">UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter</code><p>The source obtains its local–global row by applying a Galois-representations result to a theta lift.</p><details><summary>Original Lean declaration · line 6</summary><pre><code>theorem galoisLocalGlobalStrong_recParameter : UpperTheory.GalStar.Row0b recT := galoisRepresentations_of_thetaLift UpperTheory.TP.K.tLiftK</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean">Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean</a></article><article id="local" class="card"><header><span class="status source">Source-traced declaration</span><h3>Local parameter construction</h3></header><code class="name">UpperTheory.Zero.LLC.recTExists</code><p>The project constructs the local parameter with the required compatibilities.</p><details><summary>Original Lean declaration · line 20</summary><pre><code>theorem UpperTheory.Zero.LLC.recTExists :
+    UpperTheory.Zero.LLC.RecTExists := by
+  intro E Ω _ _ _ _ _ A w h
+  obtain ⟨a, ha, -⟩ := UpperTheory.Zero.LLC.artEx E Ω A w h
+  obtain ⟨r, hr⟩ := UpperTheory.Zero.LLC.cuspEx E Ω A w h a ha
+  obtain ⟨⟨rc, hrc⟩, hcu⟩ :=
+    GlobalTheory.LocLanglands.exists_isLExt UpperTheory.Zero.LLC.Pr.exh UpperTheory.Zero.LLC.Pr.multi E Ω A w h r
+  have hcusp : ∀ x : IrrGL (HeightOneSpectrum.adicCompletion E w), x.IsCusp → rc x = r x :=
+    hcu rc hrc
+  have hD := UpperTheory.Zero.LLC.extDim E Ω A w h a ha r rc hr hrc
+  have hT := UpperTheory.Zero.LLC.extTw E Ω A w h a ha r rc hr hrc
+  refine ⟨rc, a, ha, ?_⟩
+  refine
+    { dim := fun x =&gt; (hD x).1.1
+      one := fun χ hχ =&gt; (hcusp _ (IrrGL.isCusp_ofChar χ hχ)).trans (hr.one χ hχ)
+      langlands := ?_
+      cusp := ?_
+      nu := hT.1
+      absCentral := fun x ω hω σ =&gt; ((hD x).2 ω hω σ).1
+      twist := ?_
+      central := fun x ω hg hω σ =&gt; ((hD x).2 ω hω σ).2 hg
+      dual := UpperTheory.Zero.LLC.extDual E Ω A w h a ha r rc hr hrc
+      inj := UpperTheory.Zero.LLC.extInj E Ω A w h a ha r rc hr hrc
+      depth := fun x hg hx =&gt; UpperTheory.Zero.LLC.extDepth E Ω A w h a ha r rc hr hrc x hg hx
+      type := ?_ }
+  · intro l x hl
+    rw [hrc l x hl]
+    unfold GlobalTheory.LocLanglands.segSum
+    congr 1
+    refine List.map_congr_left ?_
+    intro Δ _
+    rw [hcusp _ Δ.isCusp_first]
+  · intro x hx
+    rw [hcusp x hx]
+    exact hr.irr x hx
+  · intro x χ hχ hg
+    rw [hcusp _ (IrrGL.isCusp_ofChar χ hχ), hr.one χ hχ]
+    exact hT.2 x χ hχ hg
+  · refine (UpperTheory.Zero.LLC.typeIff E Ω A w h rc).2 ?_
+    intro x
+    unfold UpperTheory.Zero.LLC.TypeAt
+    intro g _ i hi n hn D R hR θ hθ τ hτ hN σ hσ hinf
+    have hx : x.IsCusp := by
+      subst hσ
+      exact IrrGL.isCusp_of.2 ⟨hn, DiscreteGroups.sglob.DzLc.isCuspidal_of_inflates i hi τ hτ σ hinf⟩
+    rw [hcusp x hx]
+    exact hr.type x hx g i hi n hn D R hR θ hθ τ hτ hN σ hσ hinf</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean">Development/AutomorphicArithmetic/Foundations/LocalLanglands/LocalCentralUnits/RecTExists.lean</a></article><article id="window" class="card"><header><span class="status source">Source-traced declaration</span><h3>Window condition from a row</h3></header><code class="name">UpperTheory.One.vwin_of_row</code><p>Use open-image and base-change inputs together with the given row to obtain the automorphic window.</p><details><summary>Original Lean declaration · line 4</summary><pre><code>theorem UpperTheory.One.vwin_of_row (h : UpperTheory.GalStar.Row0b fun h rc =&gt; UpperTheory.Zero.LLC.IsRecT h rc) : UpperTheory.Top.VWin :=
+  UpperTheory.One.Join.automorphic_window_of_inputs (UpperTheory.LiteratureTheorems.OpenImageCondition.mk h) UpperTheory.BaseChangeIdentities.baseChangeN h</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean">Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean</a></article><article id="ofRow" class="card"><header><span class="status source">Source-traced declaration</span><h3>Nonvanishing given the Galois row</h3></header><code class="name">UpperTheory.FinalTheorems.everyCharacter_of_row</code><p>Assemble the literature package using the supplied row and local parameter existence. Apply the window result to that same row.</p><ul><li><a href="#literature">Assemble the literature inputs</a> <small>source reference</small></li><li><a href="#local">Local parameter construction</a> <small>source reference</small></li><li><a href="#window">Window condition from a row</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 7</summary><pre><code>theorem UpperTheory.FinalTheorems.everyCharacter_of_row (h : UpperTheory.GalStar.Row0b fun h rc =&gt; UpperTheory.Zero.LLC.IsRecT h rc) : UpperTheory.EveryCharacter :=
+  UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin ⟨h, UpperTheory.Zero.LLC.recTExists, h⟩ (UpperTheory.One.vwin_of_row h)</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean">Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean</a></article><article id="every" class="card"><header><span class="status source">Source-traced declaration</span><h3>Nonvanishing for all characters</h3></header><code class="name">UpperTheory.FinalTheorems.everyCharacter</code><p>Discharge the row assumption with the local–global result. This is the unconditional input consumed by the public analytic deductions.</p><ul><li><a href="#row">Galois row for the local parameter</a> <small>source reference</small></li><li><a href="#ofRow">Nonvanishing given the Galois row</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 10</summary><pre><code>theorem UpperTheory.FinalTheorems.everyCharacter : UpperTheory.EveryCharacter :=
+  UpperTheory.FinalTheorems.everyCharacter_of_row UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean">Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean</a></article><article id="allChi" class="card"><header><span class="status source">Source-traced declaration</span><h3>Public nonvanishing bridge</h3></header><code class="name">allChi</code><p>Expose the unconditional all-character result to the final deduction module.</p><ul><li><a href="#every">Nonvanishing for all characters</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 7</summary><pre><code>theorem allChi : UpperTheory.EveryCharacter := UpperTheory.FinalTheorems.everyCharacter</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a></article><article id="rhAll" class="card"><header><span class="status source">Source-traced declaration</span><h3>Riemann hypothesis from all characters</h3></header><code class="name">rhOfAll</code><p>Apply the checked level-one reduction to the nonvanishing bridge.</p><ul><li><a href="#allChi">Public nonvanishing bridge</a> <small>source reference</small></li><li><a href="#rhEvery">Specialize to the level-one character</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 9</summary><pre><code>theorem rhOfAll : RiemannHypothesis := Formalism.VW.rh_of_every allChi</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a></article><article id="critAll" class="card"><header><span class="status source">Source-traced declaration</span><h3>Primitive critical-line bridge</h3></header><code class="name">critAll</code><p>Apply the primitive critical-line theorem with the unconditional nonvanishing input.</p><ul><li><a href="#crit">Primitive zeros on the critical line</a> <small>source reference</small></li><li><a href="#allChi">Public nonvanishing bridge</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 11</summary><pre><code>theorem critAll (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)
+    (h0 : 0 &lt; s.re) (h1 : s.re &lt; 1) (hz : LFunction χ s = 0) : s.re = 1 / 2 :=
+  Formalism.VW.critLine allChi N χ hχ s h0 h1 hz</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a></article><article id="claimAll" class="card"><header><span class="status source">Source-traced declaration</span><h3>Package the three analytic claims</h3></header><code class="name">claimAll</code><p>Assemble the half-plane result, the general Dirichlet strip result and the zeta statement in a conjunction.</p><ul><li><a href="#strip">All Dirichlet zeros in the strip</a> <small>source reference</small></li><li><a href="#allChi">Public nonvanishing bridge</a> <small>source reference</small></li><li><a href="#zeta">Zeta consequence of nonvanishing</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 15</summary><pre><code>theorem claimAll : Claim.HalfPlane ∧ Claim.Strip ∧ Claim.Zeta :=
+  ⟨allChi, Claim.strip allChi, Claim.zeta allChi⟩</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Supplements/Kernels/MainTheorems.lean">Supplements/Kernels/MainTheorems.lean</a></article><article id="mainRH" class="card"><header><span class="status source">Source-traced declaration</span><h3>Riemann hypothesis</h3></header><code class="name">riemannHypothesis</code><p>The first public theorem takes its proof from the zeta bridge.</p><ul><li><a href="#rhAll">Riemann hypothesis from all characters</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 4</summary><pre><code>theorem riemannHypothesis : RiemannHypothesis := rhOfAll</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a></article><article id="mainZeta" class="card"><header><span class="status source">Source-traced declaration</span><h3>Nontrivial zeta zeros on the line</h3></header><code class="name">riemannZeta_eq_zero_re</code><p>The second public statement uses the same bridge under a definitionally equal type.</p><ul><li><a href="#rhAll">Riemann hypothesis from all characters</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 6</summary><pre><code>theorem riemannZeta_eq_zero_re : RiemannZetaZerosOnLine := rhOfAll</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a></article><article id="mainNV" class="card"><header><span class="status source">Source-traced declaration</span><h3>Dirichlet half-plane nonvanishing</h3></header><code class="name">LFunction_ne_zero_of_half_lt_re</code><p>The public theorem is the all-character nonvanishing bridge.</p><ul><li><a href="#allChi">Public nonvanishing bridge</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 8</summary><pre><code>theorem LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf := allChi</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a></article><article id="mainStrip" class="card"><header><span class="status source">Source-traced declaration</span><h3>All Dirichlet zeros on the line</h3></header><code class="name">LFunction_eq_zero_re</code><p>Project the strip proof from the three-part conjunction. Only the strip component is selected at this use.</p><ul><li><a href="#claimAll">Package the three analytic claims</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 10</summary><pre><code>theorem LFunction_eq_zero_re : DirichletLZerosOnLine := claimAll.2.1</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a></article><article id="mainPrim" class="card"><header><span class="status source">Source-traced declaration</span><h3>Primitive Dirichlet zeros on the line</h3></header><code class="name">LFunction_eq_zero_re_of_isPrimitive</code><p>The original public theorem uses the dedicated primitive bridge.</p><ul><li><a href="#critAll">Primitive critical-line bridge</a> <small>source reference</small></li></ul><details><summary>Original Lean declaration · line 12</summary><pre><code>theorem LFunction_eq_zero_re_of_isPrimitive : PrimitiveDirichletLZerosOnLine := critAll</code></pre></details><a class="file" href="https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/Main.lean">Main.lean</a></article></section></main><script>
+const ancestors={"everyDef": ["everyDef"], "half": ["half"], "stripDef": ["stripDef"], "zetaDef": ["zetaDef"], "factor": ["factor"], "primZero": ["factor", "primZero"], "gamma": ["gamma"], "reflect": ["gamma", "reflect"], "strip": ["factor", "gamma", "half", "primZero", "reflect", "strip", "stripDef"], "zeta": ["factor", "gamma", "half", "primZero", "reflect", "strip", "stripDef", "zeta", "zetaDef"], "right": ["right"], "vGamma": ["vGamma"], "crit": ["crit", "everyDef", "vGamma"], "rhEvery": ["everyDef", "rhEvery", "right"], "topG": ["topG"], "greenZero": ["greenZero", "topG"], "imprimitive": ["imprimitive"], "greenEvery": ["greenEvery", "greenZero", "imprimitive", "topG"], "definite": ["definite"], "match": ["definite", "greenEvery", "greenZero", "imprimitive", "match", "topG"], "literature": ["definite", "greenEvery", "greenZero", "imprimitive", "literature", "match", "topG"], "row": ["row"], "local": ["local"], "window": ["window"], "ofRow": ["definite", "greenEvery", "greenZero", "imprimitive", "literature", "local", "match", "ofRow", "topG", "window"], "every": ["definite", "every", "greenEvery", "greenZero", "imprimitive", "literature", "local", "match", "ofRow", "row", "topG", "window"], "allChi": ["allChi", "definite", "every", "greenEvery", "greenZero", "imprimitive", "literature", "local", "match", "ofRow", "row", "topG", "window"], "rhAll": ["allChi", "definite", "every", "everyDef", "greenEvery", "greenZero", "imprimitive", "literature", "local", "match", "ofRow", "rhAll", "rhEvery", "right", "row", "topG", "window"], "critAll": ["allChi", "crit", "critAll", "definite", "every", "everyDef", "greenEvery", "greenZero", "imprimitive", "literature", "local", "match", "ofRow", "row", "topG", "vGamma", "window"], "claimAll": ["allChi", "claimAll", "definite", "every", "factor", "gamma", "greenEvery", "greenZero", "half", "imprimitive", "literature", "local", "match", "ofRow", "primZero", "reflect", "row", "strip", "stripDef", "topG", "window", "zeta", "zetaDef"], "mainRH": ["allChi", "definite", "every", "everyDef", "greenEvery", "greenZero", "imprimitive", "literature", "local", "mainRH", "match", "ofRow", "rhAll", "rhEvery", "right", "row", "topG", "window"], "mainZeta": ["allChi", "definite", "every", "everyDef", "greenEvery", "greenZero", "imprimitive", "literature", "local", "mainZeta", "match", "ofRow", "rhAll", "rhEvery", "right", "row", "topG", "window"], "mainNV": ["allChi", "definite", "every", "greenEvery", "greenZero", "imprimitive", "literature", "local", "mainNV", "match", "ofRow", "row", "topG", "window"], "mainStrip": ["allChi", "claimAll", "definite", "every", "factor", "gamma", "greenEvery", "greenZero", "half", "imprimitive", "literature", "local", "mainStrip", "match", "ofRow", "primZero", "reflect", "row", "strip", "stripDef", "topG", "window", "zeta", "zetaDef"], "mainPrim": ["allChi", "crit", "critAll", "definite", "every", "everyDef", "greenEvery", "greenZero", "imprimitive", "literature", "local", "mainPrim", "match", "ofRow", "row", "topG", "vGamma", "window"]},edges=[["allChi", "claimAll", "trace"], ["allChi", "critAll", "trace"], ["allChi", "mainNV", "trace"], ["allChi", "rhAll", "trace"], ["claimAll", "mainStrip", "trace"], ["crit", "critAll", "trace"], ["critAll", "mainPrim", "trace"], ["definite", "match", "trace"], ["every", "allChi", "trace"], ["everyDef", "crit", "type"], ["everyDef", "rhEvery", "type"], ["factor", "primZero", "proof"], ["gamma", "reflect", "proof"], ["greenEvery", "match", "trace"], ["greenZero", "greenEvery", "trace"], ["half", "strip", "type"], ["half", "zeta", "type"], ["imprimitive", "greenEvery", "trace"], ["literature", "ofRow", "trace"], ["local", "ofRow", "trace"], ["match", "literature", "trace"], ["ofRow", "every", "trace"], ["primZero", "strip", "proof"], ["reflect", "strip", "proof"], ["rhAll", "mainRH", "trace"], ["rhAll", "mainZeta", "trace"], ["rhEvery", "rhAll", "trace"], ["right", "rhEvery", "proof"], ["row", "every", "trace"], ["strip", "claimAll", "trace"], ["strip", "zeta", "proof"], ["stripDef", "strip", "type"], ["topG", "greenZero", "trace"], ["vGamma", "crit", "proof"], ["window", "ofRow", "trace"], ["zeta", "claimAll", "trace"], ["zetaDef", "zeta", "type"]];document.querySelector('#focus').addEventListener('change',e=>{const id=e.target.value,wanted=new Set(ancestors[id]||Object.keys(ancestors));Object.keys(ancestors).forEach(k=>document.getElementById('n-'+k)?.classList.toggle('dim',!wanted.has(k)));edges.forEach(([d,u])=>document.getElementById('e-'+d+'-'+u)?.classList.toggle('dim',!(wanted.has(d)&&wanted.has(u))));});document.querySelector('#zoom').onclick=e=>{const active=document.querySelector('#graph').classList.toggle('actual');e.target.textContent=active?'Fit to page':'Actual size';};</script></body></html>

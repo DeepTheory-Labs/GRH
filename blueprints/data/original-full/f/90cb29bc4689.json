@@ -1,0 +1,1 @@
+{"path":"Lemmata/DetMonotoneStarMulSelf","key":"90cb29bc4689","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"OneLeReDetOneAdd","path":"Lemmata/DetMonotoneStarMulSelf/OneLeReDetOneAdd.lean","key":"832c56f79b13","module":true,"decls":4,"thms":4,"defs":0,"inEdges":1,"outEdges":1}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/CoreStatements/MeasureExistence","key":"2bc2a7c85a9e","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"ExistsMeas","path":"Development/WeilBound/CoreStatements/MeasureExistence/ExistsMeas.lean","key":"fd8697baa3e4","module":true,"decls":1,"thms":1,"defs":0,"inEdges":27,"outEdges":2}],"edges":[],"edgesTotal":0}

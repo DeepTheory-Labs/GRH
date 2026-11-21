@@ -1,0 +1,23 @@
+{
+ "root": "da39a3ee5e6b",
+ "srcUrl": "https://github.com/leanprover-community/riemann-hypothesis/blob/e7c8972c701d3396947808ab20cc16dc14623d33/src/",
+ "stats": {
+  "project_declarations": 1905921,
+  "reachable": 1265264,
+  "visible": 874318,
+  "visible_edges": 11311381,
+  "modules": 146440,
+  "external_constants": 67981,
+  "external_references": 95456185,
+  "kinds": {
+   "thm": 691808,
+   "def": 170576,
+   "inductive": 5569,
+   "ctor": 5701,
+   "rec": 664
+  },
+  "unreachable_project": 640657
+ },
+ "folders": 3247,
+ "modules": 146440
+}

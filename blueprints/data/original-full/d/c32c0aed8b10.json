@@ -1,0 +1,1 @@
+{"Development/AutomorphicArithmetic/ExponentialBounds/BadShareWin.lean":{"decls":[["UpperTheory.Win.badShare_win","thm",1,14,1],["UpperTheory.Win.fm_div_min_le","thm",3,58,1],["UpperTheory.Win.two_mul_div_le_exp","thm",1,0,1]],"edges":[[2,1]]}}

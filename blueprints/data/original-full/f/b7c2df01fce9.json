@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/AlgebraicIntegralClosure","key":"b7c2df01fce9","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"AicLoc","path":"Development/EtaleCohomology/EtaleSheaves/AlgebraicIntegralClosure/AicLoc.lean","key":"540090c4de19","module":true,"decls":1,"thms":1,"defs":0,"inEdges":1,"outEdges":1}],"edges":[],"edgesTotal":0}

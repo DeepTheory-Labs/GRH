@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/PeriodRingComparison/AinfInverseMaps/AinfInvMapGOC.lean":{"decls":[["Cmp6.ainfInv_map_gOC","thm",1,26,1],["Cmp6.cD_gal","thm",1,38,1],["Cmp6.cPoint_smul","thm",1,21,1],["Cmp6.comparison_map_galois","thm",1,40,1]],"edges":[[3,2],[0,3],[2,1]]}}

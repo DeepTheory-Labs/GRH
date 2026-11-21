@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/SymmetricDistance/SymDistOf.lean":{"decls":[["PI.SymDistWork.inUJ_coe","thm",1,2,1],["PI.SymDistWork.kset_ct","thm",1,2,1],["PI.SymDistWork.kset_inv","thm",1,2,1],["PI.SymDistWork.symD_eq","thm",2,6,1],["PI.SymDistWork.symDist_of","thm",1,19,1]],"edges":[[1,4],[3,4],[2,4],[0,4]]}}

@@ -1,0 +1,1 @@
+{"path":"Lemmata/PosDefOfRealQuadratic","key":"b8f0bf9d64fc","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"QuadFormRealSmul","path":"Lemmata/PosDefOfRealQuadratic/QuadFormRealSmul.lean","key":"0991fbef11c2","module":true,"decls":4,"thms":4,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

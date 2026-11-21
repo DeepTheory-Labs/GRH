@@ -1,0 +1,1 @@
+{"Development/WeilBound/ThetaLifts/DoubleEigenvalues/DblEigenW.lean":{"decls":[["PositivityTheory.ThKU.Vac.KSub","def",3,17,2],["PositivityTheory.ThKU.Vac.dbl_eigenW","thm",1,73,1],["PositivityTheory.ThKU.Vac.symp_dblW","thm",1,5,1],["PositivityTheory.ThKU.Vac.vacFixW","thm",4,120,1],["PositivityTheory.ThKU.Vac.vacFixX","thm",4,136,1]],"edges":[[1,3],[2,1],[0,4],[0,3]]}}

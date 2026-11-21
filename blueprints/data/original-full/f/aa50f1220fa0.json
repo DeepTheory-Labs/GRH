@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/SimpleEigenvalues","key":"aa50f1220fa0","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"SimpleEigenvalueExtension","path":"Development/WeilBound/SimpleEigenvalues/SimpleEigenvalueExtension","key":"c9fde485ba7b","module":false,"decls":1,"thms":1,"defs":0,"modules":1,"inEdges":1,"outEdges":5}],"edges":[],"edgesTotal":0}

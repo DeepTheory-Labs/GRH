@@ -1,0 +1,1 @@
+{"path":"Lemmata/RankOneOrbitForms","key":"f26bc32a2d02","counts":{"decls":5,"thms":5,"defs":0,"modules":1},"children":[{"name":"RankOneForm","path":"Lemmata/RankOneOrbitForms/RankOneForm.lean","key":"c29fb921810c","module":true,"decls":5,"thms":5,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Development/WeilBound/ThetaLifts/Reductions/TopPolarZero","key":"f432baec8e34","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"PolZero","path":"Development/WeilBound/ThetaLifts/Reductions/TopPolarZero/PolZero.lean","key":"af0371a44919","module":true,"decls":1,"thms":1,"defs":0,"inEdges":43,"outEdges":1}],"edges":[],"edgesTotal":0}

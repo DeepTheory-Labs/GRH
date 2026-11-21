@@ -1,0 +1,1 @@
+{"path":"Lemmata/GeneralBFactMore","key":"2354d9af8f77","counts":{"decls":3,"thms":3,"defs":0,"modules":1},"children":[{"name":"Imports","path":"Lemmata/GeneralBFactMore/Imports.lean","key":"5a4bfc71bd8c","module":true,"decls":3,"thms":3,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

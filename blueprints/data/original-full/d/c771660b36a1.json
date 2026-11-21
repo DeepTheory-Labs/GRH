@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/PhiBigCellForm/BigCellEqW0BMulTM.lean":{"decls":[["PI.SwBig.PhiFormProof.bigCell_eq_w0B_mul_tM","thm",1,6,1],["PI.SwBig.PhiFormProof.exp_neg_eq_inv","thm",1,1,1],["PI.SwBig.PhiFormProof.phiForm","thm",1,9,1]],"edges":[[0,2],[1,2]]}}

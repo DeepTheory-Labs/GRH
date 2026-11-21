@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicArithmetic/RepresentationRank","key":"6908ff415bea","counts":{"decls":3,"thms":0,"defs":3,"modules":1},"children":[{"name":"RepOfRank","path":"Development/AutomorphicArithmetic/RepresentationRank/RepOfRank.lean","key":"4ecb06988aa3","module":true,"decls":3,"thms":0,"defs":3,"inEdges":0,"outEdges":17}],"edges":[],"edgesTotal":0}

@@ -1,0 +1,1 @@
+{"path":"Development/AutomorphicSpectrum/Definitions/NonGaloisLines","key":"ec88ebf9b250","counts":{"decls":10,"thms":0,"defs":10,"modules":1},"children":[{"name":"TopLine","path":"Development/AutomorphicSpectrum/Definitions/NonGaloisLines/TopLine.lean","key":"e9da1f48c6c1","module":true,"decls":10,"thms":0,"defs":10,"inEdges":126,"outEdges":58}],"edges":[],"edgesTotal":0}

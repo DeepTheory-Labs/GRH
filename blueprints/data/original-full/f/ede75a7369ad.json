@@ -1,0 +1,1 @@
+{"path":"Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing","key":"ede75a7369ad","counts":{"decls":1,"thms":1,"defs":0,"modules":1},"children":[{"name":"InputsHecke","path":"Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/InputsHecke.lean","key":"1d93bafded1f","module":true,"decls":1,"thms":1,"defs":0,"inEdges":18,"outEdges":4}],"edges":[],"edgesTotal":0}

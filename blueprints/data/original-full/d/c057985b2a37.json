@@ -1,0 +1,1 @@
+{"Development/WeilBound/CoreStatements/HomogeneousNonvanishing/SpectralNormIntegrality/SpecInt.lean":{"decls":[["PositivityTheory.UnitarySelfGeneration.Mend.specInt_isIntegral_iff_coeff","thm",1,0,1],["PositivityTheory.UnitarySelfGeneration.Mend.specInt_norm_le_one_iff_mem","thm",1,0,2]],"edges":[]}}

@@ -1,0 +1,1 @@
+{"Formalism/JacquetSubsetSums/JacquetSubsetSum.lean":{"decls":[["Formalism.PacketSums.IwahoriNewton","def",1,0,2],["Formalism.PacketSums.NoFixedSum","def",2,0,2],["Formalism.PacketSums.PacketSum","def",1,2,1],["Formalism.PacketSums.SignEven","def",1,0,1],["Formalism.PacketSums.numK","def",1,0,5],["Formalism.PacketSums.vdm","def",1,0,7]],"edges":[[5,2],[4,2]]}}

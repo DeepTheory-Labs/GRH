@@ -1,0 +1,1 @@
+{"Development/AbelianVarietyTheory/Counterexamples/MetricPositivity/PosSemidefOfIsMetric.lean":{"decls":[["GlobalTheory.MetricTest.exists_isMetric","thm",1,20,1],["GlobalTheory.MetricTest.exists_isMetricAt","thm",1,105,1],["GlobalTheory.MetricTest.posSemidef_of_isMetric","thm",1,51,1],["GlobalTheory.MetricTest.pos_of_isMetric","thm",1,72,1]],"edges":[[2,3],[1,0]]}}

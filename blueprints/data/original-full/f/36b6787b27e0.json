@@ -1,0 +1,1 @@
+{"path":"Supplements/Kernels","key":"36b6787b27e0","counts":{"decls":4,"thms":4,"defs":0,"modules":1},"children":[{"name":"MainTheorems","path":"Supplements/Kernels/MainTheorems.lean","key":"5b4a76f8795f","module":true,"decls":4,"thms":4,"defs":0,"inEdges":9,"outEdges":5}],"edges":[],"edgesTotal":0}

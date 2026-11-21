@@ -1,0 +1,1 @@
+{"Development/EtaleCohomology/EtaleTrace/LocalSplitting/Cover2.lean":{"decls":[["LateralTheory.EtaleTrace.LSplitPf.Sch.cov","thm",2,0,1],["LateralTheory.EtaleTrace.LSplitPf.Sch.cover2","thm",1,8,2],["LateralTheory.EtaleTrace.LSplitPf.Sch.epi","thm",1,8,1],["LateralTheory.EtaleTrace.LSplitPf.Sch.psi","thm",1,5,1]],"edges":[[2,1],[3,2],[0,3]]}}

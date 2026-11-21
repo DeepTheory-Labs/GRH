@@ -1,0 +1,3 @@
+@viz-js/viz 3.17.0 (https://github.com/mdaines/viz-js), MIT License, Copyright (c) Michael Daines.
+The bundled WebAssembly build of Graphviz is distributed under the Eclipse Public License 1.0
+(https://graphviz.org/license/).

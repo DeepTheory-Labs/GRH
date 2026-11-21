@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ExponentialFactorIdentity/ExpMvEq.lean":{"decls":[["PI.PhiCubeOfFactor.Wk.expMv_eq","thm",1,2,1],["PI.PhiCubeOfFactor.Wk.logMv_eq","thm",1,2,1],["PI.PhiCubeOfFactor.Wk.main","thm",1,26,1]],"edges":[[1,2],[0,2]]}}

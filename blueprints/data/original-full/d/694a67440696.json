@@ -1,0 +1,1 @@
+{"Formalism/PeriodIntegrals/UnitaryGroupMassFormula/CauchyBinet/WwCauchyBinetMain.lean":{"decls":[["PI.WwCauchyBinetWork.factor_expand","thm",1,2,1],["PI.WwCauchyBinetWork.fintypeColChoice","def",3,2,2],["PI.WwCauchyBinetWork.wwCauchyBinet_main","thm",1,8,1]],"edges":[[1,2],[0,2]]}}

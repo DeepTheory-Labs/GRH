@@ -1,0 +1,1 @@
+{"path":"Lemmata/PadicNatCastNorm","key":"5f10262e1cd7","counts":{"decls":2,"thms":2,"defs":0,"modules":1},"children":[{"name":"NormNatCastOfNotDvd","path":"Lemmata/PadicNatCastNorm/NormNatCastOfNotDvd.lean","key":"7bf541e2ea55","module":true,"decls":2,"thms":2,"defs":0,"inEdges":0,"outEdges":1}],"edges":[],"edgesTotal":0}

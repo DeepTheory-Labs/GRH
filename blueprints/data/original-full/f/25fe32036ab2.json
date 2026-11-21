@@ -1,0 +1,1 @@
+{"path":"Development/EtaleCohomology/EtaleSheaves/KernelLocalization","key":"25fe32036ab2","counts":{"decls":6,"thms":5,"defs":1,"modules":1},"children":[{"name":"RangeOfBd","path":"Development/EtaleCohomology/EtaleSheaves/KernelLocalization/RangeOfBd.lean","key":"4d91cd570670","module":true,"decls":6,"thms":5,"defs":1,"inEdges":71,"outEdges":14}],"edges":[],"edgesTotal":0}

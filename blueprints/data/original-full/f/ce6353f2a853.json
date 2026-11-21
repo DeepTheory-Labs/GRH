@@ -1,0 +1,1 @@
+{"path":"GroundTheory/GlobalFields/FirstInequality","key":"ce6353f2a853","counts":{"decls":7,"thms":7,"defs":0,"modules":1},"children":[{"name":"HerbrandClass","path":"GroundTheory/GlobalFields/FirstInequality/HerbrandClass.lean","key":"7d37c3e9487e","module":true,"decls":7,"thms":7,"defs":0,"inEdges":62,"outEdges":1}],"edges":[],"edgesTotal":0}
