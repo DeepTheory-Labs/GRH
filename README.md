@@ -8,6 +8,12 @@ The formalization studied here is the published archive, as mirrored in
 
 **Preview:** <https://deeptheory-labs.github.io/GRH/>
 
+**Blueprints of the original proof:**
+
+- [LeanArchitect blueprint](https://deeptheory-labs.github.io/GRH/leanarchitect-original/)
+- [Verso Blueprint](https://deeptheory-labs.github.io/GRH/verso-original/site/)
+- [Three.js Proof Map](https://deeptheory-labs.github.io/GRH/threejs-original/)
+
 ## Releases
 
 Each release is a folder named `<tool>-<stage>`. A stage is never changed after it is published;
