@@ -33,6 +33,8 @@ window.ProofScene = class ProofScene {
       this.startCanvas();
     }
     this.events();
+    this.spinning = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.spinLoop();
     this.observer = new ResizeObserver(() => this.resize());
     this.observer.observe(stage);
     this.resize();
@@ -653,6 +655,23 @@ window.ProofScene = class ProofScene {
     this.pitch = this.yaw = 0;
     this.resize();
     this.invalidate();
+  }
+  // Slow turntable rotation. It holds while the user drags or points at a node.
+  spinLoop() {
+    let last = performance.now();
+    const step = (now) => {
+      const dt = Math.min(now - last, 100) / 1000;
+      last = now;
+      if (this.spinning && !this.pointsDown.size && !this.hover) {
+        this.yaw -= 0.09 * dt;
+        this.invalidate();
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  setSpinning(on) {
+    this.spinning = on;
   }
   rotate(dx, dy) {
     this.yaw -= dx * 0.006;

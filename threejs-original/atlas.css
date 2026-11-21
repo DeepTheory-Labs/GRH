@@ -1,28 +1,10 @@
 @font-face {
-  font-family: Atlas Math;
+  font-family: Proof Math;
   src: url(vendor/math.woff2) format('woff2');
   font-display: swap;
   unicode-range:
     U+0370-03FF, U+2070-209F, U+2100-22FF, U+27C0-27EF, U+2900-2AFF,
     U+1D400-1D7FF;
-}
-@font-face {
-  font-family: DM Sans;
-  src: url(vendor/dm-sans.woff2) format('woff2');
-  font-weight: 100 900;
-  font-display: swap;
-}
-@font-face {
-  font-family: Instrument Serif;
-  src: url(vendor/instrument-serif.woff2) format('woff2');
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Instrument Serif;
-  src: url(vendor/instrument-serif-italic.woff2) format('woff2');
-  font-style: italic;
-  font-display: swap;
 }
 :root {
   color-scheme: dark;
@@ -36,12 +18,17 @@
   --cyan: #61dedb;
   --gold: #f3c17f;
   --violet: #b09bf6;
-  --mono: ui-monospace, 'SFMono-Regular', Consolas, 'Atlas Math', monospace;
-  font:
-    15px/1.5 'DM Sans',
-    'Atlas Math',
+  --mono: ui-monospace, 'SFMono-Regular', Consolas, 'Proof Math', monospace;
+  --sans:
     system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Proof Math',
     sans-serif;
+  font: 15px/1.5 var(--sans);
   color: var(--ink);
   background: var(--bg);
 }
@@ -224,12 +211,8 @@ svg {
   margin: 31px 0 28px;
 }
 .intro h1 {
-  font:
-    400 clamp(56px, 5.7vw, 91px) / 1.03 'Instrument Serif',
-    'Atlas Math',
-    Georgia,
-    serif;
-  letter-spacing: -0.04em;
+  font: 650 clamp(40px, 4.2vw, 64px) / 1.08 var(--sans);
+  letter-spacing: -0.025em;
 }
 .intro h1 em {
   color: #bee8e3;
@@ -462,10 +445,7 @@ svg {
   position: absolute;
   transform: translate(-50%, 0);
   color: #c7d4dc;
-  font:
-    10px/1.22 'DM Sans',
-    'Atlas Math',
-    sans-serif;
+  font: 10px/1.22 var(--sans);
   max-width: 155px;
   white-space: nowrap;
   text-shadow:
@@ -637,12 +617,8 @@ svg {
   height: 6px;
 }
 .inspector-title {
-  font:
-    400 clamp(29px, 2.7vw, 42px) / 1.02 'Instrument Serif',
-    'Atlas Math',
-    Georgia,
-    serif;
-  letter-spacing: -0.02em;
+  font: 620 clamp(24px, 2.1vw, 32px) / 1.15 var(--sans);
+  letter-spacing: -0.015em;
   overflow-wrap: anywhere;
   margin: 11px 0 10px;
 }
@@ -802,11 +778,7 @@ svg {
   margin: 0 0 11px;
 }
 .list-head h3 {
-  font:
-    400 28px 'Instrument Serif',
-    'Atlas Math',
-    Georgia,
-    serif;
+  font: 620 22px var(--sans);
 }
 .list-head span {
   font: 11px var(--mono);
@@ -909,7 +881,7 @@ svg {
     align-items: center;
   }
   .intro h1 {
-    font-size: 56px;
+    font-size: 44px;
   }
   .metrics > div {
     padding: 0 11px;
@@ -977,7 +949,7 @@ svg {
     margin: 20px 2px 17px;
   }
   .intro h1 {
-    font-size: 51px;
+    font-size: 38px;
   }
   .intro p {
     margin-top: 6px;

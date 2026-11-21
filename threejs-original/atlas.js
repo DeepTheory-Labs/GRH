@@ -163,6 +163,19 @@
   });
   $('zoom-in').onclick = () => scene.changeZoom(1.24);
   $('zoom-out').onclick = () => scene.changeZoom(1 / 1.24);
+  const spin = $('spin');
+  const showSpin = () => {
+    const label = scene.spinning ? 'Pause rotation' : 'Resume rotation';
+    spin.setAttribute('aria-label', label);
+    spin.title = label;
+    spin.setAttribute('aria-pressed', String(!scene.spinning));
+    spin.querySelector('use').setAttribute('href', scene.spinning ? '#i-pause' : '#i-play');
+  };
+  spin.onclick = () => {
+    scene.setSpinning(!scene.spinning);
+    showSpin();
+  };
+  showSpin();
   $('reset').onclick = () => {
     focused = false;
     scene.reset();

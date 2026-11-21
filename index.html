@@ -3,26 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GRH: proof graphs and blueprints</title>
+  <meta name="theme-color" content="#0b111b">
+  <title>GRH · Proof graphs of the Lean Riemann hypothesis</title>
+  <meta name="description" content="Blueprints and dependency graphs of the Lean formalization of the Riemann hypothesis, from the original archive through successive simplifications.">
   <style>
-    body { font: 16px/1.5 system-ui, sans-serif; max-width: 46rem; margin: 3rem auto; padding: 0 1rem; color: #222; }
-    li { margin: 0 0 1rem; } span { color: #555; } code { font-size: .9em; color: #666; }
+    :root {
+      color-scheme: dark;
+      --bg: #0b111b; --panel: #101a28; --panel-2: #132132; --line: #243142;
+      --ink: #eef3f6; --muted: #a2b0c1; --quiet: #7d8da1;
+      --cyan: #61dedb; --gold: #f3c17f; --violet: #b09bf6;
+      --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+      font: 16px/1.55 var(--sans); color: var(--ink); background: var(--bg);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(ellipse at 30% -260px, #15303a 0, transparent 60%), var(--bg); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header.top { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; gap: 10px; align-items: center; font-weight: 650; letter-spacing: .01em; }
+    .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+    .top nav a { color: var(--muted); margin-left: 22px; font-size: 14px; }
+    .top nav a:hover { color: var(--ink); }
+    .hero { padding: 72px 0 40px; }
+    .eyebrow { font: 12px var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--cyan); }
+    h1 { font-size: clamp(36px, 5vw, 60px); line-height: 1.07; letter-spacing: -.025em; margin: 14px 0 18px; font-weight: 680; }
+    h1 span { color: var(--gold); }
+    .lead { max-width: 46rem; color: var(--muted); font-size: 18px; margin: 0; }
+    .facts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .fact { padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; background: #0f1825cc; }
+    .fact b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+    .fact small { color: var(--quiet); font-size: 13px; }
+    h2 { font-size: 24px; letter-spacing: -.01em; margin: 0; }
+    .stage-head { display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; justify-content: space-between; margin: 34px 0 18px; }
+    .stage-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .stage-head code, .card code { font: 13px var(--mono); color: var(--cyan); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); overflow: hidden; transition: transform .15s, border-color .15s; }
+    .card:hover { transform: translateY(-3px); border-color: #3b5568; }
+    .thumb { height: 180px; background: #f7f7f4; display: grid; place-items: center; overflow: hidden; border-bottom: 1px solid var(--line); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .thumb.dark { background: radial-gradient(circle at 50% 50%, #17324a 0, #0b1521 70%); }
+    .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .tool { font: 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .tool.la { color: var(--cyan); } .tool.vs { color: var(--violet); } .tool.tj { color: var(--gold); }
+    .card h3 { margin: 0; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .card .open { margin-top: auto; padding-top: 10px; color: var(--ink); font-weight: 600; font-size: 14px; }
+    .card .open::after { content: ' →'; color: var(--cyan); }
+    .roadmap { margin: 56px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .step { border: 1px dashed var(--line); border-radius: 12px; padding: 16px 18px; color: var(--muted); font-size: 14px; }
+    .step.done { border-style: solid; border-color: #2c5a5f; background: #0f2028; color: var(--ink); }
+    .step b { display: block; font: 13px var(--mono); color: var(--cyan); margin-bottom: 4px; }
+    .step:not(.done) b { color: var(--quiet); }
+    .note { margin: 44px 0 0; padding: 16px 18px; border-left: 3px solid var(--gold); background: #131b26; color: var(--muted); font-size: 14px; border-radius: 0 10px 10px 0; }
+    footer { margin: 60px 0 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--quiet); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+    footer a:hover, .note a:hover { color: var(--ink); }
+    .note a, footer a { text-decoration: underline; text-underline-offset: 2px; }
   </style>
 </head>
 <body>
-  <h1>GRH</h1>
-  <p>Visualizations, simplifications and interpretability work on the Lean formalization of the Riemann hypothesis
-  (<a href="https://github.com/leanprover-community/riemann-hypothesis">leanprover-community/riemann-hypothesis</a>).</p>
-  <section>
-    <h2>Stage <code>original</code></h2>
-    <p>Built from the archive as published, commit
-    <a href="https://github.com/leanprover-community/riemann-hypothesis/tree/e7c8972c701d3396947808ab20cc16dc14623d33/src"><code>e7c8972c</code></a>.</p>
-    <ul>
-      <li><a href="leanarchitect-original/index.html"><strong>LeanArchitect blueprint</strong></a> <code>leanarchitect-original</code><br><span>35 declarations, 37 edges; 14 compiled with LeanArchitect, 21 traced in source</span></li>
-      <li><a href="verso-original/site/index.html"><strong>Verso Blueprint</strong></a> <code>verso-original</code><br><span>38 declarations, 38 line-checked proof references</span></li>
-      <li><a href="threejs-original/index.html"><strong>Three.js proof atlas</strong></a> <code>threejs-original</code><br><span>3D graph: 42 project and 44 Mathlib declarations, 204 arrows</span></li>
-    </ul>
-  </section>
-  <p><a href="https://github.com/DeepTheory-Labs/GRH">Source on GitHub</a></p>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="./"><span class="dot"></span>GRH</a>
+      <nav>
+        <a href="https://github.com/DeepTheory-Labs/GRH">GitHub</a>
+        <a href="https://github.com/leanprover-community/riemann-hypothesis/tree/e7c8972c701d3396947808ab20cc16dc14623d33">Lean archive</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Visualizations · Simplifications · Interpretability</div>
+      <h1>Proof graphs of the Lean <span>Riemann hypothesis</span></h1>
+      <p class="lead">Blueprints and dependency graphs of the Lean formalization of the Riemann hypothesis and
+        the generalized Riemann hypothesis for Dirichlet L-functions. They start from the original archive and
+        follow it through successive simplifications.</p>
+      <div class="facts">
+        <div class="fact"><b>175,187</b><small>Lean files in the archive</small></div>
+        <div class="fact"><b>5</b><small>public statements in <code>Main.lean</code></small></div>
+        <div class="fact"><b>3</b><small>graphs of the original proof</small></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="stage-original">
+      <div class="stage-head">
+        <h2 id="stage-original">Stage <code>original</code></h2>
+        <p>Built from the archive as published, commit <a href="https://github.com/leanprover-community/riemann-hypothesis/tree/e7c8972c701d3396947808ab20cc16dc14623d33/src"><code>e7c8972c</code></a></p>
+      </div>
+      <div class="cards">
+        <a class="card" href="leanarchitect-original/index.html">
+          <div class="thumb"><img src="leanarchitect-original/dependencies.svg" alt="LeanArchitect dependency graph" loading="lazy"></div>
+          <div class="body">
+            <span class="tool la">LeanArchitect</span>
+            <h3>Blueprint</h3>
+            <p>35 declarations and 37 edges. 14 are compiled with LeanArchitect; the other 21 are traced in the source.</p>
+            <span class="open">Open blueprint</span>
+          </div>
+        </a>
+        <a class="card" href="verso-original/site/index.html">
+          <div class="thumb"><img src="verso-original/site/graph.svg" alt="Verso dependency graph" loading="lazy"></div>
+          <div class="body">
+            <span class="tool vs">Verso Blueprint</span>
+            <h3>Proof structure</h3>
+            <p>38 declarations and 38 proof references. Each reference is checked against its source line.</p>
+            <span class="open">Open Verso site</span>
+          </div>
+        </a>
+        <a class="card" href="threejs-original/index.html">
+          <div class="thumb dark">
+            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#61dedb" stroke-width=".55" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.6" fill="#f3c17f" stroke="none"/>
+              <ellipse cx="12" cy="12" rx="10.5" ry="4.2"/>
+              <ellipse cx="12" cy="12" rx="10.5" ry="4.2" transform="rotate(60 12 12)" stroke="#b09bf6"/>
+              <ellipse cx="12" cy="12" rx="10.5" ry="4.2" transform="rotate(120 12 12)" stroke="#f3c17f"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="tool tj">Three.js</span>
+            <h3>Proof Map</h3>
+            <p>An interactive 3D graph of 42 project and 44 Mathlib declarations, with 204 arrows.</p>
+            <span class="open">Open Proof Map</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="roadmap" aria-label="Stages">
+      <div class="step done"><b>original</b>The archive as published</div>
+      <div class="step"><b>simp-01</b>First simplification · planned</div>
+      <div class="step"><b>simp-02 …</b>Further simplifications</div>
+    </section>
+
+    <p class="note">These graphs show the structure of the archive's proof. They do not verify it. Published
+      stages are never changed; each simplification is added as a new stage. Sources:
+      <a href="https://github.com/DeepTheory-Labs/GRH">DeepTheory-Labs/GRH</a>.</p>
+
+    <footer>
+      <span>Apache 2.0</span>
+      <a href="https://github.com/DeepTheory-Labs/GRH">Source</a>
+      <a href="https://github.com/leanprover-community/riemann-hypothesis">leanprover-community/riemann-hypothesis</a>
+    </footer>
+  </div>
 </body>
 </html>

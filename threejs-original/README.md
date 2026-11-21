@@ -1,4 +1,4 @@
-# Riemann proof atlas
+# Riemann Proof Map
 
 > **Published copy (`-original`).** Links to archive source files point to [leanprover-community/riemann-hypothesis@e7c8972c](https://github.com/leanprover-community/riemann-hypothesis/tree/e7c8972c701d3396947808ab20cc16dc14623d33/src). The generator scripts still expect the workspace they were written in: the archive's `lean/` directory next to `leanarchitect-blueprint/`, `proof-blueprint/` and `proof-atlas/` (published here as `leanarchitect-original/`, `verso-original/` and `threejs-original/`).
 
@@ -18,7 +18,7 @@ The graph combines 42 project declarations and 44 selected Mathlib declarations.
 
 The library selection covers zeta, Dirichlet characters, L-functions, gamma factors, and a few supporting analytic identities. Open the [full direct-reference table](mathlib-references.tsv) for all **1,634** type/body references, spanning **374** different Mathlib constants in those 14 project declarations. It includes instances and elaboration helpers. A given constant can occur in the type and the body of the same declaration. The table records these separately, while the visual graph combines them into a single arrow. The source line column identifies the Mathlib declaration. A zero means Lean provided no source range for that constant.
 
-The upstream unconditional nonvanishing theorem is source-traced. The two blueprints and this atlas do not independently verify the full archive or establish RH. Proof status for each project node appears in its inspector.
+The upstream unconditional nonvanishing theorem is source-traced. The two blueprints and this map do not independently verify the full archive or establish RH. Proof status for each project node appears in its inspector.
 
 ## Regenerate the data
 
